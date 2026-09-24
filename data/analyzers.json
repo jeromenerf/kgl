@@ -1,0 +1,117 @@
+[
+ {
+  "id": "area.centroid",
+  "version": "1",
+  "definition": "Area (mm²) and area centroid of the whole, blade and handle contours. Outer contours only: holes such as the Round Hole are not subtracted.",
+  "inputs": [
+   "contours.whole",
+   "contours.blade",
+   "contours.handle"
+  ],
+  "layers": {
+   "centroids": "area centroids"
+  }
+ },
+ {
+  "id": "axis.principal",
+  "version": "1",
+  "definition": "Major second-moment axis of the blade and handle regions, through their area centroids. Angle in degrees from +x of the handle frame, positive towards −y (counter-clockwise on screen). The blade axis points towards the tip, the handle axis towards the butt.",
+  "inputs": [
+   "contours.blade",
+   "contours.handle",
+   "landmarks.tip"
+  ],
+  "layers": {
+   "principal_axes": "principal axes of blade and handle"
+  }
+ },
+ {
+  "id": "bbox.parts",
+  "version": "1",
+  "definition": "Bounding boxes of whole, blade and handle: axis-aligned in the handle frame, and oriented along each part's own principal axis.",
+  "inputs": [
+   "contours.whole",
+   "contours.blade",
+   "contours.handle"
+  ],
+  "layers": {
+   "bbox": "axis-aligned boxes (handle frame)",
+   "obb": "boxes along each part's axis"
+  }
+ },
+ {
+  "id": "axis.junction_tip",
+  "version": "1",
+  "definition": "Segment from the midpoint of the blade/handle junction to the tip. The pivot is not detected in S1: this is not a pivot→tip axis.",
+  "inputs": [
+   "landmarks.junction",
+   "landmarks.tip"
+  ],
+  "layers": {
+   "junction_tip": "junction→tip axis"
+  }
+ },
+ {
+  "id": "axis.pivot_tip",
+  "version": "1",
+  "definition": "Segment from the pivot centre to the tip: length, angle, and signed deviation from the extension of the handle axis towards the blade (positive towards −y, up on screen). Absent when no pivot was found.",
+  "inputs": [
+   "landmarks.pivot",
+   "landmarks.tip",
+   "contours.handle"
+  ],
+  "layers": {
+   "pivot_tip": "pivot→tip axis"
+  }
+ },
+ {
+  "id": "axis.butt_pivot",
+  "version": "1",
+  "definition": "Segment from the butt (handle contour point farthest from the junction midpoint) to the pivot centre: length, angle, signed deviation from the handle axis extension. Absent when no pivot was found.",
+  "inputs": [
+   "landmarks.butt",
+   "landmarks.pivot",
+   "contours.handle"
+  ],
+  "layers": {
+   "butt_pivot": "butt→pivot axis"
+  }
+ },
+ {
+  "id": "axis.butt_junction",
+  "version": "1",
+  "definition": "Segment from the butt to the blade/handle junction midpoint: length, angle, signed deviation from the handle axis extension.",
+  "inputs": [
+   "landmarks.butt",
+   "landmarks.junction",
+   "contours.handle"
+  ],
+  "layers": {
+   "butt_junction": "butt→junction axis"
+  }
+ },
+ {
+  "id": "angle.relative",
+  "version": "1",
+  "definition": "Signed deviation (degrees) of the blade principal axis and of the junction→tip axis from the extension of the handle axis beyond the junction. Positive towards −y (up on screen, the spine side on Spyderco show-side photos).",
+  "inputs": [
+   "contours.blade",
+   "contours.handle",
+   "landmarks.junction",
+   "landmarks.tip"
+  ],
+  "layers": {}
+ },
+ {
+  "id": "extrema.dimensions",
+  "version": "1",
+  "definition": "Extents of the whole knife along (x) and across (y) the handle axis; tip offset from the handle axis (positive towards −y); junction→tip length; handle length from the butt extreme to the junction midpoint along x; widths of blade and handle across their own principal axes.",
+  "inputs": [
+   "contours.*",
+   "landmarks.*"
+  ],
+  "layers": {
+   "dimensions": "handle axis and tip offset"
+  }
+ }
+]

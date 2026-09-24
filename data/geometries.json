@@ -1,0 +1,1211 @@
+[
+ {
+  "slug": "benchmade-940",
+  "brand": "Benchmade",
+  "model": "940 Osborne",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "axis-lock",
+   "reverse-tanto"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "benchmade-bugout",
+  "brand": "Benchmade",
+  "model": "Bugout 535",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "axis-lock",
+   "drop-point"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "benchmade-taggedout",
+  "brand": "Benchmade",
+  "model": "Taggedout 15536",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "axis-lock",
+   "clip-point"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "buck-110-heritage-elite",
+  "brand": "Buck",
+  "model": "110 Slim Heritage Elite",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "lockback"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "crk-inkosi-large",
+  "brand": "Chris Reeve Knives",
+  "model": "Inkosi Large Drop Point",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "drop-point"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "crk-inkosi-large-insingo",
+  "brand": "Chris Reeve Knives",
+  "model": "Inkosi Large Insingo",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "insingo"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "crk-inkosi-large-tanto",
+  "brand": "Chris Reeve Knives",
+  "model": "Inkosi Large Tanto",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "tanto"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "crk-inkosi-small",
+  "brand": "Chris Reeve Knives",
+  "model": "Inkosi Small Drop Point",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "drop-point"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "crk-inkosi-small-insingo",
+  "brand": "Chris Reeve Knives",
+  "model": "Inkosi Small Insingo",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "insingo"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "crk-inkosi-small-tanto",
+  "brand": "Chris Reeve Knives",
+  "model": "Inkosi Small Tanto",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "tanto"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "crk-sebenza-31-large-drop-point",
+  "brand": "Chris Reeve Knives",
+  "model": "Sebenza 31 Large Drop Point",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "drop-point"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "crk-sebenza-31-large-insingo",
+  "brand": "Chris Reeve Knives",
+  "model": "Sebenza 31 Large Insingo",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "insingo"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "crk-sebenza-31-large-tanto",
+  "brand": "Chris Reeve Knives",
+  "model": "Sebenza 31 Large Tanto",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "tanto"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "crk-sebenza-31-small-drop-point",
+  "brand": "Chris Reeve Knives",
+  "model": "Sebenza 31 Small Drop Point",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "drop-point"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "crk-sebenza-31-small-insingo",
+  "brand": "Chris Reeve Knives",
+  "model": "Sebenza 31 Small Insingo",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "insingo"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "crk-sebenza-31-small-tanto",
+  "brand": "Chris Reeve Knives",
+  "model": "Sebenza 31 Small Tanto",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "tanto"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "crk-umnumzaan",
+  "brand": "Chris Reeve Knives",
+  "model": "Umnumzaan Drop Point",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "drop-point"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "crk-umnumzaan-tanto",
+  "brand": "Chris Reeve Knives",
+  "model": "Umnumzaan Tanto",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "tanto"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "kershaw-leek",
+  "brand": "Kershaw",
+  "model": "Leek",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "assisted"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "kershaw-random-leek",
+  "brand": "Kershaw",
+  "model": "Random Leek",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "assisted"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "protech-malibu",
+  "brand": "Pro-Tech",
+  "model": "Malibu Reverse Tanto",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "button-lock",
+   "flipper",
+   "reverse-tanto"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "protech-malibu-wharncliffe",
+  "brand": "Pro-Tech",
+  "model": "Malibu Wharncliffe",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "button-lock",
+   "flipper",
+   "wharncliffe"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "alcyone",
+  "brand": "Spyderco",
+  "model": "Alcyone",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "liner-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "amalgam",
+  "brand": "Spyderco",
+  "model": "Amalgam",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "ambitious",
+  "brand": "Spyderco",
+  "model": "Ambitious",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "liner-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "astute",
+  "brand": "Spyderco",
+  "model": "Astute",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "liner-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "atlantic",
+  "brand": "Spyderco",
+  "model": "Atlantic",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "autonomy",
+  "brand": "Spyderco",
+  "model": "Autonomy",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "autonomy-2",
+  "brand": "Spyderco",
+  "model": "Autonomy 2",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "bodacious",
+  "brand": "Spyderco",
+  "model": "Bodacious",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "bradley-folder-2",
+  "brand": "Spyderco",
+  "model": "Bradley Folder 2",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "liner-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "buttonup",
+  "brand": "Spyderco",
+  "model": "ButtonUp",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "caly-3-5",
+  "brand": "Spyderco",
+  "model": "Caly 3.5",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "canis",
+  "brand": "Spyderco",
+  "model": "Canis",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "cat",
+  "brand": "Spyderco",
+  "model": "Cat",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "liner-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "centofante-3",
+  "brand": "Spyderco",
+  "model": "Centofante 3",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "liner-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "chaparral",
+  "brand": "Spyderco",
+  "model": "Chaparral Lightweight",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "chicago",
+  "brand": "Spyderco",
+  "model": "Chicago",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "liner-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "civilian",
+  "brand": "Spyderco",
+  "model": "Civilian",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "delica-4",
+  "brand": "Spyderco",
+  "model": "Delica 4",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "delica-4-wharncliffe",
+  "brand": "Spyderco",
+  "model": "Delica 4 Wharncliffe",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "dragonfly-2-wharncliffe",
+  "brand": "Spyderco",
+  "model": "Dragonfly 2 Wharncliffe",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "drunken",
+  "brand": "Spyderco",
+  "model": "Drunken",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "chris-reeve-integral-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "edgerati",
+  "brand": "Spyderco",
+  "model": "Edgerati",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "efficient",
+  "brand": "Spyderco",
+  "model": "Efficient",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "emphasis",
+  "brand": "Spyderco",
+  "model": "Emphasis",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "liner-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "endela",
+  "brand": "Spyderco",
+  "model": "Endela",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "endela-wharncliffe",
+  "brand": "Spyderco",
+  "model": "Endela Wharncliffe",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "endura",
+  "brand": "Spyderco",
+  "model": "Endura",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "endura-4",
+  "brand": "Spyderco",
+  "model": "Endura 4",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "endura-4-wharncliffe",
+  "brand": "Spyderco",
+  "model": "Endura 4 Wharncliffe",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "essenza",
+  "brand": "Spyderco",
+  "model": "Essenza",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "liner-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "ikuchi",
+  "brand": "Spyderco",
+  "model": "Ikuchi",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "insistent",
+  "brand": "Spyderco",
+  "model": "Insistent",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "liner-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "kapara",
+  "brand": "Spyderco",
+  "model": "Kapara",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "karahawk",
+  "brand": "Spyderco",
+  "model": "Karahawk",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "leafjumper",
+  "brand": "Spyderco",
+  "model": "LeafJumper",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "lil-native",
+  "brand": "Spyderco",
+  "model": "Lil' Native",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "lil-native-wharncliffe",
+  "brand": "Spyderco",
+  "model": "Lil' Native Wharncliffe",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "lil-temperance-3",
+  "brand": "Spyderco",
+  "model": "Lil' Temperance 3",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "manix-2",
+  "brand": "Spyderco",
+  "model": "Manix 2",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "ball-bearing-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "manix-2-xl",
+  "brand": "Spyderco",
+  "model": "Manix 2 XL",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "ball-bearing-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "mantra-4",
+  "brand": "Spyderco",
+  "model": "Mantra 4",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "liner-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "matriarch-2",
+  "brand": "Spyderco",
+  "model": "Matriarch 2",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "mcbee",
+  "brand": "Spyderco",
+  "model": "McBee",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "chris-reeve-integral-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "meerkat",
+  "brand": "Spyderco",
+  "model": "Meerkat",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "phantom-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "microjimbo",
+  "brand": "Spyderco",
+  "model": "MicroJimbo",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "military-2",
+  "brand": "Spyderco",
+  "model": "Military 2",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "military-model",
+  "brand": "Spyderco",
+  "model": "Military Model",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "native-chief",
+  "brand": "Spyderco",
+  "model": "Native Chief",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "p-kal",
+  "brand": "Spyderco",
+  "model": "P'Kal",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "ball-bearing-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "para-3",
+  "brand": "Spyderco",
+  "model": "Para 3",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "para-military-2",
+  "brand": "Spyderco",
+  "model": "Para Military 2",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "persistence",
+  "brand": "Spyderco",
+  "model": "Persistence",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "liner-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "polestar",
+  "brand": "Spyderco",
+  "model": "Polestar",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "liner-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "police-4",
+  "brand": "Spyderco",
+  "model": "Police 4 Lightweight",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "police-model",
+  "brand": "Spyderco",
+  "model": "Police Model",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "rescue-3",
+  "brand": "Spyderco",
+  "model": "Rescue 3",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "rescue-79mm",
+  "brand": "Spyderco",
+  "model": "Rescue 79mm",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "retract",
+  "brand": "Spyderco",
+  "model": "Retract",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "rockjumper",
+  "brand": "Spyderco",
+  "model": "RockJumper",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "sage-1",
+  "brand": "Spyderco",
+  "model": "Sage 1",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "liner-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "sage-5",
+  "brand": "Spyderco",
+  "model": "Sage 5",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "salt-2-wharncliffe",
+  "brand": "Spyderco",
+  "model": "Salt 2 Wharncliffe",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "saver",
+  "brand": "Spyderco",
+  "model": "Saver",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "shaman",
+  "brand": "Spyderco",
+  "model": "Shaman",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "slym",
+  "brand": "Spyderco",
+  "model": "Slym",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "chris-reeve-integral-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "smock",
+  "brand": "Spyderco",
+  "model": "Smock",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "spyopera",
+  "brand": "Spyderco",
+  "model": "SpyOpera",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "spydiechef",
+  "brand": "Spyderco",
+  "model": "SpydieChef",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "stretch-2",
+  "brand": "Spyderco",
+  "model": "Stretch 2",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "stretch-2-xl",
+  "brand": "Spyderco",
+  "model": "Stretch 2 XL",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "swayback",
+  "brand": "Spyderco",
+  "model": "Swayback",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "tasman",
+  "brand": "Spyderco",
+  "model": "Tasman",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "techno-2",
+  "brand": "Spyderco",
+  "model": "Techno 2",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "chris-reeve-integral-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "techno-3",
+  "brand": "Spyderco",
+  "model": "Techno 3",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "chris-reeve-integral-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "tenacious",
+  "brand": "Spyderco",
+  "model": "Tenacious",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "liner-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "uptern",
+  "brand": "Spyderco",
+  "model": "UpTern",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "back-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "yojumbo",
+  "brand": "Spyderco",
+  "model": "YoJumbo",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "discovered",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "yojimbo-2",
+  "brand": "Spyderco",
+  "model": "Yojimbo 2",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "compression-lock"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "zt-0450cf",
+  "brand": "Zero Tolerance",
+  "model": "0450CF",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "liner-lock",
+   "flipper"
+  ],
+  "comparable": true
+ },
+ {
+  "slug": "zt-0562cf",
+  "brand": "Zero Tolerance",
+  "model": "0562CF",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "frame-lock",
+   "flipper"
+  ],
+  "comparable": true
+ }
+]

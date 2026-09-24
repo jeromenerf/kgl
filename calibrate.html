@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calibrate · Knife Geometry Lab</title>
+<link rel="stylesheet" href="./static/app.css">
+
+</head><body data-static="1">
+<nav><b>KGL</b>
+<a href="index.html">compare</a>
+<a href="calibrate.html">calibrate</a>
+<a href="demo.html">demo</a>
+<span class="dim">published fe62126a4bdb</span>
+
+</nav>
+<main>
+<h1>Display calibration (1:1)</h1>
+<p>Hold a physical reference against the screen and adjust the bar until both ends match exactly.
+Browser zoom must be 100 %; the calibration is only valid for this display, this zoom and this device pixel ratio.
+DPI declarations are not trusted (spec 001 US8).</p>
+<p>
+<label>reference <select id="ref">
+<option value="85.60">ID-1 card width (credit card) — 85.60 mm</option>
+<option value="53.98">ID-1 card height — 53.98 mm</option>
+<option value="100">ruler — 100 mm</option>
+<option value="200">ruler — 200 mm</option>
+</select></label>
+<label>name <input id="name" value="default" size="14"></label>
+</p>
+<div id="calbar"><div id="bar"></div></div>
+<p><input type="range" id="w" min="100" max="2000" step="0.5" style="width:60%">
+<kbd>←</kbd>/<kbd>→</kbd> 0.5 px, <kbd>shift</kbd> 5 px</p>
+<p id="readout"></p>
+<p><button id="save">save calibration</button> <span id="msg"></span></p>
+<script type="module">
+import { api } from ".\/static/kgl-data.js";
+const bar = document.getElementById("bar"), w = document.getElementById("w"), ref = document.getElementById("ref");
+const readout = document.getElementById("readout");
+function update() {
+  bar.style.width = w.value + "px";
+  const k = w.value / ref.value;
+  readout.textContent = `${(+w.value).toFixed(1)} css px for ${ref.value} mm → ${k.toFixed(4)} css px/mm · DPR ${window.devicePixelRatio} · screen ${screen.width}×${screen.height}`;
+}
+api("/api/calibrations").then(r => r.json()).then(cs => {
+  const c = cs.find(c => c.name === document.getElementById("name").value) || cs[0];
+  w.value = c ? c.css_px_per_mm * ref.value : 96 / 25.4 * ref.value;
+  update();
+});
+w.addEventListener("input", update);
+ref.addEventListener("change", update);
+document.addEventListener("keydown", e => {
+  const d = (e.shiftKey ? 5 : 0.5) * (e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0);
+  if (d) { w.value = +w.value + d; update(); e.preventDefault(); }
+});
+document.getElementById("save").addEventListener("click", async () => {
+  const body = {
+    name: document.getElementById("name").value, css_px_per_mm: w.value / ref.value,
+    device_pixel_ratio: window.devicePixelRatio, reference: ref.selectedOptions[0].text,
+    screen: { width: screen.width, height: screen.height, userAgent: navigator.userAgent },
+  };
+  const r = await api("/api/calibrations", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  document.getElementById("msg").textContent = r.ok ? "saved" : await r.text();
+});
+</script>
+</main></body></html>

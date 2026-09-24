@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compare · Knife Geometry Lab</title>
+<link rel="stylesheet" href="./static/app.css">
+
+</head><body data-static="1">
+<nav><b>KGL</b>
+<a href="index.html">compare</a>
+<a href="calibrate.html">calibrate</a>
+<a href="demo.html">demo</a>
+<span class="dim">published fe62126a4bdb</span>
+
+</nav>
+<main>
+<div id="wb">
+<aside id="controls">
+
+<h2 class="group">Display</h2>
+<h2>Layout</h2>
+<div class="radio">
+<label><input type="radio" name="layout" value="single"> single <kbd>s</kbd> <kbd>←</kbd><kbd>→</kbd></label>
+<label><input type="radio" name="layout" value="rows"> rows <kbd>r</kbd></label>
+<label><input type="radio" name="layout" value="columns"> columns <kbd>c</kbd></label>
+<label><input type="radio" name="layout" value="grid"> grid <kbd>g</kbd></label>
+<label><input type="radio" name="layout" value="overlay"> overlay <kbd>o</kbd></label>
+</div>
+<h2>Displayed order</h2>
+<ol id="order" class="dim"></ol>
+<h2>Opacity <span id="opv"></span></h2>
+<input type="range" id="opacity" min="0.05" max="1" step="0.05"> <kbd>[</kbd> <kbd>]</kbd>
+<h2>Layers</h2>
+<div id="layers"></div>
+<h2>Alignment</h2>
+<div class="radio">
+<label><input type="radio" name="align" value="frame"> handle frame</label>
+<label><input type="radio" name="align" value="pivot"> pivot</label>
+<label><input type="radio" name="align" value="junction"> blade/handle junction</label>
+<label><input type="radio" name="align" value="tip"> tip</label>
+<label><input type="radio" name="align" value="butt"> butt</label>
+</div>
+<h2>Orientation</h2>
+<div class="radio">
+<label><input type="radio" name="orient" value="frame"> handle frame</label>
+<label><input type="radio" name="orient" value="pivot_tip"> pivot→tip horizontal</label>
+<label><input type="radio" name="orient" value="pivot_butt"> pivot→butt horizontal</label>
+</div>
+<h2>Rotation about pivot <span id="rotv"></span></h2>
+<input type="range" id="rotation" min="-45" max="45" step="1"> <button id="rotreset" title="back to 0°">0</button>
+<p class="dim">+ raises the tip · <kbd>,</kbd> <kbd>.</kbd> 1° · <kbd>0</kbd> reset · display only</p>
+<h2>Scale</h2>
+<div class="radio">
+<label><input type="radio" name="scale" value="fit"> common, fit screen</label>
+<label><input type="radio" name="scale" value="physical"> 1:1 physical <kbd>m</kbd></label>
+<select id="calsel" hidden title="display calibration"></select>
+</div>
+<p id="calib" class="dim"></p>
+</aside>
+<section id="main">
+<div id="stage"></div>
+<h2 id="measures-title">Measurements <span class="dim">(canonical frame, rotation not applied; mm / degrees; hover a header for its definition)</span></h2>
+<table id="measures"></table>
+</section>
+<aside id="knives">
+<h2>Knives</h2>
+<input id="filter" type="search" placeholder="filter: brand, model, tag  (/)" autocomplete="off">
+
+<label class="dim">favourites <select id="minstars"><option value="0">all</option><option value="1">★ and more</option><option value="2">★★ and more</option><option value="3">★★★ and more</option><option value="4">★★★★ and more</option><option value="5">★★★★★</option></select></label>
+<div id="pick"><p class="dim">loading…</p></div>
+</aside>
+</div>
+<script type="module" src="./static/workbench.js"></script>
+</main></body></html>
