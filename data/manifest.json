@@ -1,5 +1,5 @@
 {
- "backend_commit": "fe62126a4bdb78eaed7e74b187b37cceee94d7a3",
+ "backend_commit": "b56f523c21b90ee4fce89f490184d358a8b15c7e",
  "worker_code_sha256": "bffaa2891679f85224524643079c8f5f9e071383a584953fbb166de825acfcd9",
  "catalog_lock_sha256": "9274dff9f58cc7ce14d957e343ab4dfeb78a86e4af7a56aa175294f5fe9e12a0",
  "geometries": 102,
