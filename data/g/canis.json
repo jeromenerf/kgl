@@ -2,7 +2,7 @@
  "slug": "canis",
  "brand": "Spyderco",
  "model": "Canis",
- "version": 8,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -2519,6 +2519,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 996,
+   "px_to_mm": [
+    [
+     0.06107674157235394,
+     0.07918100554365227,
+     -65.14064254460092
+    ],
+    [
+     0.07918100554365227,
+     -0.06107674157235394,
+     -1.6191392078368194
+    ]
+   ],
+   "url": "img/canis-closed.webp",
+   "width": 866
+  },
   "height": 1135,
   "px_to_mm": [
    [

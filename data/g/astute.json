@@ -2,7 +2,7 @@
  "slug": "astute",
  "brand": "Spyderco",
  "model": "Astute",
- "version": 8,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4747,6 +4747,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 806,
+   "px_to_mm": [
+    [
+     0.06256240138169859,
+     0.07801247293449451,
+     -55.521947479545695
+    ],
+    [
+     0.07801247293449451,
+     -0.06256240138169859,
+     -0.7807490503711563
+    ]
+   ],
+   "url": "img/astute-closed.webp",
+   "width": 716
+  },
   "height": 1430,
   "px_to_mm": [
    [

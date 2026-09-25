@@ -2,7 +2,7 @@
  "slug": "para-3",
  "brand": "Spyderco",
  "model": "Para 3",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5263,6 +5263,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 980,
+   "px_to_mm": [
+    [
+     0.055529746821750964,
+     0.08316518032152788,
+     -61.07235803406511
+    ],
+    [
+     0.08316518032152788,
+     -0.055529746821750964,
+     -1.4325110942840782
+    ]
+   ],
+   "url": "img/para-3-closed.webp",
+   "width": 722
+  },
   "height": 1498,
   "px_to_mm": [
    [

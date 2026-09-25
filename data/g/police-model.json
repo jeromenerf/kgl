@@ -2,7 +2,7 @@
  "slug": "police-model",
  "brand": "Spyderco",
  "model": "Police Model",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6195,6 +6195,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1213,
+   "px_to_mm": [
+    [
+     0.05323717695503909,
+     0.08465106608813533,
+     -73.87827348576558
+    ],
+    [
+     0.08465106608813533,
+     -0.05323717695503908,
+     0.1677287594380843
+    ]
+   ],
+   "url": "img/police-model-closed.webp",
+   "width": 822
+  },
   "height": 2027,
   "px_to_mm": [
    [

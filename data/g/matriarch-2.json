@@ -2,7 +2,7 @@
  "slug": "matriarch-2",
  "brand": "Spyderco",
  "model": "Matriarch 2",
- "version": 6,
+ "version": 7,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6467,6 +6467,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1176,
+   "px_to_mm": [
+    [
+     0.04413461286982156,
+     0.08973369460147607,
+     -69.70341726453671
+    ],
+    [
+     0.08973369460147607,
+     -0.04413461286982156,
+     -3.1896693070778426
+    ]
+   ],
+   "url": "img/matriarch-2-closed.webp",
+   "width": 733
+  },
   "height": 1756,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "stretch-2",
  "brand": "Spyderco",
  "model": "Stretch 2",
- "version": 6,
+ "version": 7,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6003,6 +6003,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 995,
+   "px_to_mm": [
+    [
+     0.06333467371511364,
+     0.07738681480329897,
+     -68.99506887014965
+    ],
+    [
+     0.07738681480329897,
+     -0.06333467371511366,
+     -0.7396111035914785
+    ]
+   ],
+   "url": "img/stretch-2-closed.webp",
+   "width": 942
+  },
   "height": 1650,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "cat",
  "brand": "Spyderco",
  "model": "Cat",
- "version": 6,
+ "version": 7,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4427,6 +4427,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 832,
+   "px_to_mm": [
+    [
+     0.03811621606952494,
+     0.09245081975051,
+     -48.77262932742221
+    ],
+    [
+     0.09245081975051,
+     -0.038116216069524936,
+     -5.191899404237365
+    ]
+   ],
+   "url": "img/cat-closed.webp",
+   "width": 529
+  },
   "height": 1296,
   "px_to_mm": [
    [

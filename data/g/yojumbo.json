@@ -2,7 +2,7 @@
  "slug": "yojumbo",
  "brand": "Spyderco",
  "model": "YoJumbo",
- "version": 8,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -2515,6 +2515,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1231,
+   "px_to_mm": [
+    [
+     0.05691087377571845,
+     0.08222622723975755,
+     -74.15545675198803
+    ],
+    [
+     0.08222622723975755,
+     -0.056910873775718455,
+     -3.543630804110973
+    ]
+   ],
+   "url": "img/yojumbo-closed.webp",
+   "width": 923
+  },
   "height": 1065,
   "px_to_mm": [
    [

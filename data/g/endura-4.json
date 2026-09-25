@@ -2,7 +2,7 @@
  "slug": "endura-4",
  "brand": "Spyderco",
  "model": "Endura 4",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5499,6 +5499,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1142,
+   "px_to_mm": [
+    [
+     0.04727176491357418,
+     0.0881213949160803,
+     -68.8707819745091
+    ],
+    [
+     0.0881213949160803,
+     -0.04727176491357418,
+     -2.0949430676179315
+    ]
+   ],
+   "url": "img/endura-4-closed.webp",
+   "width": 744
+  },
   "height": 1907,
   "px_to_mm": [
    [

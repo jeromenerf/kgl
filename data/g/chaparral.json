@@ -2,7 +2,7 @@
  "slug": "chaparral",
  "brand": "Spyderco",
  "model": "Chaparral Lightweight",
- "version": 19,
+ "version": 20,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6019,6 +6019,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 857,
+   "px_to_mm": [
+    [
+     0.0388507416134533,
+     0.09214455966623691,
+     -50.32563879055011
+    ],
+    [
+     0.09214455966623691,
+     -0.0388507416134533,
+     -5.545657217546438
+    ]
+   ],
+   "url": "img/chaparral-closed.webp",
+   "width": 547
+  },
   "height": 1341,
   "px_to_mm": [
    [

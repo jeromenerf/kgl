@@ -2,7 +2,7 @@
  "slug": "salt-2-wharncliffe",
  "brand": "Spyderco",
  "model": "Salt 2 Wharncliffe",
- "version": 5,
+ "version": 6,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6879,6 +6879,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 898,
+   "px_to_mm": [
+    [
+     0.06209764324016273,
+     0.0783829235485477,
+     -61.09923893650827
+    ],
+    [
+     0.07838292354854771,
+     -0.06209764324016273,
+     1.1455234568435824
+    ]
+   ],
+   "url": "img/salt-2-wharncliffe-closed.webp",
+   "width": 785
+  },
   "height": 1457,
   "px_to_mm": [
    [

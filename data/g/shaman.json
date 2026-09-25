@@ -2,7 +2,7 @@
  "slug": "shaman",
  "brand": "Spyderco",
  "model": "Shaman",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4999,6 +4999,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 991,
+   "px_to_mm": [
+    [
+     0.06234190017202059,
+     0.07818879384503781,
+     -66.98968961325866
+    ],
+    [
+     0.07818879384503781,
+     -0.06234190017202059,
+     -1.9470500099856682
+    ]
+   ],
+   "url": "img/shaman-closed.webp",
+   "width": 914
+  },
   "height": 1721,
   "px_to_mm": [
    [

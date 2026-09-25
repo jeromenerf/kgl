@@ -2,7 +2,7 @@
  "slug": "amalgam",
  "brand": "Spyderco",
  "model": "Amalgam",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5219,6 +5219,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1154,
+   "px_to_mm": [
+    [
+     0.05323558703572464,
+     0.0846520659698379,
+     -72.98809250308344
+    ],
+    [
+     0.0846520659698379,
+     -0.05323558703572464,
+     -8.60241754234427
+    ]
+   ],
+   "url": "img/amalgam-closed.webp",
+   "width": 901
+  },
   "height": 1887,
   "px_to_mm": [
    [

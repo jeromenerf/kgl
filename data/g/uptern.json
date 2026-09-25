@@ -2,7 +2,7 @@
  "slug": "uptern",
  "brand": "Spyderco",
  "model": "UpTern",
- "version": 8,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5559,6 +5559,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 814,
+   "px_to_mm": [
+    [
+     0.0620379812228265,
+     0.07843015291197787,
+     -55.073806887658364
+    ],
+    [
+     0.07843015291197787,
+     -0.0620379812228265,
+     1.4930027927243321
+    ]
+   ],
+   "url": "img/uptern-closed.webp",
+   "width": 704
+  },
   "height": 1357,
   "px_to_mm": [
    [

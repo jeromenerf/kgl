@@ -2,7 +2,7 @@
  "slug": "saver",
  "brand": "Spyderco",
  "model": "Saver",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -7535,6 +7535,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 966,
+   "px_to_mm": [
+    [
+     0.04992554328628931,
+     0.08664548532710084,
+     -60.0814865435685
+    ],
+    [
+     0.08664548532710083,
+     -0.04992554328628931,
+     -1.5988185143992535
+    ]
+   ],
+   "url": "img/saver-closed.webp",
+   "width": 696
+  },
   "height": 1471,
   "px_to_mm": [
    [

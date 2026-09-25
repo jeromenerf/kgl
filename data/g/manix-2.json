@@ -2,7 +2,7 @@
  "slug": "manix-2",
  "brand": "Spyderco",
  "model": "Manix 2",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -7363,6 +7363,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1077,
+   "px_to_mm": [
+    [
+     0.049880953267765496,
+     0.0866711630307278,
+     -66.71373002570093
+    ],
+    [
+     0.0866711630307278,
+     -0.04988095326776549,
+     -4.58403648909081
+    ]
+   ],
+   "url": "img/manix-2-closed.webp",
+   "width": 788
+  },
   "height": 1753,
   "px_to_mm": [
    [

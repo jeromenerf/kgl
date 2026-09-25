@@ -2,7 +2,7 @@
  "slug": "smock",
  "brand": "Spyderco",
  "model": "Smock",
- "version": 8,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4511,6 +4511,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 993,
+   "px_to_mm": [
+    [
+     0.0587663744977626,
+     0.08091052606669116,
+     -63.06932514595588
+    ],
+    [
+     0.08091052606669118,
+     -0.058766374497762605,
+     -4.410757311831411
+    ]
+   ],
+   "url": "img/smock-closed.webp",
+   "width": 816
+  },
   "height": 1639,
   "px_to_mm": [
    [

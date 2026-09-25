@@ -2,7 +2,7 @@
  "slug": "meerkat",
  "brand": "Spyderco",
  "model": "Meerkat",
- "version": 6,
+ "version": 7,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5199,6 +5199,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 759,
+   "px_to_mm": [
+    [
+     0.05138375261733009,
+     0.0857887519839345,
+     -47.46610479624962
+    ],
+    [
+     0.0857887519839345,
+     -0.05138375261733008,
+     -3.3363540657976465
+    ]
+   ],
+   "url": "img/meerkat-closed.webp",
+   "width": 565
+  },
   "height": 1123,
   "px_to_mm": [
    [

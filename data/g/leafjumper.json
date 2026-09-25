@@ -2,7 +2,7 @@
  "slug": "leafjumper",
  "brand": "Spyderco",
  "model": "LeafJumper",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6183,6 +6183,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1004,
+   "px_to_mm": [
+    [
+     0.060731975511446865,
+     0.07944574973198393,
+     -67.65829220069645
+    ],
+    [
+     0.07944574973198393,
+     -0.060731975511446865,
+     3.1258123383375933
+    ]
+   ],
+   "url": "img/leafjumper-closed.webp",
+   "width": 840
+  },
   "height": 1565,
   "px_to_mm": [
    [

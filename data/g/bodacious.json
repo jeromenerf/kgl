@@ -2,7 +2,7 @@
  "slug": "bodacious",
  "brand": "Spyderco",
  "model": "Bodacious",
- "version": 17,
+ "version": 18,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6323,6 +6323,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1033,
+   "px_to_mm": [
+    [
+     0.05904142341007947,
+     0.08071003854361442,
+     -68.4480585441232
+    ],
+    [
+     0.08071003854361442,
+     -0.05904142341007947,
+     -1.816844994049288
+    ]
+   ],
+   "url": "img/bodacious-closed.webp",
+   "width": 876
+  },
   "height": 1744,
   "px_to_mm": [
    [

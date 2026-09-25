@@ -2,7 +2,7 @@
  "slug": "crk-umnumzaan",
  "brand": "Chris Reeve Knives",
  "model": "Umnumzaan Drop Point",
- "version": 5,
+ "version": 6,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3067,6 +3067,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 306,
+   "px_to_mm": [
+    [
+     0.1135654907695124,
+     0.00047975100124118353,
+     -61.7531002264561
+    ],
+    [
+     -0.0004797510012411832,
+     0.1135654907695124,
+     -13.75771405872171
+    ]
+   ],
+   "url": "img/crk-umnumzaan-closed.webp",
+   "width": 1088
+  },
   "height": 261,
   "px_to_mm": [
    [

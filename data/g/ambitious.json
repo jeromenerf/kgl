@@ -2,7 +2,7 @@
  "slug": "ambitious",
  "brand": "Spyderco",
  "model": "Ambitious",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5823,6 +5823,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 862,
+   "px_to_mm": [
+    [
+     0.0451231798981765,
+     0.08924067814554525,
+     -51.39358787691834
+    ],
+    [
+     0.08924067814554526,
+     -0.0451231798981765,
+     -5.110620973539273
+    ]
+   ],
+   "url": "img/ambitious-closed.webp",
+   "width": 575
+  },
   "height": 1209,
   "px_to_mm": [
    [

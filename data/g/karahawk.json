@@ -2,7 +2,7 @@
  "slug": "karahawk",
  "brand": "Spyderco",
  "model": "Karahawk",
- "version": 8,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5007,6 +5007,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1047,
+   "px_to_mm": [
+    [
+     0.05764669753547118,
+     0.08171204478688499,
+     -69.70064506132897
+    ],
+    [
+     0.08171204478688499,
+     -0.05764669753547119,
+     3.8497066262320145
+    ]
+   ],
+   "url": "img/karahawk-closed.webp",
+   "width": 835
+  },
   "height": 1407,
   "px_to_mm": [
    [

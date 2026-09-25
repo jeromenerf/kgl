@@ -2,7 +2,7 @@
  "slug": "lil-native",
  "brand": "Spyderco",
  "model": "Lil' Native",
- "version": 18,
+ "version": 19,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4427,6 +4427,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 767,
+   "px_to_mm": [
+    [
+     0.05913114893244242,
+     0.08064432544159147,
+     -50.62327419620606
+    ],
+    [
+     0.08064432544159147,
+     -0.05913114893244241,
+     -2.5936364157449336
+    ]
+   ],
+   "url": "img/lil-native-closed.webp",
+   "width": 677
+  },
   "height": 1222,
   "px_to_mm": [
    [

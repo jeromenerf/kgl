@@ -2,7 +2,7 @@
  "slug": "atlantic",
  "brand": "Spyderco",
  "model": "Atlantic",
- "version": 6,
+ "version": 7,
  "active": true,
  "pinned": false,
  "frame": {
@@ -7939,6 +7939,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1072,
+   "px_to_mm": [
+    [
+     0.052566885979527286,
+     0.08506892792562615,
+     -67.15253608792241
+    ],
+    [
+     0.08506892792562615,
+     -0.05256688597952729,
+     -2.0154393662381596
+    ]
+   ],
+   "url": "img/atlantic-closed.webp",
+   "width": 799
+  },
   "height": 1682,
   "px_to_mm": [
    [

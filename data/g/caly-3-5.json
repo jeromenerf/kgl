@@ -2,7 +2,7 @@
  "slug": "caly-3-5",
  "brand": "Spyderco",
  "model": "Caly 3.5",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5867,6 +5867,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1014,
+   "px_to_mm": [
+    [
+     0.03943617474242244,
+     0.09189552830081082,
+     -58.200699455018324
+    ],
+    [
+     0.09189552830081082,
+     -0.03943617474242244,
+     -2.387533522581556
+    ]
+   ],
+   "url": "img/caly-3-5-closed.webp",
+   "width": 570
+  },
   "height": 1602,
   "px_to_mm": [
    [

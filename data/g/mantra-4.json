@@ -2,7 +2,7 @@
  "slug": "mantra-4",
  "brand": "Spyderco",
  "model": "Mantra 4",
- "version": 6,
+ "version": 7,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5939,6 +5939,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 888,
+   "px_to_mm": [
+    [
+     0.060327062312612194,
+     0.07975365541923586,
+     -59.613623386821835
+    ],
+    [
+     0.07975365541923586,
+     -0.06032706231261219,
+     -2.4225811964019233
+    ]
+   ],
+   "url": "img/mantra-4-closed.webp",
+   "width": 791
+  },
   "height": 1586,
   "px_to_mm": [
    [

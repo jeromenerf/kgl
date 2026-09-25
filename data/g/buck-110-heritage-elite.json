@@ -2,7 +2,7 @@
  "slug": "buck-110-heritage-elite",
  "brand": "Buck",
  "model": "110 Slim Heritage Elite",
- "version": 6,
+ "version": 7,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3679,6 +3679,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 347,
+   "px_to_mm": [
+    [
+     -0.09993745832033993,
+     -0.003536159565167198,
+     61.417918375402145
+    ],
+    [
+     0.003536159565167198,
+     -0.09993745832033993,
+     18.607909837263048
+    ]
+   ],
+   "url": "img/buck-110-heritage-elite-closed.webp",
+   "width": 1258
+  },
   "height": 393,
   "px_to_mm": [
    [

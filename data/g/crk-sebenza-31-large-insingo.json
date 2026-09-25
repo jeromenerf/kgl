@@ -2,7 +2,7 @@
  "slug": "crk-sebenza-31-large-insingo",
  "brand": "Chris Reeve Knives",
  "model": "Sebenza 31 Large Insingo",
- "version": 6,
+ "version": 7,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3935,6 +3935,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 259,
+   "px_to_mm": [
+    [
+     0.12709745993853486,
+     -0.00228499700535136,
+     -65.411997429742
+    ],
+    [
+     0.00228499700535136,
+     0.12709745993853486,
+     -14.935670437070058
+    ]
+   ],
+   "url": "img/crk-sebenza-31-large-insingo-closed.webp",
+   "width": 965
+  },
   "height": 396,
   "px_to_mm": [
    [

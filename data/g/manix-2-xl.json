@@ -2,7 +2,7 @@
  "slug": "manix-2-xl",
  "brand": "Spyderco",
  "model": "Manix 2 XL",
- "version": 6,
+ "version": 7,
  "active": true,
  "pinned": false,
  "frame": {
@@ -7107,6 +7107,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1126,
+   "px_to_mm": [
+    [
+     0.058437332173076034,
+     0.08114849480115804,
+     -75.34399093129716
+    ],
+    [
+     0.08114849480115804,
+     -0.05843733217307605,
+     -1.4598027539979146
+    ]
+   ],
+   "url": "img/manix-2-xl-closed.webp",
+   "width": 965
+  },
   "height": 1868,
   "px_to_mm": [
    [

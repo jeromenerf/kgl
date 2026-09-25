@@ -2,7 +2,7 @@
  "slug": "mcbee",
  "brand": "Spyderco",
  "model": "McBee",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -2131,6 +2131,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 584,
+   "px_to_mm": [
+    [
+     0.05733261934269701,
+     0.08193272093190493,
+     -37.85618319298001
+    ],
+    [
+     0.08193272093190493,
+     -0.05733261934269701,
+     -0.6486701067235439
+    ]
+   ],
+   "url": "img/mcbee-closed.webp",
+   "width": 463
+  },
   "height": 745,
   "px_to_mm": [
    [

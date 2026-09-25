@@ -2,7 +2,7 @@
  "slug": "rockjumper",
  "brand": "Spyderco",
  "model": "RockJumper",
- "version": 8,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3371,6 +3371,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1004,
+   "px_to_mm": [
+    [
+     0.06155886605767227,
+     0.07880676373061873,
+     -67.55443424894648
+    ],
+    [
+     0.07880676373061873,
+     -0.06155886605767228,
+     3.1420850884686296
+    ]
+   ],
+   "url": "img/rockjumper-closed.webp",
+   "width": 860
+  },
   "height": 1129,
   "px_to_mm": [
    [

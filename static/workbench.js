@@ -8,7 +8,8 @@ const SVGNS = "http://www.w3.org/2000/svg";
 
 // Layers that do not come from analyzers.
 const BASE_LAYERS = [
-  ["image", "image", true],
+  ["image", "open image", true],
+  ["image_closed", "folded image", false],
   ["whole", "whole contour", false],
   ["blade", "blade contour", true],
   ["handle", "handle contour", true],
@@ -183,10 +184,12 @@ function drawItem(svg, it, overlay) {
   const [cx, cy] = rotationCentre(it);
   const g = el("g", { transform: `translate(${dx} ${dy}) rotate(${angle(it)} ${cx} ${cy})` }, svg);
   const L = state.layers;
-  if (L.image && it.cutout?.url) {
-    const m = it.cutout.px_to_mm;
+  // Open and folded photographs are alternative layers (spec 006); axes and points do not depend on them.
+  for (const [on, cut] of [[L.image, it.cutout], [L.image_closed, it.cutout?.closed]]) {
+    if (!on || !cut?.url) continue;
+    const m = cut.px_to_mm;
     el("image", {
-      href: it.cutout.url, width: it.cutout.width, height: it.cutout.height, opacity: overlay ? state.opacity : 1,
+      href: cut.url, width: cut.width, height: cut.height, opacity: overlay ? state.opacity : 1,
       transform: `matrix(${m[0][0]} ${m[1][0]} ${m[0][1]} ${m[1][1]} ${m[0][2]} ${m[1][2]})`, preserveAspectRatio: "none",
     }, g);
   }

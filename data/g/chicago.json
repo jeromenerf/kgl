@@ -2,7 +2,7 @@
  "slug": "chicago",
  "brand": "Spyderco",
  "model": "Chicago",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5735,6 +5735,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 731,
+   "px_to_mm": [
+    [
+     0.03848969693880526,
+     0.09229595456767822,
+     -43.08109204229987
+    ],
+    [
+     0.09229595456767821,
+     -0.03848969693880526,
+     -5.22444787867714
+    ]
+   ],
+   "url": "img/chicago-closed.webp",
+   "width": 475
+  },
   "height": 1105,
   "px_to_mm": [
    [

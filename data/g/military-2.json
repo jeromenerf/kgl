@@ -2,7 +2,7 @@
  "slug": "military-2",
  "brand": "Spyderco",
  "model": "Military 2",
- "version": 23,
+ "version": 24,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6495,6 +6495,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1285,
+   "px_to_mm": [
+    [
+     0.05133300472559552,
+     0.08581912738918981,
+     -77.87654967508827
+    ],
+    [
+     0.08581912738918981,
+     -0.051333004725595516,
+     -0.18108968621061194
+    ]
+   ],
+   "url": "img/military-2-closed.webp",
+   "width": 849
+  },
   "height": 2038,
   "px_to_mm": [
    [

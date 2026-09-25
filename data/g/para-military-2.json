@@ -2,7 +2,7 @@
  "slug": "para-military-2",
  "brand": "Spyderco",
  "model": "Para Military 2",
- "version": 6,
+ "version": 7,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6299,6 +6299,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1104,
+   "px_to_mm": [
+    [
+     0.05778182698265229,
+     0.08161654532352393,
+     -68.57263777474239
+    ],
+    [
+     0.08161654532352393,
+     -0.05778182698265229,
+     -0.733028706644925
+    ]
+   ],
+   "url": "img/para-military-2-closed.webp",
+   "width": 818
+  },
   "height": 1719,
   "px_to_mm": [
    [

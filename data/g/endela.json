@@ -2,7 +2,7 @@
  "slug": "endela",
  "brand": "Spyderco",
  "model": "Endela",
- "version": 8,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -7139,6 +7139,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 982,
+   "px_to_mm": [
+    [
+     0.06298261042118024,
+     0.07767361704294348,
+     -67.52692458204005
+    ],
+    [
+     0.07767361704294348,
+     -0.06298261042118024,
+     1.8730933214362793
+    ]
+   ],
+   "url": "img/endela-closed.webp",
+   "width": 877
+  },
   "height": 1686,
   "px_to_mm": [
    [

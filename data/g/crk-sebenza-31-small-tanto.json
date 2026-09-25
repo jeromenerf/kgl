@@ -2,7 +2,7 @@
  "slug": "crk-sebenza-31-small-tanto",
  "brand": "Chris Reeve Knives",
  "model": "Sebenza 31 Small Tanto",
- "version": 7,
+ "version": 8,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3571,6 +3571,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 120,
+   "px_to_mm": [
+    [
+     -0.24767512932834407,
+     -0.00038696301788849775,
+     50.87297190116182
+    ],
+    [
+     0.00038696301788849775,
+     -0.24767512932834407,
+     16.19317506752394
+    ]
+   ],
+   "url": "img/crk-sebenza-31-small-tanto-closed.webp",
+   "width": 430
+  },
   "height": 316,
   "px_to_mm": [
    [

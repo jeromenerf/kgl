@@ -2,7 +2,7 @@
  "slug": "alcyone",
  "brand": "Spyderco",
  "model": "Alcyone",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -2203,6 +2203,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 890,
+   "px_to_mm": [
+    [
+     0.06429359990125745,
+     0.07659199051948597,
+     -62.78421007388866
+    ],
+    [
+     0.07659199051948597,
+     -0.06429359990125745,
+     1.3619609413216196
+    ]
+   ],
+   "url": "img/alcyone-closed.webp",
+   "width": 850
+  },
   "height": 1093,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "tenacious",
  "brand": "Spyderco",
  "model": "Tenacious",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -7403,6 +7403,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 980,
+   "px_to_mm": [
+    [
+     0.05747049844838981,
+     0.08183606667047012,
+     -63.642251406703664
+    ],
+    [
+     0.08183606667047012,
+     -0.05747049844838982,
+     -3.1331778478485037
+    ]
+   ],
+   "url": "img/tenacious-closed.webp",
+   "width": 815
+  },
   "height": 1563,
   "px_to_mm": [
    [

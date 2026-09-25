@@ -2,7 +2,7 @@
  "slug": "essenza",
  "brand": "Spyderco",
  "model": "Essenza",
- "version": 7,
+ "version": 8,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5075,6 +5075,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 932,
+   "px_to_mm": [
+    [
+     0.057952295280410744,
+     0.08149559173189726,
+     -58.769877267509855
+    ],
+    [
+     0.08149559173189726,
+     -0.057952295280410744,
+     -2.354366116940409
+    ]
+   ],
+   "url": "img/essenza-closed.webp",
+   "width": 728
+  },
   "height": 1587,
   "px_to_mm": [
    [

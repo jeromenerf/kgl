@@ -2,7 +2,7 @@
  "slug": "stretch-2-xl",
  "brand": "Spyderco",
  "model": "Stretch 2 XL",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5187,6 +5187,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1046,
+   "px_to_mm": [
+    [
+     0.06198494443933691,
+     0.07847207568844038,
+     -71.98752802973374
+    ],
+    [
+     0.07847207568844038,
+     -0.06198494443933691,
+     -0.6426493890525258
+    ]
+   ],
+   "url": "img/stretch-2-xl-closed.webp",
+   "width": 965
+  },
   "height": 1892,
   "px_to_mm": [
    [

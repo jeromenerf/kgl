@@ -2,7 +2,7 @@
  "slug": "p-kal",
  "brand": "Spyderco",
  "model": "P'Kal",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -7091,6 +7091,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1015,
+   "px_to_mm": [
+    [
+     0.05804159449900905,
+     0.08143201648008357,
+     -64.02064135771141
+    ],
+    [
+     0.08143201648008357,
+     -0.05804159449900905,
+     -0.6250639027947869
+    ]
+   ],
+   "url": "img/p-kal-closed.webp",
+   "width": 751
+  },
   "height": 1444,
   "px_to_mm": [
    [

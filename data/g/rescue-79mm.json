@@ -2,7 +2,7 @@
  "slug": "rescue-79mm",
  "brand": "Spyderco",
  "model": "Rescue 79mm",
- "version": 6,
+ "version": 7,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6791,6 +6791,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 935,
+   "px_to_mm": [
+    [
+     0.055812319189631976,
+     0.08297580988863346,
+     -60.76102728819854
+    ],
+    [
+     0.08297580988863346,
+     -0.055812319189631976,
+     -0.5895193609709521
+    ]
+   ],
+   "url": "img/rescue-79mm-closed.webp",
+   "width": 730
+  },
   "height": 1497,
   "px_to_mm": [
    [

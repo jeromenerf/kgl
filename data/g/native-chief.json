@@ -2,7 +2,7 @@
  "slug": "native-chief",
  "brand": "Spyderco",
  "model": "Native Chief",
- "version": 8,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5215,6 +5215,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1089,
+   "px_to_mm": [
+    [
+     0.06051628895469176,
+     0.07961016751114301,
+     -70.99331021421037
+    ],
+    [
+     0.07961016751114301,
+     -0.06051628895469175,
+     -0.3742078848808923
+    ]
+   ],
+   "url": "img/native-chief-closed.webp",
+   "width": 957
+  },
   "height": 1911,
   "px_to_mm": [
    [

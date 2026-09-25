@@ -2,7 +2,7 @@
  "slug": "autonomy",
  "brand": "Spyderco",
  "model": "Autonomy",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5563,6 +5563,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 1171,
+   "px_to_mm": [
+    [
+     0.046171914826311194,
+     0.08870261710497536,
+     -71.04674365493626
+    ],
+    [
+     0.08870261710497536,
+     -0.046171914826311194,
+     -4.88630797327378
+    ]
+   ],
+   "url": "img/autonomy-closed.webp",
+   "width": 819
+  },
   "height": 1806,
   "px_to_mm": [
    [

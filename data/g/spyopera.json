@@ -2,7 +2,7 @@
  "slug": "spyopera",
  "brand": "Spyderco",
  "model": "SpyOpera",
- "version": 8,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -2099,6 +2099,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 893,
+   "px_to_mm": [
+    [
+     0.06300917785857059,
+     0.07765206697562546,
+     -58.713379009818865
+    ],
+    [
+     0.07765206697562546,
+     -0.06300917785857059,
+     -0.6709398451329331
+    ]
+   ],
+   "url": "img/spyopera-closed.webp",
+   "width": 742
+  },
   "height": 1078,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "zt-0562cf",
  "brand": "Zero Tolerance",
  "model": "0562CF",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3995,6 +3995,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 374,
+   "px_to_mm": [
+    [
+     0.11660999512346383,
+     -0.005015969790256607,
+     -61.74307694448492
+    ],
+    [
+     -0.005015969790256606,
+     -0.11660999512346383,
+     25.769001848824956
+    ]
+   ],
+   "url": "img/zt-0562cf-closed.webp",
+   "width": 1081
+  },
   "height": 360,
   "px_to_mm": [
    [

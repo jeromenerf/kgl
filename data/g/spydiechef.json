@@ -2,7 +2,7 @@
  "slug": "spydiechef",
  "brand": "Spyderco",
  "model": "SpydieChef",
- "version": 18,
+ "version": 19,
  "active": true,
  "pinned": false,
  "frame": {
@@ -2579,6 +2579,23 @@
   ]
  },
  "cutout": {
+  "closed": {
+   "height": 975,
+   "px_to_mm": [
+    [
+     0.06149720473141408,
+     0.07885489084528965,
+     -62.726466843642385
+    ],
+    [
+     0.07885489084528967,
+     -0.061497204731414075,
+     -0.8128665940797113
+    ]
+   ],
+   "url": "img/spydiechef-closed.webp",
+   "width": 835
+  },
   "height": 1172,
   "px_to_mm": [
    [
