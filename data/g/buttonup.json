@@ -2,7 +2,7 @@
  "slug": "buttonup",
  "brand": "Spyderco",
  "model": "ButtonUp",
- "version": 7,
+ "version": 8,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4055,38 +4055,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1058,
+   "blend": "multiply",
+   "height": 1125,
    "px_to_mm": [
     [
      0.046736041904615326,
      0.08840668745683236,
-     -63.33106575124873
+     -67.86114201381608
     ],
     [
      0.08840668745683238,
      -0.046736041904615326,
-     -5.757795166556168
+     -7.154623565345393
     ]
    ],
    "url": "img/buttonup-closed.webp",
-   "width": 719
+   "width": 786
   },
-  "height": 1759,
+  "display": "display.photo-band/1",
+  "height": 1825,
   "px_to_mm": [
    [
     0.040521180899532494,
     0.09142228338051595,
-    -137.77483705163047
+    -142.17258184835217
    ],
    [
     -0.09142228338051595,
     0.040521180899532494,
-    13.937388205031315
+    15.633948620544
    ]
   ],
   "url": "img/buttonup.webp",
-  "width": 980
+  "width": 1047
  },
  "quality": {
   "blade_handle": 0.3274695534506089,

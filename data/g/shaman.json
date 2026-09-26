@@ -2,7 +2,7 @@
  "slug": "shaman",
  "brand": "Spyderco",
  "model": "Shaman",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4999,38 +4999,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 991,
+   "blend": "multiply",
+   "height": 1060,
    "px_to_mm": [
     [
      0.06234190017202059,
      0.07818879384503781,
-     -66.98968961325866
+     -71.8264365781371
     ],
     [
      0.07818879384503781,
      -0.06234190017202059,
-     -1.9470500099856682
+     -2.492464059292317
     ]
    ],
    "url": "img/shaman-closed.webp",
-   "width": 914
+   "width": 983
   },
-  "height": 1721,
+  "display": "display.photo-band/1",
+  "height": 1790,
   "px_to_mm": [
    [
     0.05313733010295526,
     0.08471377780225346,
-    -148.19146183964816
+    -152.95582819977253
    ],
    [
     -0.08471377780225346,
     0.05313733010295526,
-    21.007744193364676
+    22.099079384476898
    ]
   ],
   "url": "img/shaman.webp",
-  "width": 1321
+  "width": 1390
  },
  "quality": {
   "blade_handle": 0.2661563111981485,

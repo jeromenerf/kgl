@@ -2,7 +2,7 @@
  "slug": "ambitious",
  "brand": "Spyderco",
  "model": "Ambitious",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5823,38 +5823,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 862,
+   "blend": "multiply",
+   "height": 933,
    "px_to_mm": [
     [
      0.0451231798981765,
      0.08924067814554525,
-     -51.39358787691834
+     -56.184819576462395
     ],
     [
      0.08924067814554526,
      -0.0451231798981765,
-     -5.110620973539273
+     -6.683790717136473
     ]
    ],
    "url": "img/ambitious-closed.webp",
-   "width": 575
+   "width": 647
   },
-  "height": 1209,
+  "display": "display.photo-band/1",
+  "height": 1280,
   "px_to_mm": [
    [
     0.052910349500415316,
     0.08485573001126033,
-    -101.90874544066243
+    -106.78621165462
    ],
    [
     -0.08485573001126033,
     0.052910349500415316,
-    12.719212508146015
+    13.850205817137288
    ]
   ],
   "url": "img/ambitious.webp",
-  "width": 938
+  "width": 1008
  },
  "quality": {
   "blade_handle": 0.29738495844313806,

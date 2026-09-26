@@ -2,7 +2,7 @@
  "slug": "salt-2-wharncliffe",
  "brand": "Spyderco",
  "model": "Salt 2 Wharncliffe",
- "version": 6,
+ "version": 7,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6879,38 +6879,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 898,
+   "blend": "multiply",
+   "height": 968,
    "px_to_mm": [
     [
      0.06209764324016273,
      0.0783829235485477,
-     -61.09923893650827
+     -66.04276049004014
     ],
     [
      0.07838292354854771,
      -0.06209764324016273,
-     1.1455234568435824
+     0.5724432362113925
     ]
    ],
    "url": "img/salt-2-wharncliffe-closed.webp",
-   "width": 785
+   "width": 855
   },
-  "height": 1457,
+  "display": "display.photo-band/1",
+  "height": 1528,
   "px_to_mm": [
    [
     0.052149075824624115,
     0.08532569302758465,
-    -127.53093938520895
+    -132.41523469282802
    ],
    [
     -0.08532569302758465,
     0.052149075824624115,
-    27.707480452779528
+    28.88620144340217
    ]
   ],
   "url": "img/salt-2-wharncliffe.webp",
-  "width": 1197
+  "width": 1268
  },
  "quality": {
   "blade_handle": 0.25700136612021857,

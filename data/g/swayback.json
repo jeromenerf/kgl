@@ -2,7 +2,7 @@
  "slug": "swayback",
  "brand": "Spyderco",
  "model": "Swayback",
- "version": 19,
+ "version": 20,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1571,38 +1571,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 995,
+   "blend": "multiply",
+   "height": 1065,
    "px_to_mm": [
     [
      0.06182344163052661,
      0.07859937700107343,
-     -66.40328880491049
+     -71.26522497941485
     ],
     [
      0.07859937700107343,
      -0.06182344163052661,
-     -3.7241665973015845
+     -4.305008997660968
     ]
    ],
    "url": "img/swayback-closed.webp",
-   "width": 832
+   "width": 901
   },
-  "height": 1062,
+  "display": "display.photo-band/1",
+  "height": 1100,
   "px_to_mm": [
    [
     0.09166949089957989,
     0.12296941243833459,
-    -149.95010369187622
+    -154.02824285529658
    ],
    [
     -0.12296941243833459,
     0.09166949089957989,
-    8.701558181180939
+    9.296256690417279
    ]
   ],
   "url": "img/swayback.webp",
-  "width": 904
+  "width": 942
  },
  "quality": {
   "blade_handle": 0.35430038510911427,

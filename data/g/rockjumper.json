@@ -2,7 +2,7 @@
  "slug": "rockjumper",
  "brand": "Spyderco",
  "model": "RockJumper",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3371,38 +3371,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1004,
+   "blend": "multiply",
+   "height": 1074,
    "px_to_mm": [
     [
      0.06155886605767227,
      0.07880676373061873,
-     -67.55443424894648
+     -72.42826847685328
     ],
     [
      0.07880676373061873,
      -0.06155886605767228,
-     3.1420850884686296
+     2.5431963564860864
     ]
    ],
    "url": "img/rockjumper-closed.webp",
-   "width": 860
+   "width": 929
   },
-  "height": 1129,
+  "display": "display.photo-band/1",
+  "height": 1171,
   "px_to_mm": [
    [
     0.07304610432623294,
     0.11805338251500343,
-    -135.00673085207734
+    -139.0198200757433
    ],
    [
     -0.11805338251500343,
     0.07304610432623294,
-    26.392524830946577
+    27.337677672910758
    ]
   ],
   "url": "img/rockjumper.webp",
-  "width": 910
+  "width": 952
  },
  "quality": {
   "blade_handle": 0.2500864752680733,

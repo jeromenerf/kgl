@@ -2,7 +2,7 @@
  "slug": "delica-4",
  "brand": "Spyderco",
  "model": "Delica 4",
- "version": 11,
+ "version": 12,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5699,38 +5699,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 996,
+   "blend": "multiply",
+   "height": 1066,
    "px_to_mm": [
     [
      0.0438612307141751,
      0.08986763844809713,
-     -59.172710448437435
+     -63.86177524186432
     ],
     [
      0.08986763844809713,
      -0.0438612307141751,
-     -2.352579112300459
+     -3.965746322406785
     ]
    ],
    "url": "img/delica-4-closed.webp",
-   "width": 611
+   "width": 681
   },
-  "height": 1480,
+  "display": "display.photo-band/1",
+  "height": 1551,
   "px_to_mm": [
    [
     0.05298072487587259,
     0.08481180809077883,
-    -126.3744586397166
+    -131.22405358476612
    ],
    [
     -0.08481180809077883,
     0.05298072487587259,
-    18.616032550122515
+    19.73632446239776
    ]
   ],
   "url": "img/delica-4.webp",
-  "width": 1124
+  "width": 1195
  },
  "quality": {
   "blade_handle": 0.2336874051593323,

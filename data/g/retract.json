@@ -2,7 +2,7 @@
  "slug": "retract",
  "brand": "Spyderco",
  "model": "Retract",
- "version": 8,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6539,38 +6539,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1023,
+   "blend": "multiply",
+   "height": 1093,
    "px_to_mm": [
     [
      0.053031029846860325,
      0.08478036254570637,
-     -64.71660170890544
+     -69.5085909073972
     ],
     [
      0.08478036254570637,
      -0.053031029846860325,
-     -3.616528457593235
+     -4.720518894891779
     ]
    ],
    "url": "img/retract-closed.webp",
-   "width": 737
+   "width": 806
   },
-  "height": 1571,
+  "display": "display.photo-band/1",
+  "height": 1639,
   "px_to_mm": [
    [
     0.04807171360818831,
     0.08768757238498696,
-    -137.37810066238163
+    -142.0466510822561
    ],
    [
     -0.08768757238498696,
     0.04807171360818831,
-    36.63805403990658
+    38.00038172727677
    ]
   ],
   "url": "img/retract.webp",
-  "width": 1293
+  "width": 1362
  },
  "quality": {
   "blade_handle": 0.235056258790436,

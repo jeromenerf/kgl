@@ -2,7 +2,7 @@
  "slug": "bradley-folder-2",
  "brand": "Spyderco",
  "model": "Bradley Folder 2",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -7939,38 +7939,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1110,
+   "blend": "multiply",
+   "height": 1178,
    "px_to_mm": [
     [
      0.048080813737291624,
      0.08768258293617875,
-     -66.10665492452326
+     -70.70189019305252
     ],
     [
      0.08768258293617877,
      -0.048080813737291624,
-     -7.0437467118584856
+     -8.384162840047791
     ]
    ],
    "url": "img/bradley-folder-2-closed.webp",
-   "width": 747
+   "width": 815
   },
-  "height": 1757,
+  "display": "display.photo-band/1",
+  "height": 1825,
   "px_to_mm": [
    [
     0.056819455943700616,
     0.08228942475349955,
-    -153.6779781074243
+    -158.45213423152333
    ],
    [
     -0.08228942475349955,
     0.056819455943700616,
-    6.5048521730443625
+    7.378970395867214
    ]
   ],
   "url": "img/bradley-folder-2.webp",
-  "width": 1319
+  "width": 1388
  },
  "quality": {
   "blade_handle": 0.19872611464968154,

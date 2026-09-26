@@ -2,7 +2,7 @@
  "slug": "crk-umnumzaan-tanto",
  "brand": "Chris Reeve Knives",
  "model": "Umnumzaan Tanto",
- "version": 8,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3711,38 +3711,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 306,
+   "blend": "multiply",
+   "height": 360,
    "px_to_mm": [
     [
      0.1148239144736646,
      -0.000049388024349411744,
-     -63.19107243601081
+     -66.28998465014232
     ],
     [
      0.000049388024349411934,
      0.1148239144736646,
-     -13.94480349769367
+     -17.046382665140044
     ]
    ],
    "url": "img/crk-umnumzaan-tanto-closed.webp",
-   "width": 1088
+   "width": 1142
   },
-  "height": 305,
+  "display": "display.photo-band/1",
+  "height": 361,
   "px_to_mm": [
    [
     0.11351412819041339,
     0.0027545353367718173,
-    -152.59430152288286
+    -155.84982410164406
    ],
    [
     -0.0027545353367718173,
     0.11351412819041339,
-    -12.833858099385992
+    -15.935126699287956
    ]
   ],
   "url": "img/crk-umnumzaan-tanto.webp",
-  "width": 1892
+  "width": 1948
  },
  "quality": {
   "blade_handle": 0.2769268774703557,

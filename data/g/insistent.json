@@ -2,7 +2,7 @@
  "slug": "insistent",
  "brand": "Spyderco",
  "model": "Insistent",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3071,38 +3071,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 798,
+   "blend": "multiply",
+   "height": 870,
    "px_to_mm": [
     [
      0.06044879741109526,
      0.0796614266226281,
-     -52.78921239522596
+     -57.82500066181843
     ],
     [
      0.07966142662262808,
      -0.060448797411095274,
-     -2.181343553009646
+     -2.871876548878251
     ]
    ],
    "url": "img/insistent-closed.webp",
-   "width": 700
+   "width": 771
   },
-  "height": 1169,
+  "display": "display.photo-band/1",
+  "height": 1225,
   "px_to_mm": [
    [
     0.04804607658099489,
     0.10032773583056433,
-    -104.83268194057862
+    -108.98714868810228
    ],
    [
     -0.10032773583056433,
     0.04804607658099489,
-    28.184348404000858
+    29.6482348629888
    ]
   ],
   "url": "img/insistent.webp",
-  "width": 864
+  "width": 920
  },
  "quality": {
   "blade_handle": 0.36034420939404804,

@@ -2,7 +2,7 @@
  "slug": "civilian",
  "brand": "Spyderco",
  "model": "Civilian",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -8043,38 +8043,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1318,
+   "blend": "multiply",
+   "height": 1386,
    "px_to_mm": [
     [
      0.03285988673508889,
      0.09444695783219875,
-     -73.31113728596397
+     -77.63418371771374
     ],
     [
      0.09444695783219877,
      -0.03285988673508889,
-     -3.126944388238357
+     -5.218299089968923
     ]
    ],
    "url": "img/civilian-closed.webp",
-   "width": 633
+   "width": 701
   },
-  "height": 1939,
+  "display": "display.photo-band/1",
+  "height": 2006,
   "px_to_mm": [
    [
     0.03761902606090668,
     0.09265424371408375,
-    -166.01529154499576
+    -170.34657253981317
    ],
    [
     -0.09265424371408375,
     0.03761902606090668,
-    58.1871478470432
+    60.01693988863828
    ]
   ],
   "url": "img/civilian.webp",
-  "width": 1474
+  "width": 1540
  },
  "quality": {
   "blade_handle": 0.2669820885434268,

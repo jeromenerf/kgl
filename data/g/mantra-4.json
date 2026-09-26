@@ -2,7 +2,7 @@
  "slug": "mantra-4",
  "brand": "Spyderco",
  "model": "Mantra 4",
- "version": 7,
+ "version": 8,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5939,38 +5939,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 888,
+   "blend": "multiply",
+   "height": 960,
    "px_to_mm": [
     [
      0.060327062312612194,
      0.07975365541923586,
-     -59.613623386821835
+     -64.61195791970817
     ],
     [
      0.07975365541923586,
      -0.06032706231261219,
-     -2.4225811964019233
+     -3.115757336226146
     ]
    ],
    "url": "img/mantra-4-closed.webp",
-   "width": 791
+   "width": 862
   },
-  "height": 1586,
+  "display": "display.photo-band/1",
+  "height": 1657,
   "px_to_mm": [
    [
     0.05110638129619932,
     0.08595427732700382,
-    -135.80724701504204
+    -140.64370049036904
    ],
    [
     -0.08595427732700382,
     0.05110638129619932,
-    20.06972614363465
+    21.29940232904797
    ]
   ],
   "url": "img/mantra-4.webp",
-  "width": 1155
+  "width": 1226
  },
  "quality": {
   "blade_handle": 0.2805980528511822,

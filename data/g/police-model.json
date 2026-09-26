@@ -2,7 +2,7 @@
  "slug": "police-model",
  "brand": "Spyderco",
  "model": "Police Model",
- "version": 11,
+ "version": 12,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6195,38 +6195,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1213,
+   "blend": "multiply",
+   "height": 1280,
    "px_to_mm": [
     [
      0.05323717695503909,
      0.08465106608813533,
-     -73.87827348576558
+     -78.49491471760386
     ],
     [
      0.08465106608813533,
      -0.05323717695503908,
-     0.1677287594380843
+     -0.8840407941041946
     ]
    ],
    "url": "img/police-model-closed.webp",
-   "width": 822
+   "width": 889
   },
-  "height": 2027,
+  "display": "display.photo-band/1",
+  "height": 2093,
   "px_to_mm": [
    [
     0.04727928350087233,
     0.08811736123854452,
-    -171.8024119418768
+    -176.30156408917526
    ],
    [
     -0.08811736123854452,
     0.04727928350087233,
-    26.34771624950323
+    27.704741938718843
    ]
   ],
   "url": "img/police-model.webp",
-  "width": 1386
+  "width": 1453
  },
  "quality": {
   "blade_handle": 0.35272594218807174,

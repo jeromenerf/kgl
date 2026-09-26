@@ -2,7 +2,7 @@
  "slug": "alcyone",
  "brand": "Spyderco",
  "model": "Alcyone",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -2203,38 +2203,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 890,
+   "blend": "multiply",
+   "height": 959,
    "px_to_mm": [
     [
      0.06429359990125745,
      0.07659199051948597,
-     -62.78421007388866
+     -67.69773032434614
     ],
     [
      0.07659199051948597,
      -0.06429359990125745,
-     1.3619609413216196
+     0.9330427590558701
     ]
    ],
    "url": "img/alcyone-closed.webp",
-   "width": 850
+   "width": 920
   },
-  "height": 1093,
+  "display": "display.photo-band/1",
+  "height": 1137,
   "px_to_mm": [
    [
     0.07375604464121059,
     0.11403324130198325,
-    -124.64717477227742
+    -128.77853906302767
    ],
    [
     -0.11403324130198325,
     0.07375604464121059,
-    18.587254634638352
+    19.47335296117535
    ]
   ],
   "url": "img/alcyone.webp",
-  "width": 838
+  "width": 882
  },
  "quality": {
   "blade_handle": 0.35106811769447804,

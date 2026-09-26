@@ -2,7 +2,7 @@
  "slug": "kershaw-random-leek",
  "brand": "Kershaw",
  "model": "Random Leek",
- "version": 11,
+ "version": 12,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4067,38 +4067,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 283,
+   "blend": "multiply",
+   "height": 350,
    "px_to_mm": [
     [
      0.09997754369072488,
      -0.0021191407620052504,
-     -50.46234039514375
+     -53.74463986306101
     ],
     [
      -0.00211914076200525,
      -0.0999775436907249,
-     15.662240101267425
+     19.086697102669838
     ]
    ],
    "url": "img/kershaw-random-leek-closed.webp",
-   "width": 1056
+   "width": 1123
   },
-  "height": 287,
+  "display": "display.photo-band/1",
+  "height": 351,
   "px_to_mm": [
    [
     0.09992201024745984,
     0.0039486539613556295,
-    -126.73847701756202
+    -130.0835645559465
    ],
    [
     -0.0039486539613556295,
     0.09992201024745984,
-    -7.743964521002317
+    -10.834724367152763
    ]
   ],
   "url": "img/kershaw-random-leek.webp",
-  "width": 1805
+  "width": 1864
  },
  "quality": {
   "blade_handle": 0.275797373358349,

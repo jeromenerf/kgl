@@ -2,7 +2,7 @@
  "slug": "crk-inkosi-small-tanto",
  "brand": "Chris Reeve Knives",
  "model": "Inkosi Small Tanto",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3067,38 +3067,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 982,
+   "blend": "multiply",
+   "height": 1054,
    "px_to_mm": [
     [
      -0.0013833140170211996,
      0.0999904317538949,
-     -48.91391847221535
+     -52.468479668800995
     ],
     [
      -0.0999904317538949,
      -0.0013833140170211998,
-     15.465908854343354
+     19.120200667550762
     ]
    ],
    "url": "img/crk-inkosi-small-tanto-closed.webp",
-   "width": 266
+   "width": 338
   },
-  "height": 294,
+  "display": "display.photo-band/1",
+  "height": 356,
   "px_to_mm": [
    [
     0.10448825022224445,
     0.0041331353769577086,
-    -117.98637596694114
+    -118.11450316362682
    ],
    [
     -0.0041331353769577086,
     0.10448825022224445,
-    -11.163998193873553
+    -14.403133950763134
    ]
   ],
   "url": "img/crk-inkosi-small-tanto.webp",
-  "width": 1596
+  "width": 1627
  },
  "quality": {
   "blade_handle": 0.255357681859342,

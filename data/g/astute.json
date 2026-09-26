@@ -2,7 +2,7 @@
  "slug": "astute",
  "brand": "Spyderco",
  "model": "Astute",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4747,38 +4747,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 806,
+   "blend": "multiply",
+   "height": 878,
    "px_to_mm": [
     [
      0.06256240138169859,
      0.07801247293449451,
-     -55.521947479545695
+     -60.569201354762235
     ],
     [
      0.07801247293449451,
      -0.06256240138169859,
-     -0.7807490503711563
+     -1.3354743090388013
     ]
    ],
    "url": "img/astute-closed.webp",
-   "width": 716
+   "width": 788
   },
-  "height": 1430,
+  "display": "display.photo-band/1",
+  "height": 1502,
   "px_to_mm": [
    [
     0.0517545336219329,
     0.08556557864922212,
-    -125.51704311915464
+    -130.44176275127217
    ],
    [
     -0.08556557864922212,
     0.0517545336219329,
-    19.34185112804777
+    20.55441871537619
    ]
   ],
   "url": "img/astute.webp",
-  "width": 1076
+  "width": 1148
  },
  "quality": {
   "blade_handle": 0.2600511695906433,

@@ -2,7 +2,7 @@
  "slug": "native-chief",
  "brand": "Spyderco",
  "model": "Native Chief",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5215,38 +5215,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1089,
+   "blend": "multiply",
+   "height": 1158,
    "px_to_mm": [
     [
      0.06051628895469176,
      0.07961016751114301,
-     -70.99331021421037
+     -75.83874349273528
     ],
     [
      0.07961016751114301,
      -0.06051628895469175,
-     -0.3742078848808923
+     -1.034455185119299
     ]
    ],
    "url": "img/native-chief-closed.webp",
-   "width": 957
+   "width": 1026
   },
-  "height": 1911,
+  "display": "display.photo-band/1",
+  "height": 1980,
   "px_to_mm": [
    [
     0.04980088660966301,
     0.0867171937558607,
-    -163.04708445681405
+    -167.75515674090812
    ],
    [
     -0.0867171937558607,
     0.04980088660966301,
-    30.28905451738371
+    31.56217996743956
    ]
   ],
   "url": "img/native-chief.webp",
-  "width": 1418
+  "width": 1487
  },
  "quality": {
   "blade_handle": 0.2947025544316818,

@@ -2,7 +2,7 @@
  "slug": "endura-4-wharncliffe",
  "brand": "Spyderco",
  "model": "Endura 4 Wharncliffe",
- "version": 11,
+ "version": 12,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6275,38 +6275,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1142,
+   "blend": "multiply",
+   "height": 1210,
    "px_to_mm": [
     [
      0.049396604388189436,
      0.08694811944439454,
-     -70.07495482506773
+     -74.6943739251755
     ],
     [
      0.08694811944439454,
      -0.049396604388189436,
-     -1.441000324424488
+     -2.713262140009043
     ]
    ],
    "url": "img/endura-4-wharncliffe-closed.webp",
-   "width": 793
+   "width": 860
   },
-  "height": 1853,
+  "display": "display.photo-band/1",
+  "height": 1922,
   "px_to_mm": [
    [
     0.043685230661307674,
     0.08995332468601894,
-    -154.09727333264038
+    -158.70237660712974
    ],
    [
     -0.08995332468601894,
     0.043685230661307674,
-    37.570851892954316
+    39.16522225069885
    ]
   ],
   "url": "img/endura-4-wharncliffe.webp",
-  "width": 1320
+  "width": 1389
  },
  "quality": {
   "blade_handle": 0.22556930249237941,

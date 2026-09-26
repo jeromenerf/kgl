@@ -2,7 +2,7 @@
  "slug": "crk-sebenza-31-small-drop-point",
  "brand": "Chris Reeve Knives",
  "model": "Sebenza 31 Small Drop Point",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3607,38 +3607,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 123,
+   "blend": "multiply",
+   "height": 141,
    "px_to_mm": [
     [
      -0.24003749552927053,
      -0.005463274799266649,
-     51.11450330052223
+     53.32401023347906
     ],
     [
      0.005463274799266649,
      -0.24003749552927053,
-     15.428150903586612
+     17.53931889015665
     ]
    ],
    "url": "img/crk-sebenza-31-small-drop-point-closed.webp",
-   "width": 431
+   "width": 449
   },
-  "height": 282,
+  "display": "display.photo-band/1",
+  "height": 349,
   "px_to_mm": [
    [
     0.09996240118842056,
     0.0027419607300711055,
-    -128.4875323947639
+    -128.6721730086219
    ],
    [
     -0.0027419607300711055,
     0.09996240118842056,
-    -10.852299234698467
+    -14.194223164030468
    ]
   ],
   "url": "img/crk-sebenza-31-small-drop-point.webp",
-  "width": 1784
+  "width": 1819
  },
  "quality": {
   "blade_handle": 0.23796178343949045,

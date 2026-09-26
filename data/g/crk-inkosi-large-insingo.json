@@ -2,7 +2,7 @@
  "slug": "crk-inkosi-large-insingo",
  "brand": "Chris Reeve Knives",
  "model": "Inkosi Large Insingo",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3671,38 +3671,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1248,
+   "blend": "multiply",
+   "height": 1317,
    "px_to_mm": [
     [
      -0.0018195619212024758,
      0.0999834446016685,
-     -62.43849952142395
+     -65.81264044476424
     ],
     [
      -0.0999834446016685,
      -0.0018195619212024758,
-     20.436369632950573
+     23.93559644680859
     ]
    ],
    "url": "img/crk-inkosi-large-insingo-closed.webp",
-   "width": 338
+   "width": 407
   },
-  "height": 275,
+  "display": "display.photo-band/1",
+  "height": 323,
   "px_to_mm": [
    [
     0.12845786670767573,
     -0.001322002782353417,
-    -152.42506292732764
+    -153.54945566092024
    ],
    [
     0.001322002782353417,
     0.12845786670767573,
-    -17.388342123393073
+    -20.483228949418475
    ]
   ],
   "url": "img/crk-inkosi-large-insingo.webp",
-  "width": 1675
+  "width": 1708
  },
  "quality": {
   "blade_handle": 0.32415375788869766,

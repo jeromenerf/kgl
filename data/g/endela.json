@@ -2,7 +2,7 @@
  "slug": "endela",
  "brand": "Spyderco",
  "model": "Endela",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -7139,38 +7139,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 982,
+   "blend": "multiply",
+   "height": 1052,
    "px_to_mm": [
     [
      0.06298261042118024,
      0.07767361704294348,
-     -67.52692458204005
+     -72.43631424203437
     ],
     [
      0.07767361704294348,
      -0.06298261042118024,
-     1.8730933214362793
+     1.3603262914646521
     ]
    ],
    "url": "img/endela-closed.webp",
-   "width": 877
+   "width": 947
   },
-  "height": 1686,
+  "display": "display.photo-band/1",
+  "height": 1755,
   "px_to_mm": [
    [
     0.05228280195085458,
     0.08524381866251489,
-    -147.1099298118434
+    -151.88865425141643
    ],
    [
     -0.08524381866251489,
     0.05228280195085458,
-    25.112247442286964
+    26.257564730028673
    ]
   ],
   "url": "img/endela.webp",
-  "width": 1314
+  "width": 1384
  },
  "quality": {
   "blade_handle": 0.17139090309822017,

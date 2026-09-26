@@ -2,7 +2,7 @@
  "slug": "amalgam",
  "brand": "Spyderco",
  "model": "Amalgam",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5219,38 +5219,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1154,
+   "blend": "multiply",
+   "height": 1222,
    "px_to_mm": [
     [
      0.05323558703572464,
      0.0846520659698379,
-     -72.98809250308344
+     -77.71474784773218
     ],
     [
      0.0846520659698379,
      -0.05323558703572464,
-     -8.60241754234427
+     -9.679344046111655
     ]
    ],
    "url": "img/amalgam-closed.webp",
-   "width": 901
+   "width": 970
   },
-  "height": 1887,
+  "display": "display.photo-band/1",
+  "height": 1955,
   "px_to_mm": [
    [
     0.053125928589375274,
     0.0847209284151006,
-    -160.80838571165455
+    -165.52236478511304
    ],
    [
     -0.0847209284151006,
     0.053125928589375274,
-    12.904004297549598
+    13.984465406645166
    ]
   ],
   "url": "img/amalgam.webp",
-  "width": 1358
+  "width": 1426
  },
  "quality": {
   "blade_handle": 0.24638199035197428,

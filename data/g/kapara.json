@@ -2,7 +2,7 @@
  "slug": "kapara",
  "brand": "Spyderco",
  "model": "Kapara",
- "version": 21,
+ "version": 22,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3999,38 +3999,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1050,
+   "blend": "multiply",
+   "height": 1120,
    "px_to_mm": [
     [
      0.05122455360098505,
      0.0858839048272714,
-     -66.27368381895411
+     -71.06164400080598
     ],
     [
      0.0858839048272714,
      -0.05122455360098505,
-     -0.7965326715680892
+     -2.00687079003736
     ]
    ],
    "url": "img/kapara-closed.webp",
-   "width": 780
+   "width": 850
   },
-  "height": 1734,
+  "display": "display.photo-band/1",
+  "height": 1804,
   "px_to_mm": [
    [
     0.054321842322946484,
     0.08395914153110988,
-    -150.71068753580607
+    -155.53082943717396
    ],
    [
     -0.08395914153110988,
     0.054321842322946484,
-    17.230105977084097
+    18.263190814746363
    ]
   ],
   "url": "img/kapara.webp",
-  "width": 1292
+  "width": 1361
  },
  "quality": {
   "blade_handle": 0.23318385650224216,

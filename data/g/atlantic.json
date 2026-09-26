@@ -2,7 +2,7 @@
  "slug": "atlantic",
  "brand": "Spyderco",
  "model": "Atlantic",
- "version": 7,
+ "version": 8,
  "active": true,
  "pinned": false,
  "frame": {
@@ -7939,38 +7939,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1072,
+   "blend": "multiply",
+   "height": 1141,
    "px_to_mm": [
     [
      0.052566885979527286,
      0.08506892792562615,
-     -67.15253608792241
+     -71.91016998174956
     ],
     [
      0.08506892792562615,
      -0.05256688597952729,
-     -2.0154393662381596
+     -3.1389319514450236
     ]
    ],
    "url": "img/atlantic-closed.webp",
-   "width": 799
+   "width": 868
   },
-  "height": 1682,
+  "display": "display.photo-band/1",
+  "height": 1750,
   "px_to_mm": [
    [
     0.055087556324491145,
     0.08345873913615048,
-    -155.10491558250027
+    -159.87153344406693
    ],
    [
     -0.08345873913615048,
     0.055087556324491145,
-    23.307080646593974
+    24.28317738230385
    ]
   ],
   "url": "img/atlantic.webp",
-  "width": 1406
+  "width": 1475
  },
  "quality": {
   "blade_handle": 0.17465862178469355,

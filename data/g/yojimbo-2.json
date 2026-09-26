@@ -2,7 +2,7 @@
  "slug": "yojimbo-2",
  "brand": "Spyderco",
  "model": "Yojimbo 2",
- "version": 19,
+ "version": 20,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6575,38 +6575,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1049,
+   "blend": "multiply",
+   "height": 1118,
    "px_to_mm": [
     [
      0.05154947713928801,
      0.08568927241298074,
-     -63.590922425862985
+     -68.34806270981073
     ],
     [
      0.08568927241298074,
      -0.051549477139287994,
-     -7.6761416180576285
+     -8.85953767720314
     ]
    ],
    "url": "img/yojimbo-2-closed.webp",
-   "width": 783
+   "width": 852
   },
-  "height": 1598,
+  "display": "display.photo-band/1",
+  "height": 1669,
   "px_to_mm": [
    [
     0.05184583514615174,
     0.08551028814124095,
-    -131.7162730660203
+    -136.55313276919307
    ],
    [
     -0.08551028814124095,
     0.05184583514615174,
-    19.94084152670171
+    21.126301863119387
    ]
   ],
   "url": "img/yojimbo-2.webp",
-  "width": 1195
+  "width": 1265
  },
  "quality": {
   "blade_handle": 0.2858913081961409,

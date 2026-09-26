@@ -2,7 +2,7 @@
  "slug": "tasman",
  "brand": "Spyderco",
  "model": "Tasman",
- "version": 11,
+ "version": 12,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6807,38 +6807,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 949,
+   "blend": "multiply",
+   "height": 1019,
    "px_to_mm": [
     [
      0.052906979173742076,
      0.08485783142827318,
-     -60.07144081386034
+     -64.87951796865724
     ],
     [
      0.08485783142827318,
      -0.052906979173742076,
-     -0.7541751963858108
+     -1.8692797149489495
     ]
    ],
    "url": "img/tasman-closed.webp",
-   "width": 697
+   "width": 767
   },
-  "height": 1445,
+  "display": "display.photo-band/1",
+  "height": 1515,
   "px_to_mm": [
    [
     0.048806354500840796,
     0.087280809805697,
-    -125.04112084260557
+    -129.84122242122686
    ],
    [
     -0.087280809805697,
     0.048806354500840796,
-    33.9298240746557
+    35.286904991041304
    ]
   ],
   "url": "img/tasman.webp",
-  "width": 1185
+  "width": 1255
  },
  "quality": {
   "blade_handle": 0.2586267605633803,

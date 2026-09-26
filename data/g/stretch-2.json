@@ -2,7 +2,7 @@
  "slug": "stretch-2",
  "brand": "Spyderco",
  "model": "Stretch 2",
- "version": 7,
+ "version": 8,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6003,38 +6003,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 995,
+   "blend": "multiply",
+   "height": 1064,
    "px_to_mm": [
     [
      0.06333467371511364,
      0.07738681480329897,
-     -68.99506887014965
+     -73.85488970540334
     ],
     [
      0.07738681480329897,
      -0.06333467371511366,
-     -0.7396111035914785
+     -1.2249022183976734
     ]
    ],
    "url": "img/stretch-2-closed.webp",
-   "width": 942
+   "width": 1011
   },
-  "height": 1650,
+  "display": "display.photo-band/1",
+  "height": 1719,
   "px_to_mm": [
    [
     0.058140792216136564,
     0.08136122098690526,
-    -146.43186024175273
+    -151.22928413536562
    ],
    [
     -0.08136122098690526,
     0.058140792216136564,
-    20.723186232253056
+    21.521728398398608
    ]
   ],
   "url": "img/stretch-2.webp",
-  "width": 1391
+  "width": 1460
  },
  "quality": {
   "blade_handle": 0.25671378091872793,

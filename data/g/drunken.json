@@ -2,7 +2,7 @@
  "slug": "drunken",
  "brand": "Spyderco",
  "model": "Drunken",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4455,38 +4455,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 974,
+   "blend": "multiply",
+   "height": 1044,
    "px_to_mm": [
     [
      0.06444888165618567,
      0.07646137360306163,
-     -64.99751900381312
+     -69.90285967479808
     ],
     [
      0.07646137360306163,
      -0.06444888165618567,
-     -0.6206845633485907
+     -1.038861119756631
     ]
    ],
    "url": "img/drunken-closed.webp",
-   "width": 852
+   "width": 921
   },
-  "height": 1616,
+  "display": "display.photo-band/1",
+  "height": 1685,
   "px_to_mm": [
    [
     0.05766083205083418,
     0.08170207125407225,
-    -143.4449158442761
+    -148.30056958507907
    ],
    [
     -0.08170207125407225,
     0.05766083205083418,
-    11.095565719902167
+    11.933205653503007
    ]
   ],
   "url": "img/drunken.webp",
-  "width": 1306
+  "width": 1375
  },
  "quality": {
   "blade_handle": 0.38590157704731143,

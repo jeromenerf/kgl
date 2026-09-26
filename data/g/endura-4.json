@@ -2,7 +2,7 @@
  "slug": "endura-4",
  "brand": "Spyderco",
  "model": "Endura 4",
- "version": 11,
+ "version": 12,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5499,38 +5499,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1142,
+   "blend": "multiply",
+   "height": 1210,
    "px_to_mm": [
     [
      0.04727176491357418,
      0.0881213949160803,
-     -68.8707819745091
+     -73.48277010386964
     ],
     [
      0.0881213949160803,
      -0.04727176491357418,
-     -2.0949430676179315
+     -3.486431447809087
     ]
    ],
    "url": "img/endura-4-closed.webp",
-   "width": 744
+   "width": 812
   },
-  "height": 1907,
+  "display": "display.photo-band/1",
+  "height": 1974,
   "px_to_mm": [
    [
     0.043874966793269174,
     0.08986093305151867,
-    -155.87424568527803
+    -160.40885357632328
    ],
    [
     -0.08986093305151867,
     0.043874966793269174,
-    27.8942313912264
+    29.453486054439598
    ]
   ],
   "url": "img/endura-4.webp",
-  "width": 1243
+  "width": 1311
  },
  "quality": {
   "blade_handle": 0.2172635445362718,

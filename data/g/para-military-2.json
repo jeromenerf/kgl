@@ -2,7 +2,7 @@
  "slug": "para-military-2",
  "brand": "Spyderco",
  "model": "Para Military 2",
- "version": 7,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6299,38 +6299,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1104,
+   "blend": "multiply",
+   "height": 1174,
    "px_to_mm": [
     [
      0.05778182698265229,
      0.08161654532352393,
-     -68.57263777474239
+     -73.47514220939175
     ],
     [
      0.08161654532352393,
      -0.05778182698265229,
-     -0.733028706644925
+     -1.5712724424332567
     ]
    ],
    "url": "img/para-military-2-closed.webp",
-   "width": 818
+   "width": 889
   },
-  "height": 1719,
+  "display": "display.photo-band/1",
+  "height": 1788,
   "px_to_mm": [
    [
     0.05032449683988353,
     0.08641437969350095,
-    -147.13766780834771
+    -151.87644932798167
    ],
    [
     -0.08641437969350095,
     0.05032449683988353,
-    20.617372291758336
+    21.86809245451119
    ]
   ],
   "url": "img/para-military-2.webp",
-  "width": 1284
+  "width": 1353
  },
  "quality": {
   "blade_handle": 0.19715481171548116,

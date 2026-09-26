@@ -2,7 +2,7 @@
  "slug": "police-4",
  "brand": "Spyderco",
  "model": "Police 4 Lightweight",
- "version": 16,
+ "version": 17,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6751,38 +6751,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1306,
+   "blend": "multiply",
+   "height": 1372,
    "px_to_mm": [
     [
      0.044993756086295196,
      0.08930600155223037,
-     -75.75943778821238
+     -80.24014248085167
     ],
     [
      0.08930600155223037,
      -0.044993756086295196,
-     -2.9114927076096535
+     -4.389902569934254
     ]
    ],
    "url": "img/police-4-closed.webp",
-   "width": 781
+   "width": 848
   },
-  "height": 2095,
+  "display": "display.photo-band/1",
+  "height": 2163,
   "px_to_mm": [
    [
     0.04815442234120962,
     0.08764217939431,
-    -179.80233081464775
+    -184.36286481693335
    ],
    [
     -0.08764217939431,
     0.04815442234120962,
-    32.36628672988933
+    33.6924263859125
    ]
   ],
   "url": "img/police-4.webp",
-  "width": 1519
+  "width": 1586
  },
  "quality": {
   "blade_handle": 0.2185430463576159,

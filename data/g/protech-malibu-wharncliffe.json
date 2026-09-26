@@ -2,7 +2,7 @@
  "slug": "protech-malibu-wharncliffe",
  "brand": "Pro-Tech",
  "model": "Malibu Wharncliffe",
- "version": 4,
+ "version": 5,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4515,38 +4515,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 770,
+   "blend": "multiply",
+   "height": 840,
    "px_to_mm": [
     [
      0.0779411093309857,
      -0.06265128471352628,
-     -8.343998544809253
+     -8.878459937943653
     ],
     [
      0.06265128471352627,
      0.0779411093309857,
-     -55.51425782011694
+     -60.428716204376414
     ]
    ],
    "url": "img/protech-malibu-wharncliffe-closed.webp",
-   "width": 866
+   "width": 936
   },
-  "height": 345,
+  "display": "display.photo-band/1",
+  "height": 410,
   "px_to_mm": [
    [
     0.09999854411554333,
     0.0005396061264813508,
-    -136.2831576265319
+    -136.68524750838557
    ],
    [
     -0.0005396061264813508,
     0.09999854411554333,
-    -12.70719558920629
+    -15.972996734905156
    ]
   ],
   "url": "img/protech-malibu-wharncliffe.webp",
-  "width": 1914
+  "width": 1922
  },
  "quality": {
   "blade_handle": 0.19548511047070125,

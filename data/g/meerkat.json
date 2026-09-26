@@ -2,7 +2,7 @@
  "slug": "meerkat",
  "brand": "Spyderco",
  "model": "Meerkat",
- "version": 7,
+ "version": 8,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5199,38 +5199,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 759,
+   "blend": "multiply",
+   "height": 830,
    "px_to_mm": [
     [
      0.05138375261733009,
      0.0857887519839345,
-     -47.46610479624962
+     -52.3533774791968
     ],
     [
      0.0857887519839345,
      -0.05138375261733008,
-     -3.3363540657976465
+     -4.562158129447227
     ]
    ],
    "url": "img/meerkat-closed.webp",
-   "width": 565
+   "width": 636
   },
-  "height": 1123,
+  "display": "display.photo-band/1",
+  "height": 1195,
   "px_to_mm": [
    [
     0.04972773662082415,
     0.08675916211311603,
-    -91.38585170364449
+    -96.27587798756568
    ],
    [
     -0.08675916211311603,
     0.04972773662082415,
-    17.58413086116768
+    18.910885631538516
    ]
   ],
   "url": "img/meerkat.webp",
-  "width": 852
+  "width": 923
  },
  "quality": {
   "blade_handle": 0.34175185407897374,

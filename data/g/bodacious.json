@@ -2,7 +2,7 @@
  "slug": "bodacious",
  "brand": "Spyderco",
  "model": "Bodacious",
- "version": 18,
+ "version": 20,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6323,38 +6323,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1033,
+   "blend": "multiply",
+   "height": 1102,
    "px_to_mm": [
     [
      0.05904142341007947,
      0.08071003854361442,
-     -68.4480585441232
+     -73.26507218373524
     ],
     [
      0.08071003854361442,
      -0.05904142341007947,
-     -1.816844994049288
+     -2.563728162143276
     ]
    ],
    "url": "img/bodacious-closed.webp",
-   "width": 876
+   "width": 945
   },
-  "height": 1744,
+  "display": "display.photo-band/1",
+  "height": 1814,
   "px_to_mm": [
    [
     0.05092240570535979,
     0.08606339870803818,
-    -149.3087470503078
+    -154.055167544594
    ],
    [
     -0.08606339870803818,
     0.05092240570535979,
-    22.660523045256436
+    23.87812314690002
    ]
   ],
   "url": "img/bodacious.webp",
-  "width": 1298
+  "width": 1368
  },
  "quality": {
   "blade_handle": 0.2845653661875428,

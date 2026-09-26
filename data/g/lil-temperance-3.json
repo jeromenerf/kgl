@@ -2,7 +2,7 @@
  "slug": "lil-temperance-3",
  "brand": "Spyderco",
  "model": "Lil' Temperance 3",
- "version": 8,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4519,38 +4519,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 966,
+   "blend": "multiply",
+   "height": 1037,
    "px_to_mm": [
     [
      0.06179364891223811,
      0.07862280174422086,
-     -68.81797292245963
+     -73.80353936330926
     ],
     [
      0.07862280174422084,
      -0.06179364891223811,
-     -2.927555589513376
+     -3.525084292131975
     ]
    ],
    "url": "img/lil-temperance-3-closed.webp",
-   "width": 890
+   "width": 961
   },
-  "height": 1491,
+  "display": "display.photo-band/1",
+  "height": 1562,
   "px_to_mm": [
    [
     0.05805318830540774,
     0.0814237516181665,
-    -127.7173000935418
+    -132.64745545632394
    ],
    [
     -0.0814237516181665,
     0.05805318830540774,
-    13.104219132277288
+    13.930309151966362
    ]
   ],
   "url": "img/lil-temperance-3.webp",
-  "width": 1215
+  "width": 1285
  },
  "quality": {
   "blade_handle": 0.20150763007905864,

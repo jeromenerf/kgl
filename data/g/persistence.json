@@ -2,7 +2,7 @@
  "slug": "persistence",
  "brand": "Spyderco",
  "model": "Persistence",
- "version": 7,
+ "version": 8,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6099,38 +6099,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 980,
+   "blend": "multiply",
+   "height": 1050,
    "px_to_mm": [
     [
      0.04231258319626228,
      0.0906070930074428,
-     -57.409000405129845
+     -62.07442365915456
     ],
     [
      0.0906070930074428,
      -0.04231258319626227,
-     -5.688763614662747
+     -7.383880060549222
     ]
    ],
    "url": "img/persistence-closed.webp",
-   "width": 616
+   "width": 686
   },
-  "height": 1455,
+  "display": "display.photo-band/1",
+  "height": 1525,
   "px_to_mm": [
    [
     0.04909783362006905,
     0.08711717817868078,
-    -120.24442001983343
+    -125.01245140876921
    ],
    [
     -0.08711717817868078,
     0.04909783362006905,
-    16.230369650364985
+    17.561187934256132
    ]
   ],
   "url": "img/persistence.webp",
-  "width": 1034
+  "width": 1104
  },
  "quality": {
   "blade_handle": 0.2809166337416041,

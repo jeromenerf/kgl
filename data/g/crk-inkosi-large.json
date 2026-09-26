@@ -2,7 +2,7 @@
  "slug": "crk-inkosi-large",
  "brand": "Chris Reeve Knives",
  "model": "Inkosi Large Drop Point",
- "version": 8,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3499,38 +3499,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1216,
+   "blend": "multiply",
+   "height": 1286,
    "px_to_mm": [
     [
      -0.0018889082493391894,
      0.09998215853653881,
-     -60.2829801265718
+     -63.70435314092157
     ],
     [
      -0.09998215853653879,
      -0.0018889082493391894,
-     20.13013238574682
+     23.6832710351826
     ]
    ],
    "url": "img/crk-inkosi-large-closed.webp",
-   "width": 329
+   "width": 399
   },
-  "height": 263,
+  "display": "display.photo-band/1",
+  "height": 311,
   "px_to_mm": [
    [
     0.1253029223245584,
     0.0017582966569378092,
-    -154.8838461404094
+    -156.68028617271972
    ],
    [
     -0.0017582966569378092,
     0.1253029223245584,
-    -14.945683240779694
+    -17.928337223371962
    ]
   ],
   "url": "img/crk-inkosi-large.webp",
-  "width": 1714
+  "width": 1752
  },
  "quality": {
   "blade_handle": 0.20777777777777778,

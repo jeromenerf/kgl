@@ -2,7 +2,7 @@
  "slug": "techno-3",
  "brand": "Spyderco",
  "model": "Techno 3",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6383,38 +6383,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 848,
+   "blend": "multiply",
+   "height": 919,
    "px_to_mm": [
     [
      0.049906903419234684,
      0.08665622303737443,
-     -51.84520213739502
+     -56.70108625976488
     ],
     [
      0.08665622303737443,
      -0.04990690341923469,
-     -4.795989279995258
+     -6.1027141791086335
     ]
    ],
    "url": "img/techno-3-closed.webp",
-   "width": 611
+   "width": 682
   },
-  "height": 1336,
+  "display": "display.photo-band/1",
+  "height": 1407,
   "px_to_mm": [
    [
     0.053312209692636434,
     0.08460383145985982,
-    -113.54107131298389
+    -118.43691173711981
    ],
    [
     -0.08460383145985982,
     0.053312209692636434,
-    8.308442925887132
+    9.419254877162253
    ]
   ],
   "url": "img/techno-3.webp",
-  "width": 982
+  "width": 1053
  },
  "quality": {
   "blade_handle": 0.2930188679245283,

@@ -2,7 +2,7 @@
  "slug": "chaparral",
  "brand": "Spyderco",
  "model": "Chaparral Lightweight",
- "version": 20,
+ "version": 21,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6019,38 +6019,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 857,
+   "blend": "multiply",
+   "height": 929,
    "px_to_mm": [
     [
      0.0388507416134533,
      0.09214455966623691,
-     -50.32563879055011
+     -54.980656135621494
     ],
     [
      0.09214455966623691,
      -0.0388507416134533,
-     -5.545657217546438
+     -7.4394934467642955
     ]
    ],
    "url": "img/chaparral-closed.webp",
-   "width": 547
+   "width": 618
   },
-  "height": 1341,
+  "display": "display.photo-band/1",
+  "height": 1412,
   "px_to_mm": [
    [
     0.0533852694557154,
     0.08455774952741271,
-    -115.74318918759872
+    -120.63827219930128
    ],
    [
     -0.08455774952741271,
     0.0533852694557154,
-    19.305711393701106
+    20.41190639187108
    ]
   ],
   "url": "img/chaparral.webp",
-  "width": 1054
+  "width": 1125
  },
  "quality": {
   "blade_handle": 0.3041532402434658,

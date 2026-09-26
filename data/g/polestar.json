@@ -2,7 +2,7 @@
  "slug": "polestar",
  "brand": "Spyderco",
  "model": "Polestar",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4879,38 +4879,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 976,
+   "blend": "multiply",
+   "height": 1045,
    "px_to_mm": [
     [
      0.06323633388503398,
      0.07746719355172559,
-     -68.37933959795228
+     -73.23858848243168
     ],
     [
      0.07746719355172559,
      -0.06323633388503398,
-     1.3074656794514272
+     0.8159976244544787
     ]
    ],
    "url": "img/polestar-closed.webp",
-   "width": 903
+   "width": 973
   },
-  "height": 1664,
+  "display": "display.photo-band/1",
+  "height": 1733,
   "px_to_mm": [
    [
     0.05327640205905966,
     0.08462638467783806,
-    -140.81359880828617
+    -145.6000771930732
    ],
    [
     -0.08462638467783806,
     0.05327640205905966,
-    19.509203997803137
+    20.597332945150086
    ]
   ],
   "url": "img/polestar.webp",
-  "width": 1238
+  "width": 1307
  },
  "quality": {
   "blade_handle": 0.24175620600222306,

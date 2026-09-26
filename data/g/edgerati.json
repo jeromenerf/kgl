@@ -2,7 +2,7 @@
  "slug": "edgerati",
  "brand": "Spyderco",
  "model": "Edgerati",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5451,38 +5451,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1081,
+   "blend": "multiply",
+   "height": 1150,
    "px_to_mm": [
     [
      0.05041218551755141,
      0.0863632534782241,
-     -66.43692367001336
+     -71.12954573140031
     ],
     [
      0.0863632534782241,
      -0.05041218551755141,
-     -5.895862297849424
+     -7.129305786543951
     ]
    ],
    "url": "img/edgerati-closed.webp",
-   "width": 823
+   "width": 891
   },
-  "height": 1793,
+  "display": "display.photo-band/1",
+  "height": 1862,
   "px_to_mm": [
    [
     0.047938654415110596,
     0.08776038635323229,
-    -146.5550999317711
+    -151.27425557184893
    ],
    [
     -0.08776038635323229,
     0.047938654415110596,
-    20.537447707518602
+    21.922313435451553
    ]
   ],
   "url": "img/edgerati.webp",
-  "width": 1220
+  "width": 1290
  },
  "quality": {
   "blade_handle": 0.32223983095615427,

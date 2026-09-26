@@ -2,7 +2,7 @@
  "slug": "uptern",
  "brand": "Spyderco",
  "model": "UpTern",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5559,38 +5559,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 814,
+   "blend": "multiply",
+   "height": 886,
    "px_to_mm": [
     [
      0.0620379812228265,
      0.07843015291197787,
-     -55.073806887658364
+     -60.112784180592335
     ],
     [
      0.07843015291197787,
      -0.0620379812228265,
-     1.4930027927243321
+     0.9049706284739001
     ]
    ],
    "url": "img/uptern-closed.webp",
-   "width": 704
+   "width": 776
   },
-  "height": 1357,
+  "display": "display.photo-band/1",
+  "height": 1429,
   "px_to_mm": [
    [
     0.05192318709857701,
     0.08546334092186057,
-    -117.2731951289941
+    -121.61499069157145
    ],
    [
     -0.08546334092186057,
     0.05192318709857701,
-    23.47180225927292
+    23.699812377300734
    ]
   ],
   "url": "img/uptern.webp",
-  "width": 1072
+  "width": 1133
  },
  "quality": {
   "blade_handle": 0.2659664577333559,

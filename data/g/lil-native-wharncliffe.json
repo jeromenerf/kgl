@@ -2,7 +2,7 @@
  "slug": "lil-native-wharncliffe",
  "brand": "Spyderco",
  "model": "Lil' Native Wharncliffe",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -2215,38 +2215,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 768,
+   "blend": "multiply",
+   "height": 841,
    "px_to_mm": [
     [
      0.059564531582172286,
      0.08032475693954139,
-     -50.84604392450284
+     -55.903943385551166
     ],
     [
      0.08032475693954139,
      -0.059564531582172286,
-     -2.518894013612085
+     -3.269509973961191
     ]
    ],
    "url": "img/lil-native-wharncliffe-closed.webp",
-   "width": 683
+   "width": 755
   },
-  "height": 1058,
+  "display": "display.photo-band/1",
+  "height": 1114,
   "px_to_mm": [
    [
     0.056892274725863085,
     0.09713277157721456,
-    -102.69390640789018
+    -107.00660770437636
    ],
    [
     -0.09713277157721456,
     0.056892274725863085,
-    29.311585132859854
+    30.438319044697696
    ]
   ],
   "url": "img/lil-native-wharncliffe.webp",
-  "width": 927
+  "width": 983
  },
  "quality": {
   "blade_handle": 0.30182099961255326,

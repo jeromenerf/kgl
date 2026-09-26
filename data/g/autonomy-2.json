@@ -2,7 +2,7 @@
  "slug": "autonomy-2",
  "brand": "Spyderco",
  "model": "Autonomy 2",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4143,38 +4143,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1163,
+   "blend": "multiply",
+   "height": 1231,
    "px_to_mm": [
     [
      0.04923457409607157,
      0.0870399719300187,
-     -72.79732634844477
+     -77.41677808672148
     ],
     [
      0.0870399719300187,
      -0.04923457409607157,
-     -5.931182239533795
+     -7.2127143805899445
     ]
    ],
    "url": "img/autonomy-2-closed.webp",
-   "width": 871
+   "width": 939
   },
-  "height": 1785,
+  "display": "display.photo-band/1",
+  "height": 1854,
   "px_to_mm": [
    [
     0.055293387273416,
     0.08332251390729903,
-    -150.66791080938052
+    -155.4618766395392
    ],
    [
     -0.08332251390729903,
     0.055293387273416,
-    14.348662853664887
+    15.318037032149977
    ]
   ],
   "url": "img/autonomy-2.webp",
-  "width": 1345
+  "width": 1414
  },
  "quality": {
   "blade_handle": 0.3490256608142003,

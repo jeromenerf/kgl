@@ -2,7 +2,7 @@
  "slug": "kershaw-leek",
  "brand": "Kershaw",
  "model": "Leek",
- "version": 11,
+ "version": 12,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3955,38 +3955,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 286,
+   "blend": "multiply",
+   "height": 351,
    "px_to_mm": [
     [
      0.09996010056802955,
      -0.0028245874795115797,
-     -50.48285877434661
+     -53.64719188302746
     ],
     [
      -0.0028245874795115792,
      -0.09996010056802956,
-     16.017557307489035
+     19.36592065177772
     ]
    ],
    "url": "img/kershaw-leek-closed.webp",
-   "width": 1055
+   "width": 1120
   },
-  "height": 284,
+  "display": "display.photo-band/1",
+  "height": 349,
   "px_to_mm": [
    [
     0.09987045924080702,
     0.0050883564173814875,
-    -126.69033996161338
+    -130.11469694647036
    ],
    [
     -0.0050883564173814875,
     0.09987045924080702,
-    -6.34436152277512
+    -9.436695918961766
    ]
   ],
   "url": "img/kershaw-leek.webp",
-  "width": 1806
+  "width": 1872
  },
  "quality": {
   "blade_handle": 0.3279891304347826,

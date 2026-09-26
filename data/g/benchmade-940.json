@@ -2,7 +2,7 @@
  "slug": "benchmade-940",
  "brand": "Benchmade",
  "model": "940 Osborne",
- "version": 6,
+ "version": 8,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4455,38 +4455,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 301,
+   "blend": "multiply",
+   "height": 363,
    "px_to_mm": [
     [
      -0.10346141712508367,
      -0.004353269780344117,
-     60.877320768267055
+     64.21957606233532
     ],
     [
      0.0043532697803441165,
      -0.10346141712508367,
-     14.287517003761579
+     17.3598695714485
     ]
    ],
    "url": "img/benchmade-940-closed.webp",
-   "width": 1121
+   "width": 1183
   },
-  "height": 317,
+  "display": "display.photo-band/1",
+  "height": 381,
   "px_to_mm": [
    [
     0.10067808615263633,
     0.008066385054380053,
-    -142.20554957792768
+    -142.76570815812576
    ],
    [
     -0.008066385054380053,
     0.10067808615263633,
-    -4.697294060106426
+    -7.894793661827649
    ]
   ],
   "url": "img/benchmade-940.webp",
-  "width": 1997
+  "width": 2000
  },
  "quality": {
   "blade_handle": 0.16837983357807146,

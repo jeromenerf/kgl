@@ -2,7 +2,7 @@
  "slug": "chicago",
  "brand": "Spyderco",
  "model": "Chicago",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5735,38 +5735,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 731,
+   "blend": "multiply",
+   "height": 803,
    "px_to_mm": [
     [
      0.03848969693880526,
      0.09229595456767822,
-     -43.08109204229987
+     -47.82225178882597
     ],
     [
      0.09229595456767821,
      -0.03848969693880526,
-     -5.22444787867714
+     -7.174998721546773
     ]
    ],
    "url": "img/chicago-closed.webp",
-   "width": 475
+   "width": 547
   },
-  "height": 1105,
+  "display": "display.photo-band/1",
+  "height": 1177,
   "px_to_mm": [
    [
     0.05030370364109383,
     0.08642648552376181,
-    -89.97955392997937
+    -94.90551057884046
    ],
    [
     -0.08642648552376181,
     0.05030370364109383,
-    13.950734624933844
+    15.252124308347106
    ]
   ],
   "url": "img/chicago.webp",
-  "width": 812
+  "width": 884
  },
  "quality": {
   "blade_handle": 0.2300488599348534,

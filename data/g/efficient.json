@@ -2,7 +2,7 @@
  "slug": "efficient",
  "brand": "Spyderco",
  "model": "Efficient",
- "version": 7,
+ "version": 8,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6135,38 +6135,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 866,
+   "blend": "multiply",
+   "height": 936,
    "px_to_mm": [
     [
      0.060020671051438795,
      0.07998449253783492,
-     -57.21786313762436
+     -62.109276289054364
     ],
     [
      0.07998449253783492,
      -0.060020671051438795,
-     -2.3909091694997686
+     -3.0883927227338024
     ]
    ],
    "url": "img/efficient-closed.webp",
-   "width": 750
+   "width": 819
   },
-  "height": 1481,
+  "display": "display.photo-band/1",
+  "height": 1551,
   "px_to_mm": [
    [
     0.04332779120029921,
     0.09012603680237627,
-    -122.50749041385268
+    -127.19154546744602
    ],
    [
     -0.09012603680237627,
     0.04332779120029921,
-    30.778507854804474
+    32.42106515040574
    ]
   ],
   "url": "img/efficient.webp",
-  "width": 1084
+  "width": 1154
  },
  "quality": {
   "blade_handle": 0.27856622998544395,

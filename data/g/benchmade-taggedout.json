@@ -2,7 +2,7 @@
  "slug": "benchmade-taggedout",
  "brand": "Benchmade",
  "model": "Taggedout 15536",
- "version": 4,
+ "version": 5,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4455,38 +4455,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 269,
+   "blend": "multiply",
+   "height": 313,
    "px_to_mm": [
     [
      -0.13681094334212243,
      -0.0007986268130245093,
-     60.09897026430889
+     63.12638080772212
     ],
     [
      0.0007986268130245088,
      -0.13681094334212243,
-     19.98720767221576
+     22.979478635855912
     ]
    ],
    "url": "img/benchmade-taggedout-closed.webp",
-   "width": 883
+   "width": 927
   },
-  "height": 384,
+  "display": "display.photo-band/1",
+  "height": 446,
   "px_to_mm": [
    [
     0.10436057665293182,
     0.010381127829559758,
-    -150.21620191975586
+    -151.05981976573685
    ],
    [
     -0.010381127829559758,
     0.10436057665293182,
-    -2.1708087498486606
+    -5.354080986941746
    ]
   ],
   "url": "img/benchmade-taggedout.webp",
-  "width": 1990
+  "width": 2000
  },
  "quality": {
   "blade_handle": 0.16330498177399758,

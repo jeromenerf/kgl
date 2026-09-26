@@ -2,7 +2,7 @@
  "slug": "tenacious",
  "brand": "Spyderco",
  "model": "Tenacious",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -7403,38 +7403,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 980,
+   "blend": "multiply",
+   "height": 1050,
    "px_to_mm": [
     [
      0.05747049844838981,
      0.08183606667047012,
-     -63.642251406703664
+     -68.47507591755979
     ],
     [
      0.08183606667047012,
      -0.05747049844838982,
-     -3.1331778478485037
+     -3.97846834240729
     ]
    ],
    "url": "img/tenacious-closed.webp",
-   "width": 815
+   "width": 884
   },
-  "height": 1563,
+  "display": "display.photo-band/1",
+  "height": 1632,
   "px_to_mm": [
    [
     0.0556043921121335,
     0.08311529087863499,
-    -139.80848319779466
+    -144.59827361398135
    ],
    [
     -0.08311529087863499,
     0.0556043921121335,
-    21.76274290275807
+    22.71265452605121
    ]
   ],
   "url": "img/tenacious.webp",
-  "width": 1298
+  "width": 1367
  },
  "quality": {
   "blade_handle": 0.18623853211009175,

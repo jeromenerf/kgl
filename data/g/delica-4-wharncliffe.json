@@ -2,7 +2,7 @@
  "slug": "delica-4-wharncliffe",
  "brand": "Spyderco",
  "model": "Delica 4 Wharncliffe",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6607,38 +6607,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1021,
+   "blend": "multiply",
+   "height": 1091,
    "px_to_mm": [
     [
      0.04061915851202876,
      0.09137879382972117,
-     -59.66090556894813
+     -64.29500866825924
     ],
     [
      0.09137879382972117,
      -0.04061915851202877,
-     -3.124024037063446
+     -4.9060621609322865
     ]
    ],
    "url": "img/delica-4-wharncliffe-closed.webp",
-   "width": 588
+   "width": 658
   },
-  "height": 1465,
+  "display": "display.photo-band/1",
+  "height": 1535,
   "px_to_mm": [
    [
     0.051968397879722156,
     0.08543585676877653,
-    -125.63405893184785
+    -130.443003888277
    ],
    [
     -0.08543585676877653,
     0.051968397879722156,
-    24.452805599088897
+    25.62411698271916
    ]
   ],
   "url": "img/delica-4-wharncliffe.webp",
-  "width": 1158
+  "width": 1228
  },
  "quality": {
   "blade_handle": 0.2239075478512098,

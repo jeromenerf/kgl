@@ -2,7 +2,7 @@
  "slug": "karahawk",
  "brand": "Spyderco",
  "model": "Karahawk",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5007,38 +5007,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1047,
+   "blend": "multiply",
+   "height": 1118,
    "px_to_mm": [
     [
      0.05764669753547118,
      0.08171204478688499,
-     -69.70064506132897
+     -74.61684353930983
     ],
     [
      0.08171204478688499,
      -0.05764669753547119,
-     3.8497066262320145
+     3.0007464421926513
     ]
    ],
    "url": "img/karahawk-closed.webp",
-   "width": 835
+   "width": 905
   },
-  "height": 1407,
+  "display": "display.photo-band/1",
+  "height": 1478,
   "px_to_mm": [
    [
     0.03274908824424228,
     0.09448543389946852,
-    -110.15905902893466
+    -114.6360503043577
    ],
    [
     -0.09448543389946852,
     0.03274908824424228,
-    58.720120350683956
+    60.89243236332125
    ]
   ],
   "url": "img/karahawk.webp",
-  "width": 1212
+  "width": 1282
  },
  "quality": {
   "blade_handle": 0.29272507344047,

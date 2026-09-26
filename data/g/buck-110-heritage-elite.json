@@ -2,7 +2,7 @@
  "slug": "buck-110-heritage-elite",
  "brand": "Buck",
  "model": "110 Slim Heritage Elite",
- "version": 7,
+ "version": 8,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3679,38 +3679,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 347,
+   "blend": "multiply",
+   "height": 418,
    "px_to_mm": [
     [
      -0.09993745832033993,
      -0.003536159565167198,
-     61.417918375402145
+     64.02604882652207
     ],
     [
      0.003536159565167198,
      -0.09993745832033993,
-     18.607909837263048
+     22.048895022543626
     ]
    ],
    "url": "img/buck-110-heritage-elite-closed.webp",
-   "width": 1258
+   "width": 1308
   },
-  "height": 393,
+  "display": "display.photo-band/1",
+  "height": 451,
   "px_to_mm": [
    [
     0.10977486917210041,
     0.014183772562877858,
-    -160.12122734092208
+    -160.86188135276186
    ],
    [
     -0.014183772562877858,
     0.10977486917210041,
-    3.7696808945854556
+    0.6287610062831774
    ]
   ],
   "url": "img/buck-110-heritage-elite.webp",
-  "width": 1986
+  "width": 2000
  },
  "quality": {
   "blade_handle": 0.2507852138197632,

@@ -2,7 +2,7 @@
  "slug": "matriarch-2",
  "brand": "Spyderco",
  "model": "Matriarch 2",
- "version": 7,
+ "version": 8,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6467,38 +6467,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1176,
+   "blend": "multiply",
+   "height": 1243,
    "px_to_mm": [
     [
      0.04413461286982156,
      0.08973369460147607,
-     -69.70341726453671
+     -74.20428544426764
     ],
     [
      0.08973369460147607,
      -0.04413461286982156,
-     -3.1896693070778426
+     -4.722783902068574
     ]
    ],
    "url": "img/matriarch-2-closed.webp",
-   "width": 733
+   "width": 800
   },
-  "height": 1756,
+  "display": "display.photo-band/1",
+  "height": 1823,
   "px_to_mm": [
    [
     0.04798732581440636,
     0.08773378232574956,
-    -153.52085299576237
+    -158.04580664508174
    ],
    [
     -0.08773378232574956,
     0.04798732581440636,
-    44.399753498836255
+    45.724903845035826
    ]
   ],
   "url": "img/matriarch-2.webp",
-  "width": 1462
+  "width": 1529
  },
  "quality": {
   "blade_handle": 0.24513688760806918,

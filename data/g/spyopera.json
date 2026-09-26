@@ -2,7 +2,7 @@
  "slug": "spyopera",
  "brand": "Spyderco",
  "model": "SpyOpera",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -2099,38 +2099,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 893,
+   "blend": "multiply",
+   "height": 964,
    "px_to_mm": [
     [
      0.06300917785857059,
      0.07765206697562546,
-     -58.713379009818865
+     -63.661635158068826
     ],
     [
      0.07765206697562546,
      -0.06300917785857059,
-     -0.6709398451329331
+     -1.1860551932660846
     ]
    ],
    "url": "img/spyopera-closed.webp",
-   "width": 742
+   "width": 812
   },
-  "height": 1078,
+  "display": "display.photo-band/1",
+  "height": 1124,
   "px_to_mm": [
    [
     0.07587527495768098,
     0.10647806199822257,
-    -122.32116618775039
+    -126.51529293773618
    ],
    [
     -0.10647806199822257,
     0.07587527495768098,
-    6.772953296206774
+    7.476817398139232
    ]
   ],
   "url": "img/spyopera.webp",
-  "width": 853
+  "width": 899
  },
  "quality": {
   "blade_handle": 0.3861788617886179,

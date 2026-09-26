@@ -2,7 +2,7 @@
  "slug": "smock",
  "brand": "Spyderco",
  "model": "Smock",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4511,38 +4511,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 993,
+   "blend": "multiply",
+   "height": 1063,
    "px_to_mm": [
     [
      0.0587663744977626,
      0.08091052606669116,
-     -63.06932514595588
+     -67.91861649632808
     ],
     [
      0.08091052606669118,
      -0.058766374497762605,
-     -4.410757311831411
+     -5.179556177145467
     ]
    ],
    "url": "img/smock-closed.webp",
-   "width": 816
+   "width": 885
   },
-  "height": 1639,
+  "display": "display.photo-band/1",
+  "height": 1708,
   "px_to_mm": [
    [
     0.0584200440527858,
     0.08116094167067411,
-    -141.7797210575409
+    -146.60601725607657
    ],
    [
     -0.08116094167067411,
     0.0584200440527858,
-    5.5762222311244845
+    6.3625349739070165
    ]
   ],
   "url": "img/smock.webp",
-  "width": 1257
+  "width": 1327
  },
  "quality": {
   "blade_handle": 0.29464627151051626,

@@ -2,7 +2,7 @@
  "slug": "protech-malibu",
  "brand": "Pro-Tech",
  "model": "Malibu Reverse Tanto",
- "version": 4,
+ "version": 5,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3943,38 +3943,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 331,
+   "blend": "multiply",
+   "height": 393,
    "px_to_mm": [
     [
      0.10226657455697334,
      0.008431814320305054,
-     -52.56574101178147
+     -55.9973910669771
     ],
     [
      0.008431814320305054,
      -0.10226657455697336,
-     15.328310572262858
+     18.237188139599574
     ]
    ],
    "url": "img/protech-malibu-closed.webp",
-   "width": 1062
+   "width": 1124
   },
-  "height": 349,
+  "display": "display.photo-band/1",
+  "height": 415,
   "px_to_mm": [
    [
     0.09999673905314421,
     -0.0008075758400207447,
-    -134.2348729584889
+    -134.4971650827287
    ],
    [
     0.0008075758400207447,
     0.09999673905314421,
-    -13.92284743581532
+    -17.19731616898603
    ]
   ],
   "url": "img/protech-malibu.webp",
-  "width": 1922
+  "width": 1925
  },
  "quality": {
   "blade_handle": 0.31135976648017516,

@@ -2,7 +2,7 @@
  "slug": "saver",
  "brand": "Spyderco",
  "model": "Saver",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -7535,38 +7535,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 966,
+   "blend": "multiply",
+   "height": 1036,
    "px_to_mm": [
     [
      0.04992554328628931,
      0.08664548532710084,
-     -60.0814865435685
+     -64.85825743622866
     ],
     [
      0.08664548532710083,
      -0.04992554328628931,
-     -1.5988185143992535
+     -2.8831520374135113
     ]
    ],
    "url": "img/saver-closed.webp",
-   "width": 696
+   "width": 766
   },
-  "height": 1471,
+  "display": "display.photo-band/1",
+  "height": 1542,
   "px_to_mm": [
    [
     0.05418503793233163,
     0.0840474964783115,
-    -134.4058257774053
+    -139.28623131197529
    ],
    [
     -0.0840474964783115,
     0.05418503793233163,
-    23.103716989655506
+    24.15803396781868
    ]
   ],
   "url": "img/saver.webp",
-  "width": 1242
+  "width": 1313
  },
  "quality": {
   "blade_handle": 0.3055272973889454,

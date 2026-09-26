@@ -198,6 +198,8 @@ function drawItem(svg, it, overlay) {
     el("image", {
       href: cut.url, width: cut.width, height: cut.height, opacity: overlay ? state.opacity : 1,
       transform: `matrix(${m[0][0]} ${m[1][0]} ${m[0][1]} ${m[1][1]} ${m[0][2]} ${m[1][2]})`, preserveAspectRatio: "none",
+      // Display images are the photograph on white (spec 012): multiply keeps white neutral in overlays.
+      ...(cut.blend === "multiply" ? { style: "mix-blend-mode: multiply" } : {}),
     }, g);
   }
   const col = overlay ? it.color : null;

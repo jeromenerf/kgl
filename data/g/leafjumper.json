@@ -2,7 +2,7 @@
  "slug": "leafjumper",
  "brand": "Spyderco",
  "model": "LeafJumper",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6183,38 +6183,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1004,
+   "blend": "multiply",
+   "height": 1074,
    "px_to_mm": [
     [
      0.060731975511446865,
      0.07944574973198393,
-     -67.65829220069645
+     -72.57134315159257
     ],
     [
      0.07944574973198393,
      -0.060731975511446865,
-     3.1258123383375933
+     2.4699183575400028
     ]
    ],
    "url": "img/leafjumper-closed.webp",
-   "width": 840
+   "width": 910
   },
-  "height": 1565,
+  "display": "display.photo-band/1",
+  "height": 1636,
   "px_to_mm": [
    [
     0.054035963545952664,
     0.08414341711423706,
-    -133.99663597166932
+    -138.85744385080545
    ],
    [
     -0.08414341711423706,
     0.054035963545952664,
-    20.730660121396003
+    21.78976566106648
    ]
   ],
   "url": "img/leafjumper.webp",
-  "width": 1227
+  "width": 1298
  },
  "quality": {
   "blade_handle": 0.1940871889093035,

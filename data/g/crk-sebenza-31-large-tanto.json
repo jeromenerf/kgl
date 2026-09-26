@@ -2,7 +2,7 @@
  "slug": "crk-sebenza-31-large-tanto",
  "brand": "Chris Reeve Knives",
  "model": "Sebenza 31 Large Tanto",
- "version": 6,
+ "version": 7,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3727,38 +3727,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 259,
+   "blend": "multiply",
+   "height": 305,
    "px_to_mm": [
     [
      0.13059406631919301,
      -0.001380681367198079,
-     -66.60691491394903
+     -69.57882276784491
     ],
     [
      0.001380681367198079,
      0.13059406631919301,
-     -15.238586236334918
+     -18.274005433121914
     ]
    ],
    "url": "img/crk-sebenza-31-large-tanto-closed.webp",
-   "width": 965
+   "width": 1011
   },
-  "height": 379,
+  "display": "display.photo-band/1",
+  "height": 437,
   "px_to_mm": [
    [
     0.10992863484781838,
     -0.0016229137183643317,
-    -153.203588998256
+    -156.34445491101016
    ],
    [
     0.0016229137183643317,
     0.10992863484781838,
-    -25.716234021527665
+    -28.951228929946964
    ]
   ],
   "url": "img/crk-sebenza-31-large-tanto.webp",
-  "width": 1942
+  "width": 1978
  },
  "quality": {
   "blade_handle": 0.32007575757575757,

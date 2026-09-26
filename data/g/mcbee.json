@@ -2,7 +2,7 @@
  "slug": "mcbee",
  "brand": "Spyderco",
  "model": "McBee",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -2131,38 +2131,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 584,
+   "blend": "multiply",
+   "height": 658,
    "px_to_mm": [
     [
      0.05733261934269701,
      0.08193272093190493,
-     -37.85618319298001
+     -42.96053079267342
     ],
     [
      0.08193272093190493,
      -0.05733261934269701,
-     -0.6486701067235439
+     -1.5503120317818175
     ]
    ],
    "url": "img/mcbee-closed.webp",
-   "width": 463
+   "width": 537
   },
-  "height": 745,
+  "display": "display.photo-band/1",
+  "height": 811,
   "px_to_mm": [
    [
     0.05582873058185426,
     0.08296476867694343,
-    -69.32389291584467
+    -73.91780366231797
    ],
    [
     -0.08296476867694343,
     0.05582873058185426,
-    17.96691109393035
+    18.865083830315463
    ]
   ],
   "url": "img/mcbee.webp",
-  "width": 760
+  "width": 827
  },
  "quality": {
   "blade_handle": 0.3672811059907834,

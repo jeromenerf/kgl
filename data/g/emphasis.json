@@ -2,7 +2,7 @@
  "slug": "emphasis",
  "brand": "Spyderco",
  "model": "Emphasis",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4911,38 +4911,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1021,
+   "blend": "multiply",
+   "height": 1090,
    "px_to_mm": [
     [
      0.06139472672914266,
      0.07893470421718128,
-     -66.52384372625062
+     -71.42200728112772
     ],
     [
      0.07893470421718128,
      -0.06139472672914266,
-     -1.9364522924214396
+     -2.5486808029050145
     ]
    ],
    "url": "img/emphasis-closed.webp",
-   "width": 853
+   "width": 923
   },
-  "height": 1701,
+  "display": "display.photo-band/1",
+  "height": 1770,
   "px_to_mm": [
    [
     0.04837155244796729,
     0.08752252803577804,
-    -148.5290611710972
+    -153.2127021091394
    ],
    [
     -0.08752252803577804,
     0.04837155244796729,
-    32.127752724070355
+    33.477105921609336
    ]
   ],
   "url": "img/emphasis.webp",
-  "width": 1355
+  "width": 1424
  },
  "quality": {
   "blade_handle": 0.35175517551755175,

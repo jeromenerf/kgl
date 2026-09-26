@@ -2,7 +2,7 @@
  "slug": "spydiechef",
  "brand": "Spyderco",
  "model": "SpydieChef",
- "version": 19,
+ "version": 20,
  "active": true,
  "pinned": false,
  "frame": {
@@ -2579,38 +2579,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 975,
+   "blend": "multiply",
+   "height": 1044,
    "px_to_mm": [
     [
      0.06149720473141408,
      0.07885489084528965,
-     -62.726466843642385
+     -67.58219074044692
     ],
     [
      0.07885489084528967,
      -0.061497204731414075,
-     -0.8128665940797113
+     -1.4133858161836397
     ]
    ],
    "url": "img/spydiechef-closed.webp",
-   "width": 835
+   "width": 904
   },
-  "height": 1172,
+  "display": "display.photo-band/1",
+  "height": 1214,
   "px_to_mm": [
    [
     0.08291112459977154,
     0.11565060144017894,
-    -140.97555005603908
+    -145.14534630287807
    ],
    [
     -0.11565060144017894,
     0.08291112459977154,
-    3.1807517956016502
+    3.868280809250207
    ]
   ],
   "url": "img/spydiechef.webp",
-  "width": 854
+  "width": 896
  },
  "quality": {
   "blade_handle": 0.28074245939675174,

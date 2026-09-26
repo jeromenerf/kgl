@@ -2,7 +2,7 @@
  "slug": "ikuchi",
  "brand": "Spyderco",
  "model": "Ikuchi",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3587,38 +3587,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 907,
+   "blend": "multiply",
+   "height": 978,
    "px_to_mm": [
     [
      0.06263009335631643,
      0.07795813880653575,
-     -57.30379314431385
+     -62.26412257906028
     ],
     [
      0.07795813880653575,
      -0.06263009335631643,
-     0.7563212898629006
+     0.21550678601608642
     ]
    ],
    "url": "img/ikuchi-closed.webp",
-   "width": 789
+   "width": 859
   },
-  "height": 1608,
+  "display": "display.photo-band/1",
+  "height": 1678,
   "px_to_mm": [
    [
     0.05781689373479789,
     0.08159170790502604,
-    -134.30788414262486
+    -139.20982787267906
    ],
    [
     -0.08159170790502604,
     0.05781689373479789,
-    3.3721873709217207
+    4.208167359847037
    ]
   ],
   "url": "img/ikuchi.webp",
-  "width": 1153
+  "width": 1224
  },
  "quality": {
   "blade_handle": 0.543896006028636,

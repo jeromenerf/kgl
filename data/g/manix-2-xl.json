@@ -2,7 +2,7 @@
  "slug": "manix-2-xl",
  "brand": "Spyderco",
  "model": "Manix 2 XL",
- "version": 7,
+ "version": 8,
  "active": true,
  "pinned": false,
  "frame": {
@@ -7107,38 +7107,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1126,
+   "blend": "multiply",
+   "height": 1194,
    "px_to_mm": [
     [
      0.058437332173076034,
      0.08114849480115804,
-     -75.34399093129716
+     -80.10022624882328
     ],
     [
      0.08114849480115804,
      -0.05843733217307605,
-     -1.4598027539979146
+     -2.2336609324052583
     ]
    ],
    "url": "img/manix-2-xl-closed.webp",
-   "width": 965
+   "width": 1033
   },
-  "height": 1868,
+  "display": "display.photo-band/1",
+  "height": 1937,
   "px_to_mm": [
    [
     0.054671266933532525,
     0.08373202835165547,
-    -159.94217527876316
+    -164.70345707505209
    ],
    [
     -0.08373202835165547,
     0.054671266933532525,
-    19.89894842507957
+    20.898682384023914
    ]
   ],
   "url": "img/manix-2-xl.webp",
-  "width": 1420
+  "width": 1488
  },
  "quality": {
   "blade_handle": 0.28,

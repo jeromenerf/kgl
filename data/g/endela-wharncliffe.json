@@ -2,7 +2,7 @@
  "slug": "endela-wharncliffe",
  "brand": "Spyderco",
  "model": "Endela Wharncliffe",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6027,38 +6027,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1004,
+   "blend": "multiply",
+   "height": 1073,
    "px_to_mm": [
     [
      0.06323831449265852,
      0.07746557674301285,
-     -69.1184759214126
+     -73.99636329346511
     ],
     [
      0.07746557674301284,
      -0.06323831449265852,
-     2.367390471789678
+     1.8741632961912202
     ]
    ],
    "url": "img/endela-wharncliffe-closed.webp",
-   "width": 899
+   "width": 969
   },
-  "height": 1628,
+  "display": "display.photo-band/1",
+  "height": 1697,
   "px_to_mm": [
    [
     0.05154560907459241,
     0.08569159926812717,
-    -142.22765648017742
+    -146.95777176824637
    ],
    [
     -0.08569159926812717,
     0.05154560907459241,
-    33.16874540030599
+    34.34564539842709
    ]
   ],
   "url": "img/endela-wharncliffe.webp",
-  "width": 1351
+  "width": 1420
  },
  "quality": {
   "blade_handle": 0.26577370461755373,

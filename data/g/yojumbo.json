@@ -2,7 +2,7 @@
  "slug": "yojumbo",
  "brand": "Spyderco",
  "model": "YoJumbo",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -2515,38 +2515,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1231,
+   "blend": "multiply",
+   "height": 1299,
    "px_to_mm": [
     [
      0.05691087377571845,
      0.08222622723975755,
-     -74.15545675198803
+     -78.90167112847392
     ],
     [
      0.08222622723975755,
      -0.056910873775718455,
-     -3.543630804110973
+     -4.407182607906862
     ]
    ],
    "url": "img/yojumbo-closed.webp",
-   "width": 923
+   "width": 991
   },
-  "height": 1065,
+  "display": "display.photo-band/1",
+  "height": 1097,
   "px_to_mm": [
    [
     0.09473857175016423,
     0.14533489916986936,
-    -160.69745262356946
+    -164.53862815828998
    ],
    [
     -0.14533489916986936,
     0.09473857175016423,
-    27.26693363576736
+    28.076474874482642
    ]
   ],
   "url": "img/yojumbo.webp",
-  "width": 899
+  "width": 931
  },
  "quality": {
   "blade_handle": 0.3346410357002746,

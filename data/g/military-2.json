@@ -2,7 +2,7 @@
  "slug": "military-2",
  "brand": "Spyderco",
  "model": "Military 2",
- "version": 24,
+ "version": 26,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6495,38 +6495,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 1285,
+   "blend": "multiply",
+   "height": 1352,
    "px_to_mm": [
     [
      0.05133300472559552,
      0.08581912738918981,
-     -77.87654967508827
+     -82.44976195793063
     ],
     [
      0.08581912738918981,
      -0.051333004725595516,
-     -0.18108968621061194
+     -1.3309978744461777
     ]
    ],
    "url": "img/military-2-closed.webp",
-   "width": 849
+   "width": 916
   },
-  "height": 2038,
+  "display": "display.photo-band/1",
+  "height": 2106,
   "px_to_mm": [
    [
     0.043336219817459366,
     0.09012198428759124,
-    -170.1608047330936
+    -174.69681653689096
    ],
    [
     -0.09012198428759124,
     0.043336219817459366,
-    33.06770984478077
+    34.65787645393994
    ]
   ],
   "url": "img/military-2.webp",
-  "width": 1389
+  "width": 1457
  },
  "quality": {
   "blade_handle": 0.3293115684882896,

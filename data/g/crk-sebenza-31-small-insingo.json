@@ -2,7 +2,7 @@
  "slug": "crk-sebenza-31-small-insingo",
  "brand": "Chris Reeve Knives",
  "model": "Sebenza 31 Small Insingo",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3615,38 +3615,41 @@
   ]
  },
  "cutout": {
+  "blend": "multiply",
   "closed": {
-   "height": 123,
+   "blend": "multiply",
+   "height": 141,
    "px_to_mm": [
     [
      -0.2400544775126324,
      -0.004654925775378839,
-     51.3854382950811
+     53.587822924673205
     ],
     [
      0.004654925775378839,
      -0.24005447751263242,
-     15.420814985367457
+     17.539410951002736
     ]
    ],
    "url": "img/crk-sebenza-31-small-insingo-closed.webp",
-   "width": 431
+   "width": 449
   },
-  "height": 282,
+  "display": "display.photo-band/1",
+  "height": 348,
   "px_to_mm": [
    [
     0.09999236686288046,
     0.0012355440741345675,
-    -128.24042912748814
+    -128.3760045952649
    ],
    [
     -0.0012355440741345675,
     0.09999236686288046,
-    -12.09243158142738
+    -15.40381315845963
    ]
   ],
   "url": "img/crk-sebenza-31-small-insingo.webp",
-  "width": 1786
+  "width": 1820
  },
  "quality": {
   "blade_handle": 0.2661122661122661,
