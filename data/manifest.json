@@ -1,5 +1,6 @@
 {
- "backend_commit": "9884d324fb502efba58534ccc938da6cdd798be4",
+ "catalog": "house",
+ "backend_commit": "1ec3e19b82d9422fb079c1c021a16254db12b3ba",
  "worker_code_sha256": "829354d9eb8b436d9a2db1620c2f678b6b2d167fb7b291edfdb03ef76638025f",
  "catalog_lock_sha256": "2579c6f37bc2ddb211c647db64e4a8e5cddc43bff22e2c826310902adefaa2ac",
  "geometries": 102,

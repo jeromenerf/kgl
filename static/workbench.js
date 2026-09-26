@@ -11,10 +11,10 @@ const BASE_LAYERS = [
   ["image", "open image", true],
   ["image_closed", "folded image", false],
   ["whole", "whole contour", false],
-  ["blade", "blade contour", true],
-  ["handle", "handle contour", true],
-  ["landmarks", "tip, junction, pivot, butt", true],
-  ["grid", "10 mm grid", true],
+  ["blade", "blade contour", false],
+  ["handle", "handle contour", false],
+  ["landmarks", "tip, junction, pivot, butt", false],
+  ["grid", "10 mm grid", false],
 ];
 
 // Measurement table: [analyzer, value key, short header].
@@ -36,11 +36,17 @@ const COLUMNS = [
   ["area.centroid", "handle_area", "handle A"],
 ];
 
-// Remarkable points are shown by default (user request): landmarks and area centroids.
+// Consumer defaults, fronts and lab alike (spec 010): rows, knives aligned on
+// the pivot and levelled pivot→tip, open image with the principal and pivot
+// axes, life size. A phone cannot show a knife at 1:1, so it starts at fit.
+const NARROW = matchMedia("(max-width: 760px)").matches;
 const DEFAULT_STATE = {
-  layout: "rows", align: "frame", orient: "frame", scale: "fit", opacity: 0.5, single: 0, rotation: 0,
-  layers: { ...Object.fromEntries(BASE_LAYERS.map(([k, , on]) => [k, on])), centroids: true },
+  layout: "rows", align: "pivot", orient: "pivot_tip", scale: NARROW ? "fit" : "physical", opacity: 0.5, single: 0, rotation: 0,
+  layers: { ...Object.fromEntries(BASE_LAYERS.map(([k, , on]) => [k, on])), principal_axes: true, pivot_tip: true, butt_pivot: true },
 };
+const CONSUMER_LAYERS = ["image", "image_closed", "whole", "principal_axes", "pivot_tip", "butt_pivot", "grid"];
+// Layouts a static front offers (spec 010): rows and overlay.
+const LAYOUTS = STATIC ? ["rows", "overlay"] : ["single", "rows", "columns", "grid", "overlay"];
 
 const stage = document.getElementById("stage");
 let state = loadLocal();
@@ -52,6 +58,7 @@ let workspace = "";
 function loadLocal() {
   try {
     const s = JSON.parse(localStorage.getItem("kgl.workbench") || "{}");
+    if (s.layout && !LAYOUTS.includes(s.layout)) delete s.layout;
     return { ...DEFAULT_STATE, ...s, layers: { ...DEFAULT_STATE.layers, ...(s.layers || {}) } };
   } catch { return structuredClone(DEFAULT_STATE); }
 }
@@ -194,8 +201,10 @@ function drawItem(svg, it, overlay) {
     }, g);
   }
   const col = overlay ? it.color : null;
+  // Outlines are drawn smoothed when the outline.smooth analyzer has run (specs/009 C4).
+  const smooth = Object.fromEntries((it.analysis?.["outline.smooth"]?.overlay || []).map(p => [p.part, p.points]));
   for (const part of ["whole", "handle", "blade"])
-    if (L[part]) el("polygon", { points: pts(it.contours_mm[part]), class: `c-${part}`, stroke: col || PART_COLORS[part], ...NS }, g);
+    if (L[part]) el("polygon", { points: pts(smooth[part] || it.contours_mm[part]), class: `c-${part}`, stroke: col || PART_COLORS[part], ...NS }, g);
   if (L.landmarks && it.landmarks_mm) {
     const lm = it.landmarks_mm;
     if (lm.junction) drawPrimitive(g, { layer: "landmarks", type: "segment", from: lm.junction[0], to: lm.junction[1] }, col);
@@ -220,10 +229,17 @@ function drawItem(svg, it, overlay) {
 }
 
 function pxPerMM(box, cols, rows) {
-  if (state.scale === "physical" && calibration) return calibration.css_px_per_mm;
+  if (state.scale === "physical") return calibration ? calibration.css_px_per_mm : estimatedPxPerMM();
   const W = stage.clientWidth - 16 * cols;
   const H = Math.max(200, window.innerHeight * 0.72 - 22 * rows);
   return Math.max(0.2, Math.min(W / cols / (box[2] - box[0]), H / rows / (box[3] - box[1])));
+}
+
+// Without a calibration, 1:1 uses an estimate (spec 010): the CSS reference
+// pixel (96 per inch), or about 6 css px/mm on a small touch screen.
+function estimatedPxPerMM() {
+  const phone = matchMedia("(pointer: coarse)").matches && Math.min(screen.width, screen.height) < 700;
+  return phone ? 6 : 96 / 25.4;
 }
 
 // Display calibrations are re-read on focus and when 1:1 is chosen, so a
@@ -240,7 +256,8 @@ async function loadCalibrations() {
 function scaleStatus(k) {
   const el = document.getElementById("calib");
   if (state.scale === "physical" && !calibration) {
-    el.innerHTML = '<b class="st-REJECTED">1:1 needs a display calibration</b> — <a href="/calibrate">calibrate</a>; showing fit.';
+    el.innerHTML = `<b>1:1 estimated</b> (${estimatedPxPerMM().toFixed(2)} css px/mm, screen not calibrated) — ` +
+      `<a href="${STATIC ? "calibrate.html" : "/calibrate"}">calibrate</a> for the exact size`;
   } else if (state.scale === "physical") {
     const dpr = window.devicePixelRatio !== calibration.device_pixel_ratio
       ? ` <b class="st-REJECTED">DPR is ${window.devicePixelRatio}, calibrated at ${calibration.device_pixel_ratio}: recalibrate or reset zoom</b>` : "";
@@ -284,13 +301,15 @@ function render() {
     const cap = document.createElement("figcaption");
     cap.innerHTML = group.map(it =>
       `<span style="color:${state.layout === "overlay" ? it.color : "inherit"}">■</span> ` +
-      (STATIC ? `<b>${it.model}</b>` : `<a href="/g/${it.slug}">${it.model}</a>`) +
+      (STATIC ? (pageURL(it.slug) ? `<a href="${pageURL(it.slug)}" target="_blank" rel="noopener"><b>${it.model}</b></a>` : `<b>${it.model}</b>`)
+        : `<a href="/g/${it.slug}">${it.model}</a>`) +
       (it.notes ? ` <span class="dim" title="${it.notes.replace(/"/g, "&quot;")}">⚠ known defect</span>` : "") +
-      ` <span class="dim">v${it.version}${it.pinned ? " (pinned)" : ""}${it.active ? "" : " — superseded"}` +
-      `${it.landmarks_mm?.pivot ? (it.landmarks_mm.pivot_confidence === "high" ? "" : " · pivot unconfirmed") : " · no pivot"}</span>` +
+      (STATIC ? (it.landmarks_mm?.pivot ? "" : ' <span class="dim">no pivot</span>')
+        : ` <span class="dim">v${it.version}${it.pinned ? " (pinned)" : ""}${it.active ? "" : " — superseded"}` +
+          `${it.landmarks_mm?.pivot ? (it.landmarks_mm.pivot_confidence === "high" ? "" : " · pivot unconfirmed") : " · no pivot"}</span>`) +
       (state.align === "pivot" && !it.landmarks_mm?.pivot ? ' <b class="st-REJECTED">not aligned (no pivot)</b>' : "") +
       ((state.rotation || state.orient !== "frame") && !it.landmarks_mm?.pivot ? ' <span class="dim">rotated about the junction (no pivot)</span>' : "") +
-      (state.orient !== "frame" ? ` <span class="dim">${orientation(it) >= 0 ? "+" : ""}${orientation(it).toFixed(1)}° to level</span>` : "")).join(" &nbsp; ");
+      (state.orient !== "frame" && !STATIC ? ` <span class="dim">${orientation(it) >= 0 ? "+" : ""}${orientation(it).toFixed(1)}° to level</span>` : "")).join(" &nbsp; ");
     const svg = el("svg", { viewBox: `${vb[0]} ${vb[1]} ${w} ${h}`, width: (w * k).toFixed(1), height: (h * k).toFixed(1) });
     if (state.layers.grid) drawGrid(svg, vb);
     for (const it of group) drawItem(svg, it, state.layout === "overlay");
@@ -322,92 +341,139 @@ function buildLayerControls() {
   const rows = BASE_LAYERS.map(([k, label]) => [k, label, ""]);
   for (const a of analyzers)
     for (const [k, label] of Object.entries(a.layers || {})) rows.push([k, label, `${a.id} v${a.version}: ${a.definition}`]);
-  box.innerHTML = rows.map(([k, label, title]) =>
+  const html = ([k, label, title]) =>
     `<label title="${title.replace(/"/g, "&quot;")}"><input type="checkbox" data-layer="${k}"> ${label}` +
-    (k === "image" ? " <kbd>i</kbd>" : "") + "</label>").join("");
+    (k === "image" ? " <kbd>i</kbd>" : "") + "</label>";
+  // A static front lists the consumer layers first, the others under "more layers" (spec 010).
+  const first = STATIC ? rows.filter(([k]) => CONSUMER_LAYERS.includes(k)) : rows;
+  const rest = STATIC ? rows.filter(([k]) => !CONSUMER_LAYERS.includes(k)) : [];
+  box.innerHTML = first.map(html).join("") +
+    (rest.length ? `<details class="more"><summary>more layers</summary>${rest.map(html).join("")}</details>` : "");
   box.querySelectorAll("input").forEach(i => i.addEventListener("change", () => {
     state.layers[i.dataset.layer] = i.checked; refresh(false);
   }));
 }
 
-// Knife picker: the whole catalog is loaded (refreshed on focus); comparable
-// knives are listed, the others greyed with their status when "show not
-// comparable" is ticked, so an added knife is always findable.
+// Knife search (spec 010): a search field with at most MAX_SUGGEST
+// suggestions instead of a long list, and the compared knives below it, in
+// display order (the order of the g parameters, kept in workspaces). The
+// catalogue is loaded once and refreshed on focus.
+const MAX_SUGGEST = 8;
+let catalogList = [];
+let activeSuggestion = 0;
 async function loadPicker() {
   catalogList = await (await api("/api/geometries")).json();
-  renderPicker();
+  renderSuggest();
+  renderChosen();
 }
+const pageURL = slug => (catalogList.find(g => g.slug === slug) || {}).url;
 
-// Filtered, brand-grouped picker. Selected knives always stay visible.
-let catalogList = [];
-function renderPicker() {
-  const q = (document.getElementById("filter").value || "").toLowerCase().trim();
-  const all = !STATIC && document.getElementById("showall").checked;  // the static site publishes accepted knives only
-  const selected = new Set(selectedRefs().map(r => r.split("@")[0]));
-  const match = g => !q || [g.brand, g.model, g.slug, ...(g.tags || [])].join(" ").toLowerCase().includes(q);
+// Every word must appear in brand + model; words that start the brand or a
+// word of the model rank first. With favourites chosen and no text, the
+// favourites are suggested.
+function suggestions(q) {
+  const words = q.toLowerCase().split(/\s+/).filter(Boolean);
   const min = +document.getElementById("minstars").value;
-  const shown = catalogList.filter(g => selected.has(g.slug) || (match(g) && (g.comparable || all) && g.stars >= min));
-  const box = document.getElementById("pick");
-  if (!catalogList.length) { box.innerHTML = '<p class="dim">Catalog empty: run make import.</p>'; return; }
-  let html = "", brand = null;
-  for (const g of shown) {
-    if (g.brand !== brand) { brand = g.brand; html += `<div class="brand">${brand}</div>`; }
-    html += g.comparable
-      ? `<label><input type="checkbox" name="g" value="${g.slug}"> ${g.model}${stars(g)}</label>`
-      : `<label class="dim" title="not comparable yet"><input type="checkbox" disabled> ${g.model} ` +
-        `<a href="/g/${g.slug}" class="st-${g.status}">${g.status.toLowerCase()}</a></label>`;
+  const all = !STATIC && document.getElementById("showall").checked;
+  if (!words.length && !min) return [];
+  const chosen = new Set(selectedRefs().map(r => r.split("@")[0]));
+  const out = [];
+  for (const g of catalogList) {
+    if (chosen.has(g.slug) || (!g.comparable && !all) || (g.stars || 0) < min) continue;
+    const hay = `${g.brand} ${g.model}`.toLowerCase();
+    if (!words.every(w => hay.includes(w))) continue;
+    out.push([words.filter(w => !(hay.startsWith(w) || hay.includes(" " + w))).length, hay, g]);
   }
-  const hidden = catalogList.length - shown.length;
-  box.innerHTML = html + (hidden ? `<p class="dim">${hidden} hidden by the filter</p>` : "");
-  syncControls();
+  out.sort((a, b) => a[0] - b[0] || a[1].localeCompare(b[1]));
+  return out.map(x => x[2]);
+}
+function renderSuggest() {
+  const q = document.getElementById("filter").value;
+  const list = suggestions(q), shown = list.slice(0, MAX_SUGGEST);
+  activeSuggestion = Math.max(0, Math.min(activeSuggestion, shown.length - 1));
+  document.getElementById("suggest").innerHTML = shown.map((g, i) =>
+    `<div role="option" data-slug="${g.slug}" class="${i === activeSuggestion ? "on" : ""}${g.comparable ? "" : " dim"}">` +
+    `<span class="dim">${g.brand}</span> ${g.model}${g.stars ? ` <span class="stars-ro">${"★".repeat(g.stars)}</span>` : ""}` +
+    (g.comparable ? "" : ` <a href="/g/${g.slug}" class="st-${g.status}">${g.status.toLowerCase()}</a>`) + "</div>").join("") +
+    (list.length > shown.length ? `<div class="dim">${list.length - shown.length} more: type more letters</div>` : "") +
+    (q.trim() && !list.length ? '<div class="dim">no match</div>' : "");
+}
+function addKnife(slug) {
+  const g = catalogList.find(x => x.slug === slug);
+  if (!g || !g.comparable) return;
+  setRefs([...selectedRefs(), slug]);
+  document.getElementById("filter").value = "";
+  activeSuggestion = 0;
+  renderSuggest();
+  refresh(true);
+}
+function renderChosen() {
+  const refs = selectedRefs();
+  document.getElementById("count").textContent = refs.length ? `(${refs.length})` : "";
+  const box = document.getElementById("chosen");
+  if (!refs.length) { box.innerHTML = '<li class="dim">none yet: search a knife above</li>'; return; }
+  box.innerHTML = refs.map((r, i) => {
+    const slug = r.split("@")[0];
+    const g = catalogList.find(x => x.slug === slug) || { slug, brand: "", model: slug, stars: 0 };
+    const link = STATIC ? (g.url ? ` <a href="${g.url}" target="_blank" rel="noopener" title="product page">↗</a>` : "")
+      : ` <a href="/g/${slug}" title="inspect">⌕</a>`;
+    return `<li><span style="color:${COLORS[i % COLORS.length]}">■</span> <span class="dim">${g.brand}</span> ${g.model}${link}` +
+      `<span class="acts">${stars(g)} <button data-move="${i}" data-dir="-1" ${i === 0 ? "disabled" : ""} title="move up">▲</button>` +
+      `<button data-move="${i}" data-dir="1" ${i === refs.length - 1 ? "disabled" : ""} title="move down">▼</button>` +
+      `<button data-remove="${i}" title="remove">✕</button></span></li>`;
+  }).join("");
 }
 // Favourite rating (spec 004 R008): click a star to rate 1–5, click the
 // current rating again to clear it.
 function stars(g) {
-  let h = ` <span class="stars" data-slug="${g.slug}" title="favourite rating">`;
+  let h = `<span class="stars" data-slug="${g.slug}" title="favourite rating">`;
   for (let n = 1; n <= 5; n++) h += `<span data-stars="${n}" class="${n <= g.stars ? "on" : ""}">${n <= g.stars ? "★" : "☆"}</span>`;
   return h + "</span>";
 }
-document.getElementById("pick").addEventListener("click", async e => {
+document.getElementById("chosen").addEventListener("click", async e => {
   const star = e.target.closest(".stars [data-stars]");
-  if (!star) return;
-  e.preventDefault();  // inside the label: do not toggle the knife
-  const g = catalogList.find(x => x.slug === star.parentElement.dataset.slug);
-  const n = +star.dataset.stars === g.stars ? 0 : +star.dataset.stars;
-  const res = await api(`/api/geometries/${encodeURIComponent(g.slug)}/stars`, { method: "PUT", body: JSON.stringify({ stars: n }) });
-  if (res.ok) { g.stars = n; renderPicker(); }
+  if (star) {
+    const g = catalogList.find(x => x.slug === star.parentElement.dataset.slug);
+    if (!g) return;
+    const n = +star.dataset.stars === g.stars ? 0 : +star.dataset.stars;
+    const res = await api(`/api/geometries/${encodeURIComponent(g.slug)}/stars`, { method: "PUT", body: JSON.stringify({ stars: n }) });
+    if (res.ok) { g.stars = n; renderChosen(); renderSuggest(); }
+    return;
+  }
+  const b = e.target.closest("button[data-move], button[data-remove]");
+  if (!b) return;
+  const refs = selectedRefs();
+  if (b.dataset.remove != null) refs.splice(+b.dataset.remove, 1);
+  else { const i = +b.dataset.move, j = i + +b.dataset.dir; [refs[i], refs[j]] = [refs[j], refs[i]]; }
+  setRefs(refs);
+  renderSuggest();
+  refresh(true);
 });
-document.getElementById("minstars").addEventListener("change", renderPicker);
-document.getElementById("filter").addEventListener("input", renderPicker);
-document.getElementById("showall")?.addEventListener("change", renderPicker);
+const filterBox = document.getElementById("filter");
+filterBox.addEventListener("input", () => { activeSuggestion = 0; renderSuggest(); });
+filterBox.addEventListener("keydown", e => {
+  const opts = [...document.querySelectorAll("#suggest [data-slug]")];
+  if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+    activeSuggestion = Math.max(0, Math.min(opts.length - 1, activeSuggestion + (e.key === "ArrowDown" ? 1 : -1)));
+    renderSuggest();
+  } else if (e.key === "Enter" && opts[activeSuggestion]) addKnife(opts[activeSuggestion].dataset.slug);
+  else if (e.key === "Escape") { filterBox.value = ""; renderSuggest(); }
+  else return;
+  e.preventDefault();
+});
+document.getElementById("suggest").addEventListener("mousedown", e => {
+  const o = e.target.closest("[data-slug]");
+  if (o && !e.target.closest("a")) { e.preventDefault(); addKnife(o.dataset.slug); }
+});
+document.getElementById("minstars").addEventListener("change", renderSuggest);
+document.getElementById("showall")?.addEventListener("change", renderSuggest);
 document.addEventListener("keydown", e => {
   if (e.key === "/" && document.activeElement.tagName !== "TEXTAREA" && document.activeElement.type !== "search") {
-    e.preventDefault(); document.getElementById("filter").focus();
+    e.preventDefault(); filterBox.focus();
   }
 });
 
-// Displayed order = order of the g parameters (kept in workspaces).
-function renderOrder() {
-  const refs = selectedRefs();
-  const name = r => (items.find(it => it.slug === r.split("@")[0]) || {}).model || r;
-  const box = document.getElementById("order");
-  box.innerHTML = refs.map((r, i) =>
-    `<li><span style="color:${COLORS[i % COLORS.length]}">■</span> ${name(r)} ` +
-    `<button data-move="${i}" data-dir="-1" ${i === 0 ? "disabled" : ""} title="move up">▲</button>` +
-    `<button data-move="${i}" data-dir="1" ${i === refs.length - 1 ? "disabled" : ""} title="move down">▼</button></li>`).join("");
-}
-document.getElementById("order").addEventListener("click", e => {
-  const b = e.target.closest("button[data-move]");
-  if (!b) return;
-  const refs = selectedRefs(), i = +b.dataset.move, j = i + +b.dataset.dir;
-  [refs[i], refs[j]] = [refs[j], refs[i]];
-  setRefs(refs);
-  refresh(true);
-});
-
 function syncControls() {
-  const refs = selectedRefs().map(r => r.split("@")[0]);
-  document.querySelectorAll("#pick input").forEach(i => { i.checked = refs.includes(i.value); });
   for (const key of ["layout", "align", "orient", "scale"])
     document.querySelectorAll(`input[name=${key}]`).forEach(i => { i.checked = i.value === state[key]; });
   document.querySelectorAll("#layers input").forEach(i => { i.checked = !!state.layers[i.dataset.layer]; });
@@ -415,7 +481,7 @@ function syncControls() {
   document.getElementById("rotv").textContent = `${state.rotation > 0 ? "+" : ""}${state.rotation || 0}°`;
   document.getElementById("opacity").value = state.opacity;
   document.getElementById("opv").textContent = state.opacity.toFixed(2);
-  renderOrder();
+  renderChosen();
 }
 
 async function refresh(refetch) {
@@ -485,14 +551,6 @@ document.getElementById("wssaveas").addEventListener("click", async () => {
 
 // Controls ----------------------------------------------------------------------
 
-// Keep the chosen order: selected knives stay in place, new ones are appended.
-document.getElementById("pick").addEventListener("change", () => {
-  const checked = new Set([...document.querySelectorAll("#pick input:checked")].map(i => i.value));
-  const kept = selectedRefs().filter(r => checked.has(r.split("@")[0]));
-  const have = new Set(kept.map(r => r.split("@")[0]));
-  setRefs([...kept, ...[...checked].filter(slug => !have.has(slug))]);
-  refresh(true);
-});
 for (const key of ["layout", "align", "orient", "scale"])
   document.querySelectorAll(`input[name=${key}]`).forEach(i => i.addEventListener("change", async () => {
     state[key] = i.value;
@@ -509,9 +567,9 @@ document.getElementById("rotation").addEventListener("input", e => { state.rotat
 document.getElementById("rotreset").addEventListener("click", () => { state.rotation = 0; refresh(false); });
 window.addEventListener("resize", () => render());
 document.addEventListener("keydown", e => {
-  if (["TEXTAREA", "SELECT"].includes(e.target.tagName) || (e.target.tagName === "INPUT" && e.target.type === "text")) return;
+  if (["TEXTAREA", "SELECT"].includes(e.target.tagName) || (e.target.tagName === "INPUT" && ["text", "search"].includes(e.target.type))) return;
   const layouts = { s: "single", r: "rows", c: "columns", g: "grid", o: "overlay" };
-  if (layouts[e.key]) state.layout = layouts[e.key];
+  if (layouts[e.key] && LAYOUTS.includes(layouts[e.key])) state.layout = layouts[e.key];
   else if (e.key === "i") state.layers.image = !state.layers.image;
   else if (e.key === "m") { state.scale = state.scale === "physical" ? "fit" : "physical"; loadCalibrations().then(() => refresh(false)); }
   else if (e.key === ",") state.rotation = Math.max(-45, (state.rotation || 0) - 1);
@@ -527,6 +585,7 @@ document.addEventListener("keydown", e => {
 });
 
 (async () => {
+  if (NARROW) document.getElementById("ctl").open = false; // display options collapse on a phone
   await loadCalibrations();
   analyzers = await (await api("/api/analyzers")).json();
   buildLayerControls();

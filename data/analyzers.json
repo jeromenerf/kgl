@@ -113,5 +113,16 @@
   "layers": {
    "dimensions": "handle axis and tip offset"
   }
+ },
+ {
+  "id": "outline.smooth",
+  "version": "1",
+  "definition": "Outlines of whole, blade and handle for display, smoothed along their length with a Gaussian of 0.12 mm (pixel stair-steps and shadow jags removed; 1 mm jimping keeps 75 % of its amplitude), simplified to 0.02 mm. Roughness = total absolute turning / 2π, sampled every 0.2 mm (1 for a convex outline), before and after. The canonical contours are unchanged; the workbench draws these outlines in place of the raw ones.",
+  "inputs": [
+   "contours.whole",
+   "contours.blade",
+   "contours.handle"
+  ],
+  "layers": {}
  }
 ]
