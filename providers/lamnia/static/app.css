@@ -1,0 +1,76 @@
+:root { --fg:#111; --dim:#777; --bg:#fafafa; --line:#ddd; --acc:#b00; --nav:#fff; }
+* { box-sizing: border-box; }
+body { margin:0; font: 12px/1.35 ui-monospace, "DejaVu Sans Mono", monospace; color:var(--fg); background:var(--bg); }
+nav { display:flex; flex-wrap:wrap; gap:1.2em; padding:4px 10px; border-bottom:1px solid var(--line); background:var(--nav); }
+nav b.front { color:var(--acc); }
+nav a { color:var(--fg); text-decoration:none; } nav a:hover { color:var(--acc); }
+main { padding:8px 10px; }
+h1 { font-size:14px; margin:4px 0 8px; } h2 { font-size:13px; margin:12px 0 4px; }
+table { border-collapse:collapse; } td, th { border-bottom:1px solid var(--line); padding:2px 8px 2px 0; text-align:left; vertical-align:top; }
+.dim { color:var(--dim); }
+.st-ACCEPTED { color:#070; font-weight:bold; } .st-REJECTED { color:var(--acc); font-weight:bold; } .st-PROCESSING { color:#a60; }
+.gallery { display:flex; flex-wrap:wrap; gap:8px; }
+.gallery figure { margin:0; background:#fff; border:1px solid var(--line); padding:4px; }
+.gallery img { max-height:420px; max-width:100%; display:block; }
+.gallery figcaption { color:var(--dim); }
+code { background:#eee; padding:0 3px; }
+.cols { display:flex; flex-wrap:wrap; gap:16px; } .cols pre { margin:0; font-size:11px; max-height:260px; overflow:auto; }
+.gallery.small img { max-height:220px; }
+.gallery figure.sel { border:2px solid var(--acc); }
+table.lineage code { font-size:10px; word-break:break-all; }
+kbd { border:1px solid var(--line); border-radius:2px; padding:0 3px; font-size:10px; color:var(--dim); }
+#wb { display:flex; gap:10px; align-items:flex-start; }
+#controls, #knives { width:230px; flex:none; position:sticky; top:0; max-height:100vh; overflow:auto; }
+#controls label, #knives label { display:block; } #controls h2 { margin-top:10px; }
+#controls h2.group { border-bottom:1px solid var(--line); }
+#knives { border-left:1px solid var(--line); padding-left:8px; }
+#stage { display:grid; gap:8px 16px; flex:1; overflow:auto; }
+#stage figure { margin:0; } #stage svg { background:#fff; border:1px solid var(--line); display:block; }
+#stage .grid line { stroke:#e6e6e6; stroke-width:1; } #stage .grid line.axis { stroke:#bbb; }
+#stage polygon { fill:none; stroke-width:1.5; } #stage .bbox { fill:none; stroke-dasharray:4 3; stroke-width:1; }
+#stage .lm { fill:none; stroke-width:1.5; }
+#calbar { padding:20px 0; } #bar { height:40px; background:#111; }
+#measures td, #measures th { padding-right:6px; }
+#main { flex:1; min-width:0; }
+#stage .ov { fill:none; stroke-width:1.2; }
+#stage circle.ov { fill:#fff; }
+#stage .ov-obb, #stage .ov-bbox { stroke-dasharray:4 3; stroke-width:1; }
+#stage .ov-dimensions { stroke-dasharray:2 2; }
+#notes { width:100%; font:inherit; }
+#wsbar { display:flex; gap:4px; } #wsbar select { flex:1; min-width:0; }
+td.num { text-align:right; font-variant-numeric: tabular-nums; }
+#measures th { cursor:help; }
+#stage .pivot line, #stage .pivot circle { stroke-width:1.5; }
+.job-running { color:#a60; font-weight:bold; } .job-failed { color:var(--acc); font-weight:bold; } .job-queued { color:var(--dim); }
+#filter { width:100%; font:inherit; margin-bottom:3px; }
+/* Knife search and compared list (spec 010) */
+#search { position:relative; }
+#suggest div { padding:3px 4px; cursor:pointer; border-bottom:1px solid var(--line); }
+#suggest div.on, #suggest div:hover { background:var(--nav); outline:1px solid var(--acc); }
+#chosen { padding-left:0; list-style:none; margin:2px 0; }
+#chosen li { padding:3px 0; border-bottom:1px solid var(--line); }
+#chosen .acts { display:block; text-align:right; }
+#chosen button { font-size:9px; padding:0 3px; }
+.stars { cursor:pointer; color:var(--dim); font-size:13px; white-space:nowrap; }
+.stars .on, .stars-ro { color:#e6a700; }
+#ctl > summary, details.more > summary { cursor:pointer; color:var(--dim); margin-top:6px; }
+#ctl > summary { font-weight:bold; }
+/* Phones (spec 010, A11): search first, then the stage, then the display options. */
+@media (max-width: 760px) {
+  #wb { flex-direction:column; }
+  #controls, #knives { width:100%; position:static; max-height:none; }
+  #knives { order:-1; border-left:none; padding-left:0; border-bottom:1px solid var(--line); padding-bottom:6px; }
+  #main { width:100%; order:0; } #controls { order:1; }
+  #measures { display:block; overflow-x:auto; }
+  #stage { max-width:100%; }
+}
+
+/* Docs tab (specs/011) */
+.doc { max-width: 60rem; line-height: 1.45; }
+.doc table { border-collapse: collapse; margin: .5rem 0; }
+.doc th, .doc td { border: 1px solid #ccc; padding: .2rem .4rem; vertical-align: top; text-align: left; }
+.doc pre { background: #f4f4f4; padding: .5rem; overflow-x: auto; }
+.doc figure.diagram { margin: 1rem 0; overflow-x: auto; }
+.doc figure.diagram svg { max-width: 100%; height: auto; }
+.doc-index { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 1rem; }
+.doc-index dd { margin: 0 0 .4rem 1rem; }
