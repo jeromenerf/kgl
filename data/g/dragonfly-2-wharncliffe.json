@@ -2,7 +2,7 @@
  "slug": "dragonfly-2-wharncliffe",
  "brand": "Spyderco",
  "model": "Dragonfly 2 Wharncliffe",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3011,9 +3011,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 797,
    "px_to_mm": [
     [
@@ -3030,7 +3028,7 @@
    "url": "img/dragonfly-2-wharncliffe-closed.webp",
    "width": 705
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 908,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "lamnia-cold-steel-air-lite-drop-point",
  "brand": "Cold Steel",
  "model": "Air Lite Drop Point",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1203,9 +1203,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 904,
    "px_to_mm": [
     [
@@ -1222,7 +1220,7 @@
    "url": "img/lamnia-cold-steel-air-lite-drop-point-closed.webp",
    "width": 932
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 917,
   "px_to_mm": [
    [

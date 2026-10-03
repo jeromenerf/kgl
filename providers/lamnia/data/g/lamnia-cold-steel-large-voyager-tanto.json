@@ -2,7 +2,7 @@
  "slug": "lamnia-cold-steel-large-voyager-tanto",
  "brand": "Cold Steel",
  "model": "Large Voyager Tanto",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1495,9 +1495,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 743,
    "px_to_mm": [
     [
@@ -1514,7 +1512,7 @@
    "url": "img/lamnia-cold-steel-large-voyager-tanto-closed.webp",
    "width": 742
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 740,
   "px_to_mm": [
    [

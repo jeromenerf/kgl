@@ -2,7 +2,7 @@
  "slug": "lamnia-spyderco-native",
  "brand": "Spyderco",
  "model": "Native",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1359,9 +1359,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 772,
    "px_to_mm": [
     [
@@ -1378,7 +1376,7 @@
    "url": "img/lamnia-spyderco-native-closed.webp",
    "width": 759
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 749,
   "px_to_mm": [
    [

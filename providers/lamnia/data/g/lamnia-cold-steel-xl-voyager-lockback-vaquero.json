@@ -2,7 +2,7 @@
  "slug": "lamnia-cold-steel-xl-voyager-lockback-vaquero",
  "brand": "Cold Steel",
  "model": "XL Voyager Lockback Vaquero",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1851,9 +1851,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 744,
    "px_to_mm": [
     [
@@ -1870,7 +1868,7 @@
    "url": "img/lamnia-cold-steel-xl-voyager-lockback-vaquero-closed.webp",
    "width": 750
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 731,
   "px_to_mm": [
    [

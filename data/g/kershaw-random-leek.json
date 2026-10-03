@@ -2,7 +2,7 @@
  "slug": "kershaw-random-leek",
  "brand": "Kershaw",
  "model": "Random Leek",
- "version": 12,
+ "version": 13,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4067,9 +4067,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 350,
    "px_to_mm": [
     [
@@ -4086,7 +4084,7 @@
    "url": "img/kershaw-random-leek-closed.webp",
    "width": 1123
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 351,
   "px_to_mm": [
    [

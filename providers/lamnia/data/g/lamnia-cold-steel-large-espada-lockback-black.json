@@ -2,7 +2,7 @@
  "slug": "lamnia-cold-steel-large-espada-lockback-black",
  "brand": "Cold Steel",
  "model": "Large Espada Lockback Black",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1755,9 +1755,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 930,
    "px_to_mm": [
     [
@@ -1774,7 +1772,7 @@
    "url": "img/lamnia-cold-steel-large-espada-lockback-black-closed.webp",
    "width": 915
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 893,
   "px_to_mm": [
    [

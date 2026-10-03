@@ -2,7 +2,7 @@
  "slug": "lamnia-cold-steel-recon-1",
  "brand": "Cold Steel",
  "model": "Recon 1",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1231,9 +1231,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 714,
    "px_to_mm": [
     [
@@ -1250,7 +1248,7 @@
    "url": "img/lamnia-cold-steel-recon-1-closed.webp",
    "width": 777
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 710,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "zt-0450cf",
  "brand": "Zero Tolerance",
  "model": "0450CF",
- "version": 11,
+ "version": 12,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3147,9 +3147,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 335,
    "px_to_mm": [
     [
@@ -3166,7 +3164,7 @@
    "url": "img/zt-0450cf-closed.webp",
    "width": 984
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 322,
   "px_to_mm": [
    [

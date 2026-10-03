@@ -2,7 +2,7 @@
  "slug": "lamnia-original-eickhorn-solingen-prt-x-black-aluminum",
  "brand": "Original Eickhorn-Solingen",
  "model": "PRT X Black Aluminum",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1899,9 +1899,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 860,
    "px_to_mm": [
     [
@@ -1918,7 +1916,7 @@
    "url": "img/lamnia-original-eickhorn-solingen-prt-x-black-aluminum-closed.webp",
    "width": 828
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 895,
   "px_to_mm": [
    [

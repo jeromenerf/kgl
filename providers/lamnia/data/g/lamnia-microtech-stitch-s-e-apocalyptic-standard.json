@@ -2,7 +2,7 @@
  "slug": "lamnia-microtech-stitch-s-e-apocalyptic-standard",
  "brand": "Microtech",
  "model": "Stitch S/E Apocalyptic Standard",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1871,9 +1871,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 825,
    "px_to_mm": [
     [
@@ -1890,7 +1888,7 @@
    "url": "img/lamnia-microtech-stitch-s-e-apocalyptic-standard-closed.webp",
    "width": 912
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 906,
   "px_to_mm": [
    [

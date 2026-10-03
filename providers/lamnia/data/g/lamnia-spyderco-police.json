@@ -2,7 +2,7 @@
  "slug": "lamnia-spyderco-police",
  "brand": "Spyderco",
  "model": "Police",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1079,9 +1079,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 680,
    "px_to_mm": [
     [
@@ -1098,7 +1096,7 @@
    "url": "img/lamnia-spyderco-police-closed.webp",
    "width": 711
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 713,
   "px_to_mm": [
    [

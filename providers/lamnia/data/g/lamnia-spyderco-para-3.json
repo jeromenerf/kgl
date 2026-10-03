@@ -2,7 +2,7 @@
  "slug": "lamnia-spyderco-para-3",
  "brand": "Spyderco",
  "model": "Para 3",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1651,9 +1651,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 934,
    "px_to_mm": [
     [
@@ -1670,7 +1668,7 @@
    "url": "img/lamnia-spyderco-para-3-closed.webp",
    "width": 947
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 909,
   "px_to_mm": [
    [

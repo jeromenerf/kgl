@@ -2,7 +2,7 @@
  "slug": "lamnia-spyderco-ladybug-3",
  "brand": "Spyderco",
  "model": "Ladybug 3",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1371,9 +1371,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 585,
    "px_to_mm": [
     [
@@ -1390,7 +1388,7 @@
    "url": "img/lamnia-spyderco-ladybug-3-closed.webp",
    "width": 587
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 520,
   "px_to_mm": [
    [

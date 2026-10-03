@@ -1,9 +1,9 @@
 {
  "catalog": "house",
- "backend_commit": "a498e73631ad143658d1b4e0e2cf0fd75e2f5e8a",
- "worker_code_sha256": "df13ccd84ef060a3febddeca4ede0921b034e0778a703b93be14b3204df3d7ba",
- "catalog_lock_sha256": "77453c14a92f86af2f7158f72c30a816b0fcb3375709a9dab97a8f37357254df",
- "geometries": 102,
+ "backend_commit": "e44c783646cb166f5ac73665046c9bbbd0d64b52",
+ "worker_code_sha256": "f0052387fa5cbbf5d133dc2e4039dc306e626db8b78759c2f36259049cde5bfe",
+ "catalog_lock_sha256": "e48ef597d2386c3da4e669ec339d3885cdcae058dd243a771c60b267cdf4082b",
+ "geometries": 103,
  "watermarks": {
   "alcyone": "marked",
   "alcyone-closed": "marked",
@@ -21,6 +21,8 @@
   "autonomy-closed": "marked",
   "benchmade-940": "marked",
   "benchmade-940-closed": "marked",
+  "benchmade-945": "marked",
+  "benchmade-945-closed": "marked",
   "benchmade-bugout": "marked",
   "benchmade-bugout-closed": "marked",
   "benchmade-taggedout": "marked",

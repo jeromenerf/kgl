@@ -2,7 +2,7 @@
  "slug": "lamnia-microtech-msi-mini-ram-lok-apocalyptic-standard-fluted-aluminum-black",
  "brand": "Microtech",
  "model": "MSI Mini Ram-Lok Apocalyptic Standard Fluted Aluminum Black",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1479,9 +1479,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 938,
    "px_to_mm": [
     [
@@ -1498,7 +1496,7 @@
    "url": "img/lamnia-microtech-msi-mini-ram-lok-apocalyptic-standard-fluted-aluminum-black-closed.webp",
    "width": 924
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 916,
   "px_to_mm": [
    [

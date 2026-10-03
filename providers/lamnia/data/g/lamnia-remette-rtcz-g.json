@@ -2,7 +2,7 @@
  "slug": "lamnia-remette-rtcz-g",
  "brand": "Remette",
  "model": "RTCZ-G",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1339,9 +1339,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 764,
    "px_to_mm": [
     [
@@ -1358,7 +1356,7 @@
    "url": "img/lamnia-remette-rtcz-g-closed.webp",
    "width": 772
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 746,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "lamnia-fox-edge-atrax-micarta",
  "brand": "Fox Edge",
  "model": "Atrax Micarta",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1583,9 +1583,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 774,
    "px_to_mm": [
     [
@@ -1602,7 +1600,7 @@
    "url": "img/lamnia-fox-edge-atrax-micarta-closed.webp",
    "width": 736
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 743,
   "px_to_mm": [
    [

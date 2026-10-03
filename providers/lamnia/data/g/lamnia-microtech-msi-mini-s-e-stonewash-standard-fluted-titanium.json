@@ -2,7 +2,7 @@
  "slug": "lamnia-microtech-msi-mini-s-e-stonewash-standard-fluted-titanium",
  "brand": "Microtech",
  "model": "MSI Mini S/E Stonewash Standard Fluted Titanium",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1431,9 +1431,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 914,
    "px_to_mm": [
     [
@@ -1450,7 +1448,7 @@
    "url": "img/lamnia-microtech-msi-mini-s-e-stonewash-standard-fluted-titanium-closed.webp",
    "width": 927
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 919,
   "px_to_mm": [
    [

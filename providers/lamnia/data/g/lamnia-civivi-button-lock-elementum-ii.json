@@ -2,7 +2,7 @@
  "slug": "lamnia-civivi-button-lock-elementum-ii",
  "brand": "CIVIVI",
  "model": "Button Lock Elementum II",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1315,9 +1315,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 915,
    "px_to_mm": [
     [
@@ -1334,7 +1332,7 @@
    "url": "img/lamnia-civivi-button-lock-elementum-ii-closed.webp",
    "width": 675
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 890,
   "px_to_mm": [
    [

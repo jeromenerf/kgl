@@ -2,7 +2,7 @@
  "slug": "centofante-3",
  "brand": "Spyderco",
  "model": "Centofante 3",
- "version": 21,
+ "version": 22,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5563,9 +5563,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1065,
    "px_to_mm": [
     [
@@ -5582,7 +5580,7 @@
    "url": "img/centofante-3-closed.webp",
    "width": 874
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1693,
   "px_to_mm": [
    [

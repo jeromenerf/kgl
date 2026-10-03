@@ -2,7 +2,7 @@
  "slug": "lamnia-cold-steel-ad-10",
  "brand": "Cold Steel",
  "model": "AD-10",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1327,9 +1327,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 762,
    "px_to_mm": [
     [
@@ -1346,7 +1344,7 @@
    "url": "img/lamnia-cold-steel-ad-10-closed.webp",
    "width": 746
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 742,
   "px_to_mm": [
    [

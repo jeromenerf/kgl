@@ -2,7 +2,7 @@
  "slug": "lamnia-spyderco-military",
  "brand": "Spyderco",
  "model": "Military",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1635,9 +1635,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 887,
    "px_to_mm": [
     [
@@ -1654,7 +1652,7 @@
    "url": "img/lamnia-spyderco-military-closed.webp",
    "width": 901
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 920,
   "px_to_mm": [
    [

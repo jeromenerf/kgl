@@ -2,7 +2,7 @@
  "slug": "police-4",
  "brand": "Spyderco",
  "model": "Police 4 Lightweight",
- "version": 17,
+ "version": 18,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6751,9 +6751,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1372,
    "px_to_mm": [
     [
@@ -6770,7 +6768,7 @@
    "url": "img/police-4-closed.webp",
    "width": 848
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 2163,
   "px_to_mm": [
    [

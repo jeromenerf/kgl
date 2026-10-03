@@ -2,7 +2,7 @@
  "slug": "lamnia-benchmade-osborne-m390-denim-micarta",
  "brand": "Benchmade",
  "model": "Osborne M390 Denim Micarta",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1127,9 +1127,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 856,
    "px_to_mm": [
     [
@@ -1146,7 +1144,7 @@
    "url": "img/lamnia-benchmade-osborne-m390-denim-micarta-closed.webp",
    "width": 885
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 903,
   "px_to_mm": [
    [

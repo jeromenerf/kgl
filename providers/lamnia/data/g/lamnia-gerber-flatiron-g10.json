@@ -2,7 +2,7 @@
  "slug": "lamnia-gerber-flatiron-g10",
  "brand": "Gerber",
  "model": "Flatiron G10",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1007,9 +1007,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 769,
    "px_to_mm": [
     [
@@ -1026,7 +1024,7 @@
    "url": "img/lamnia-gerber-flatiron-g10-closed.webp",
    "width": 760
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 744,
   "px_to_mm": [
    [

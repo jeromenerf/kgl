@@ -2,7 +2,7 @@
  "slug": "sage-5",
  "brand": "Spyderco",
  "model": "Sage 5",
- "version": 11,
+ "version": 12,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4559,9 +4559,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1079,
    "px_to_mm": [
     [
@@ -4578,7 +4576,7 @@
    "url": "img/sage-5-closed.webp",
    "width": 650
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1560,
   "px_to_mm": [
    [

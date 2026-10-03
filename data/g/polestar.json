@@ -2,7 +2,7 @@
  "slug": "polestar",
  "brand": "Spyderco",
  "model": "Polestar",
- "version": 11,
+ "version": 12,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4879,9 +4879,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1045,
    "px_to_mm": [
     [
@@ -4898,7 +4896,7 @@
    "url": "img/polestar-closed.webp",
    "width": 973
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1733,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "lamnia-reate-og-exo-elmax-tanto-knife",
  "brand": "Reate",
  "model": "OG EXO Elmax Tanto knife",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1167,9 +1167,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 895,
    "px_to_mm": [
     [
@@ -1186,7 +1184,7 @@
    "url": "img/lamnia-reate-og-exo-elmax-tanto-knife-closed.webp",
    "width": 921
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 918,
   "px_to_mm": [
    [

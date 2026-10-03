@@ -2,7 +2,7 @@
  "slug": "techno-3",
  "brand": "Spyderco",
  "model": "Techno 3",
- "version": 11,
+ "version": 12,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6383,9 +6383,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 919,
    "px_to_mm": [
     [
@@ -6402,7 +6400,7 @@
    "url": "img/techno-3-closed.webp",
    "width": 682
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1407,
   "px_to_mm": [
    [

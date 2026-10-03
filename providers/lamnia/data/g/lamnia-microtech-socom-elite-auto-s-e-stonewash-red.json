@@ -2,7 +2,7 @@
  "slug": "lamnia-microtech-socom-elite-auto-s-e-stonewash-red",
  "brand": "Microtech",
  "model": "Socom Elite Auto S/E Stonewash Red",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1671,9 +1671,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 856,
    "px_to_mm": [
     [
@@ -1690,7 +1688,7 @@
    "url": "img/lamnia-microtech-socom-elite-auto-s-e-stonewash-red-closed.webp",
    "width": 887
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 907,
   "px_to_mm": [
    [

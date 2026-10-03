@@ -2,7 +2,7 @@
  "slug": "delica-4",
  "brand": "Spyderco",
  "model": "Delica 4",
- "version": 12,
+ "version": 13,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5699,9 +5699,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1066,
    "px_to_mm": [
     [
@@ -5718,7 +5716,7 @@
    "url": "img/delica-4-closed.webp",
    "width": 681
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1551,
   "px_to_mm": [
    [

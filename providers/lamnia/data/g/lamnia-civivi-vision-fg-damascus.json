@@ -2,7 +2,7 @@
  "slug": "lamnia-civivi-vision-fg-damascus",
  "brand": "CIVIVI",
  "model": "Vision FG Damascus",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1295,9 +1295,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 764,
    "px_to_mm": [
     [
@@ -1314,7 +1312,7 @@
    "url": "img/lamnia-civivi-vision-fg-damascus-closed.webp",
    "width": 756
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 734,
   "px_to_mm": [
    [

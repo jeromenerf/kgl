@@ -2,7 +2,7 @@
  "slug": "lamnia-cold-steel-spartan-lockback-aus10",
  "brand": "Cold Steel",
  "model": "Spartan Lockback AUS10",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -2115,9 +2115,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 924,
    "px_to_mm": [
     [
@@ -2134,7 +2132,7 @@
    "url": "img/lamnia-cold-steel-spartan-lockback-aus10-closed.webp",
    "width": 922
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 913,
   "px_to_mm": [
    [

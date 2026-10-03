@@ -2,7 +2,7 @@
  "slug": "lamnia-kizer-cutlery-militaw-315-elmax",
  "brand": "Kizer Cutlery",
  "model": "Militaw 315 Elmax",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1275,9 +1275,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 903,
    "px_to_mm": [
     [
@@ -1294,7 +1292,7 @@
    "url": "img/lamnia-kizer-cutlery-militaw-315-elmax-closed.webp",
    "width": 849
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 910,
   "px_to_mm": [
    [

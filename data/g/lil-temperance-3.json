@@ -2,7 +2,7 @@
  "slug": "lil-temperance-3",
  "brand": "Spyderco",
  "model": "Lil' Temperance 3",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4519,9 +4519,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1037,
    "px_to_mm": [
     [
@@ -4538,7 +4536,7 @@
    "url": "img/lil-temperance-3-closed.webp",
    "width": 961
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1562,
   "px_to_mm": [
    [

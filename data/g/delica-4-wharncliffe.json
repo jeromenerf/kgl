@@ -2,7 +2,7 @@
  "slug": "delica-4-wharncliffe",
  "brand": "Spyderco",
  "model": "Delica 4 Wharncliffe",
- "version": 11,
+ "version": 12,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6607,9 +6607,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1091,
    "px_to_mm": [
     [
@@ -6626,7 +6624,7 @@
    "url": "img/delica-4-wharncliffe-closed.webp",
    "width": 658
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1535,
   "px_to_mm": [
    [

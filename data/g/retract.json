@@ -2,7 +2,7 @@
  "slug": "retract",
  "brand": "Spyderco",
  "model": "Retract",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6539,9 +6539,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1093,
    "px_to_mm": [
     [
@@ -6558,7 +6556,7 @@
    "url": "img/retract-closed.webp",
    "width": 806
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1639,
   "px_to_mm": [
    [

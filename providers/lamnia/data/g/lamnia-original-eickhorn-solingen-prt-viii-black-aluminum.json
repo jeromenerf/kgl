@@ -2,7 +2,7 @@
  "slug": "lamnia-original-eickhorn-solingen-prt-viii-black-aluminum",
  "brand": "Original Eickhorn-Solingen",
  "model": "PRT VIII Black Aluminum",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1915,9 +1915,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 897,
    "px_to_mm": [
     [
@@ -1934,7 +1932,7 @@
    "url": "img/lamnia-original-eickhorn-solingen-prt-viii-black-aluminum-closed.webp",
    "width": 831
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 906,
   "px_to_mm": [
    [

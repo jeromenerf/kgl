@@ -2,7 +2,7 @@
  "slug": "lamnia-vero-engineering-aura-talon",
  "brand": "Vero Engineering",
  "model": "Aura Talon",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1195,9 +1195,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 925,
    "px_to_mm": [
     [
@@ -1214,7 +1212,7 @@
    "url": "img/lamnia-vero-engineering-aura-talon-closed.webp",
    "width": 867
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 915,
   "px_to_mm": [
    [

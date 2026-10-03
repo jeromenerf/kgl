@@ -2,7 +2,7 @@
  "slug": "microjimbo",
  "brand": "Spyderco",
  "model": "MicroJimbo",
- "version": 21,
+ "version": 22,
  "active": true,
  "pinned": false,
  "frame": {
@@ -2247,9 +2247,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 896,
    "px_to_mm": [
     [
@@ -2266,7 +2264,7 @@
    "url": "img/microjimbo-closed.webp",
    "width": 809
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1105,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "swayback",
  "brand": "Spyderco",
  "model": "Swayback",
- "version": 20,
+ "version": 21,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1571,9 +1571,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1065,
    "px_to_mm": [
     [
@@ -1590,7 +1588,7 @@
    "url": "img/swayback-closed.webp",
    "width": 901
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1100,
   "px_to_mm": [
    [

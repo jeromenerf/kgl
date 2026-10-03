@@ -2,7 +2,7 @@
  "slug": "military-model",
  "brand": "Spyderco",
  "model": "Military Model",
- "version": 9,
+ "version": 10,
  "active": true,
  "pinned": false,
  "frame": {
@@ -7355,9 +7355,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1369,
    "px_to_mm": [
     [
@@ -7374,7 +7372,7 @@
    "url": "img/military-model-closed.webp",
    "width": 889
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 2108,
   "px_to_mm": [
    [

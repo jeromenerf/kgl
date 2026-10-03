@@ -2,7 +2,7 @@
  "slug": "lamnia-remette-sharp-leopard-rtslb",
  "brand": "Remette",
  "model": "Sharp Leopard RTSLB",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1107,9 +1107,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 780,
    "px_to_mm": [
     [
@@ -1126,7 +1124,7 @@
    "url": "img/lamnia-remette-sharp-leopard-rtslb-closed.webp",
    "width": 781
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 757,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "lamnia-microtech-msi-ram-lok-stonewashed",
  "brand": "Microtech",
  "model": "MSI Ram-Lok Stonewashed",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1403,9 +1403,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 937,
    "px_to_mm": [
     [
@@ -1422,7 +1420,7 @@
    "url": "img/lamnia-microtech-msi-ram-lok-stonewashed-closed.webp",
    "width": 905
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 905,
   "px_to_mm": [
    [

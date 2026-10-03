@@ -2,7 +2,7 @@
  "slug": "lamnia-cold-steel-sr1-lite-tanto",
  "brand": "Cold Steel",
  "model": "SR1 Lite Tanto",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1255,9 +1255,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 746,
    "px_to_mm": [
     [
@@ -1274,7 +1272,7 @@
    "url": "img/lamnia-cold-steel-sr1-lite-tanto-closed.webp",
    "width": 758
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 738,
   "px_to_mm": [
    [

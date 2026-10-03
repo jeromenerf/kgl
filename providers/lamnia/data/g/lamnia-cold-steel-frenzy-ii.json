@@ -2,7 +2,7 @@
  "slug": "lamnia-cold-steel-frenzy-ii",
  "brand": "Cold Steel",
  "model": "Frenzy II",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1207,9 +1207,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 701,
    "px_to_mm": [
     [
@@ -1226,7 +1224,7 @@
    "url": "img/lamnia-cold-steel-frenzy-ii-closed.webp",
    "width": 719
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 886,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "civilian",
  "brand": "Spyderco",
  "model": "Civilian",
- "version": 11,
+ "version": 12,
  "active": true,
  "pinned": false,
  "frame": {
@@ -8043,9 +8043,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1386,
    "px_to_mm": [
     [
@@ -8062,7 +8060,7 @@
    "url": "img/civilian-closed.webp",
    "width": 701
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 2006,
   "px_to_mm": [
    [

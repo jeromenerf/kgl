@@ -2,7 +2,7 @@
  "slug": "yojimbo-2",
  "brand": "Spyderco",
  "model": "Yojimbo 2",
- "version": 20,
+ "version": 21,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6575,9 +6575,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1118,
    "px_to_mm": [
     [
@@ -6594,7 +6592,7 @@
    "url": "img/yojimbo-2-closed.webp",
    "width": 852
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1669,
   "px_to_mm": [
    [

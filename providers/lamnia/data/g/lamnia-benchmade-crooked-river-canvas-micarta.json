@@ -2,7 +2,7 @@
  "slug": "lamnia-benchmade-crooked-river-canvas-micarta",
  "brand": "Benchmade",
  "model": "Crooked River Canvas Micarta",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1335,9 +1335,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 856,
    "px_to_mm": [
     [
@@ -1354,7 +1352,7 @@
    "url": "img/lamnia-benchmade-crooked-river-canvas-micarta-closed.webp",
    "width": 881
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 886,
   "px_to_mm": [
    [

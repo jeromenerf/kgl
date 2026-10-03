@@ -2,7 +2,7 @@
  "slug": "lamnia-cold-steel-air-lite-tanto-lockback",
  "brand": "Cold Steel",
  "model": "Air Lite Tanto Lockback",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1355,9 +1355,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 753,
    "px_to_mm": [
     [
@@ -1374,7 +1372,7 @@
    "url": "img/lamnia-cold-steel-air-lite-tanto-lockback-closed.webp",
    "width": 766
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 736,
   "px_to_mm": [
    [

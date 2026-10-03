@@ -2,7 +2,7 @@
  "slug": "lamnia-spyderco-strech-2-xl-grey-g-10-cpm-cru-wear",
  "brand": "Spyderco",
  "model": "Strech 2 XL Grey G-10 CPM CRU-WEAR",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1195,9 +1195,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 676,
    "px_to_mm": [
     [
@@ -1214,7 +1212,7 @@
    "url": "img/lamnia-spyderco-strech-2-xl-grey-g-10-cpm-cru-wear-closed.webp",
    "width": 728
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 731,
   "px_to_mm": [
    [

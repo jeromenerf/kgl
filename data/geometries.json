@@ -13,6 +13,19 @@
   "url": "https://www.knivesandtools.com/en/pt/-benchmade-940-osborne.htm"
  },
  {
+  "slug": "benchmade-945",
+  "brand": "Benchmade",
+  "model": "945 Mini Osborne",
+  "status": "ACCEPTED",
+  "tags": [
+   "folder",
+   "axis-lock",
+   "reverse-tanto"
+  ],
+  "comparable": true,
+  "url": "https://www.knivesandtools.com/en/pt/-benchmade-945-mini-osborne-pocket-knife-warren-osborne-design.htm"
+ },
+ {
   "slug": "benchmade-bugout",
   "brand": "Benchmade",
   "model": "Bugout 535",

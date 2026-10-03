@@ -2,7 +2,7 @@
  "slug": "ikuchi",
  "brand": "Spyderco",
  "model": "Ikuchi",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3587,9 +3587,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 978,
    "px_to_mm": [
     [
@@ -3606,7 +3604,7 @@
    "url": "img/ikuchi-closed.webp",
    "width": 859
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1678,
   "px_to_mm": [
    [

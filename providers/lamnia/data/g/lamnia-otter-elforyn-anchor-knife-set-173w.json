@@ -2,7 +2,7 @@
  "slug": "lamnia-otter-elforyn-anchor-knife-set-173w",
  "brand": "Otter",
  "model": "Elforyn Anchor knife set 173W",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1103,9 +1103,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 784,
    "px_to_mm": [
     [
@@ -1122,7 +1120,7 @@
    "url": "img/lamnia-otter-elforyn-anchor-knife-set-173w-closed.webp",
    "width": 882
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 807,
   "px_to_mm": [
    [

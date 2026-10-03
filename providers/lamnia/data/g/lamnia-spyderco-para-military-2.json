@@ -2,7 +2,7 @@
  "slug": "lamnia-spyderco-para-military-2",
  "brand": "Spyderco",
  "model": "Para Military 2",
- "version": 3,
+ "version": 4,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1639,9 +1639,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 285,
    "px_to_mm": [
     [
@@ -1658,7 +1656,7 @@
    "url": "img/lamnia-spyderco-para-military-2-closed.webp",
    "width": 406
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 748,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "kershaw-leek",
  "brand": "Kershaw",
  "model": "Leek",
- "version": 12,
+ "version": 13,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3955,9 +3955,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 351,
    "px_to_mm": [
     [
@@ -3974,7 +3972,7 @@
    "url": "img/kershaw-leek-closed.webp",
    "width": 1120
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 349,
   "px_to_mm": [
    [

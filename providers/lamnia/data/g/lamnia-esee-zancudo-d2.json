@@ -2,7 +2,7 @@
  "slug": "lamnia-esee-zancudo-d2",
  "brand": "ESEE",
  "model": "Zancudo D2",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1067,9 +1067,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 776,
    "px_to_mm": [
     [
@@ -1086,7 +1084,7 @@
    "url": "img/lamnia-esee-zancudo-d2-closed.webp",
    "width": 776
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 749,
   "px_to_mm": [
    [

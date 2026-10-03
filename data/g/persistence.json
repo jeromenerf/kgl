@@ -2,7 +2,7 @@
  "slug": "persistence",
  "brand": "Spyderco",
  "model": "Persistence",
- "version": 8,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6099,9 +6099,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1050,
    "px_to_mm": [
     [
@@ -6118,7 +6116,7 @@
    "url": "img/persistence-closed.webp",
    "width": 686
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1525,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "lamnia-benchmade-bugout",
  "brand": "Benchmade",
  "model": "Bugout",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -919,9 +919,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 767,
    "px_to_mm": [
     [
@@ -938,7 +936,7 @@
    "url": "img/lamnia-benchmade-bugout-closed.webp",
    "width": 763
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 737,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "lamnia-kershaw-bel-air-gray-stonewash",
  "brand": "Kershaw",
  "model": "Bel Air Gray Stonewash",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1127,9 +1127,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 782,
    "px_to_mm": [
     [
@@ -1146,7 +1144,7 @@
    "url": "img/lamnia-kershaw-bel-air-gray-stonewash-closed.webp",
    "width": 782
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 747,
   "px_to_mm": [
    [

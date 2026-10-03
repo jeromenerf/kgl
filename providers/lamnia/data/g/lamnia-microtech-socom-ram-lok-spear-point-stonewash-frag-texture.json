@@ -2,7 +2,7 @@
  "slug": "lamnia-microtech-socom-ram-lok-spear-point-stonewash-frag-texture",
  "brand": "Microtech",
  "model": "Socom Ram-Lok Spear Point Stonewash Frag Texture",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1471,9 +1471,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 868,
    "px_to_mm": [
     [
@@ -1490,7 +1488,7 @@
    "url": "img/lamnia-microtech-socom-ram-lok-spear-point-stonewash-frag-texture-closed.webp",
    "width": 896
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 909,
   "px_to_mm": [
    [

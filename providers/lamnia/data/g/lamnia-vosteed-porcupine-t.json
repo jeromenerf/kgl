@@ -2,7 +2,7 @@
  "slug": "lamnia-vosteed-porcupine-t",
  "brand": "Vosteed",
  "model": "Porcupine T",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1879,9 +1879,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 892,
    "px_to_mm": [
     [
@@ -1898,7 +1896,7 @@
    "url": "img/lamnia-vosteed-porcupine-t-closed.webp",
    "width": 935
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 905,
   "px_to_mm": [
    [

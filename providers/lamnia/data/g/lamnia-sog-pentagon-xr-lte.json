@@ -2,7 +2,7 @@
  "slug": "lamnia-sog-pentagon-xr-lte",
  "brand": "SOG",
  "model": "Pentagon XR LTE",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1935,9 +1935,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 925,
    "px_to_mm": [
     [
@@ -1954,7 +1952,7 @@
    "url": "img/lamnia-sog-pentagon-xr-lte-closed.webp",
    "width": 925
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 917,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "lamnia-remette-eligo-egb4",
  "brand": "Remette",
  "model": "Eligo EGB4",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1047,9 +1047,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 819,
    "px_to_mm": [
     [
@@ -1066,7 +1064,7 @@
    "url": "img/lamnia-remette-eligo-egb4-closed.webp",
    "width": 839
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 916,
   "px_to_mm": [
    [

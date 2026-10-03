@@ -2,7 +2,7 @@
  "slug": "lamnia-vosteed-raccoon-2-0-top-liner-lock",
  "brand": "Vosteed",
  "model": "Raccoon 2.0 Top Liner Lock",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1267,9 +1267,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 883,
    "px_to_mm": [
     [
@@ -1286,7 +1284,7 @@
    "url": "img/lamnia-vosteed-raccoon-2-0-top-liner-lock-closed.webp",
    "width": 884
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 911,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "lamnia-mkm-knives-isonzo-cleaver-sw",
  "brand": "MKM Knives",
  "model": "Isonzo Cleaver SW",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1707,9 +1707,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 750,
    "px_to_mm": [
     [
@@ -1726,7 +1724,7 @@
    "url": "img/lamnia-mkm-knives-isonzo-cleaver-sw-closed.webp",
    "width": 695
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 738,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "lamnia-giantmouse-ace-bleecker",
  "brand": "GiantMouse",
  "model": "ACE Bleecker",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1395,9 +1395,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 918,
    "px_to_mm": [
     [
@@ -1414,7 +1412,7 @@
    "url": "img/lamnia-giantmouse-ace-bleecker-closed.webp",
    "width": 902
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 918,
   "px_to_mm": [
    [

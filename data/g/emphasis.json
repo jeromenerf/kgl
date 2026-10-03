@@ -2,7 +2,7 @@
  "slug": "emphasis",
  "brand": "Spyderco",
  "model": "Emphasis",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4911,9 +4911,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1090,
    "px_to_mm": [
     [
@@ -4930,7 +4928,7 @@
    "url": "img/emphasis-closed.webp",
    "width": 923
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1770,
   "px_to_mm": [
    [

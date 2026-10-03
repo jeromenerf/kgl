@@ -2,7 +2,7 @@
  "slug": "edgerati",
  "brand": "Spyderco",
  "model": "Edgerati",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5451,9 +5451,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1150,
    "px_to_mm": [
     [
@@ -5470,7 +5468,7 @@
    "url": "img/edgerati-closed.webp",
    "width": 891
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1862,
   "px_to_mm": [
    [

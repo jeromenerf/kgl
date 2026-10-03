@@ -2,7 +2,7 @@
  "slug": "lamnia-cold-steel-code-4",
  "brand": "Cold Steel",
  "model": "Code 4",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1331,9 +1331,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 748,
    "px_to_mm": [
     [
@@ -1350,7 +1348,7 @@
    "url": "img/lamnia-cold-steel-code-4-closed.webp",
    "width": 753
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 742,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "lamnia-marttiini-mef8",
  "brand": "Marttiini",
  "model": "MEF8",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1239,9 +1239,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 285,
    "px_to_mm": [
     [
@@ -1258,7 +1256,7 @@
    "url": "img/lamnia-marttiini-mef8-closed.webp",
    "width": 419
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 750,
   "px_to_mm": [
    [

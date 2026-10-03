@@ -2,7 +2,7 @@
  "slug": "lamnia-kunwu-knives-jericho",
  "brand": "Kunwu Knives",
  "model": "Jericho",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1523,9 +1523,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 276,
    "px_to_mm": [
     [
@@ -1542,7 +1540,7 @@
    "url": "img/lamnia-kunwu-knives-jericho-closed.webp",
    "width": 777
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 754,
   "px_to_mm": [
    [

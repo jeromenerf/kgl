@@ -2,7 +2,7 @@
  "slug": "rescue-3",
  "brand": "Spyderco",
  "model": "Rescue 3",
- "version": 11,
+ "version": 12,
  "active": true,
  "pinned": false,
  "frame": {
@@ -9155,9 +9155,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1204,
    "px_to_mm": [
     [
@@ -9174,7 +9172,7 @@
    "url": "img/rescue-3-closed.webp",
    "width": 805
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1823,
   "px_to_mm": [
    [

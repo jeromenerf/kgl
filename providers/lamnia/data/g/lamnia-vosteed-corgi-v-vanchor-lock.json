@@ -2,7 +2,7 @@
  "slug": "lamnia-vosteed-corgi-v-vanchor-lock",
  "brand": "Vosteed",
  "model": "Corgi-V Vanchor Lock",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -1631,9 +1631,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 823,
    "px_to_mm": [
     [
@@ -1650,7 +1648,7 @@
    "url": "img/lamnia-vosteed-corgi-v-vanchor-lock-closed.webp",
    "width": 793
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 897,
   "px_to_mm": [
    [

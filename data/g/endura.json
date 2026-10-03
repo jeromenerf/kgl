@@ -2,7 +2,7 @@
  "slug": "endura",
  "brand": "Spyderco",
  "model": "Endura",
- "version": 12,
+ "version": 13,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6075,9 +6075,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1235,
    "px_to_mm": [
     [
@@ -6094,7 +6092,7 @@
    "url": "img/endura-closed.webp",
    "width": 822
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1917,
   "px_to_mm": [
    [

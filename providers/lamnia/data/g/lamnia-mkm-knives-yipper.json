@@ -2,7 +2,7 @@
  "slug": "lamnia-mkm-knives-yipper",
  "brand": "MKM Knives",
  "model": "Yipper",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -903,9 +903,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 789,
    "px_to_mm": [
     [
@@ -922,7 +920,7 @@
    "url": "img/lamnia-mkm-knives-yipper-closed.webp",
    "width": 787
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 761,
   "px_to_mm": [
    [

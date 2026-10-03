@@ -2,7 +2,7 @@
  "slug": "tasman",
  "brand": "Spyderco",
  "model": "Tasman",
- "version": 12,
+ "version": 13,
  "active": true,
  "pinned": false,
  "frame": {
@@ -6807,9 +6807,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1019,
    "px_to_mm": [
     [
@@ -6826,7 +6824,7 @@
    "url": "img/tasman-closed.webp",
    "width": 767
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1515,
   "px_to_mm": [
    [

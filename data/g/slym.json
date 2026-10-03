@@ -2,7 +2,7 @@
  "slug": "slym",
  "brand": "Spyderco",
  "model": "Slym",
- "version": 7,
+ "version": 8,
  "active": true,
  "pinned": false,
  "frame": {
@@ -5135,9 +5135,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1091,
    "px_to_mm": [
     [
@@ -5154,7 +5152,7 @@
    "url": "img/slym-closed.webp",
    "width": 777
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1746,
   "px_to_mm": [
    [

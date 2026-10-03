@@ -2,7 +2,7 @@
  "slug": "crk-inkosi-large-tanto",
  "brand": "Chris Reeve Knives",
  "model": "Inkosi Large Tanto",
- "version": 7,
+ "version": 8,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3627,9 +3627,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1282,
    "px_to_mm": [
     [
@@ -3646,7 +3644,7 @@
    "url": "img/crk-inkosi-large-tanto-closed.webp",
    "width": 398
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 379,
   "px_to_mm": [
    [

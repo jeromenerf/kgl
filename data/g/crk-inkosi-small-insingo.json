@@ -2,7 +2,7 @@
  "slug": "crk-inkosi-small-insingo",
  "brand": "Chris Reeve Knives",
  "model": "Inkosi Small Insingo",
- "version": 7,
+ "version": 8,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4455,9 +4455,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 1054,
    "px_to_mm": [
     [
@@ -4474,7 +4472,7 @@
    "url": "img/crk-inkosi-small-insingo-closed.webp",
    "width": 338
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 384,
   "px_to_mm": [
    [

@@ -2,7 +2,7 @@
  "slug": "benchmade-taggedout",
  "brand": "Benchmade",
  "model": "Taggedout 15536",
- "version": 5,
+ "version": 6,
  "active": true,
  "pinned": false,
  "frame": {
@@ -4455,9 +4455,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 313,
    "px_to_mm": [
     [
@@ -4474,7 +4472,7 @@
    "url": "img/benchmade-taggedout-closed.webp",
    "width": 927
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 446,
   "px_to_mm": [
    [

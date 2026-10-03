@@ -13,8 +13,8 @@ const BASE_LAYERS = [
   ["whole", "whole contour", false],
   ["blade", "blade contour", false],
   ["handle", "handle contour", false],
-  ["landmarks", "tip, junction, pivot, butt", false],
-  ["grid", "10 mm grid", false],
+  ["landmarks", "tip, junction, pivot, butt", true],
+  ["grid", "10 mm grid", true],
 ];
 
 // Measurement table: [analyzer, value key, short header].
@@ -38,13 +38,13 @@ const COLUMNS = [
 
 // Consumer defaults, fronts and lab alike (spec 010): rows, knives aligned on
 // the pivot and levelled pivot→tip, open image with the principal and pivot
-// axes, life size. A phone cannot show a knife at 1:1, so it starts at fit.
+// axes, the points of interest and the grid, no contours, life size. A phone cannot show a knife at 1:1, so it starts at fit.
 const NARROW = matchMedia("(max-width: 760px)").matches;
 const DEFAULT_STATE = {
   layout: "rows", align: "pivot", orient: "pivot_tip", scale: NARROW ? "fit" : "physical", opacity: 0.5, single: 0, rotation: 0,
   layers: { ...Object.fromEntries(BASE_LAYERS.map(([k, , on]) => [k, on])), principal_axes: true, pivot_tip: true, butt_pivot: true },
 };
-const CONSUMER_LAYERS = ["image", "image_closed", "whole", "principal_axes", "pivot_tip", "butt_pivot", "grid"];
+const CONSUMER_LAYERS = ["image", "image_closed", "whole", "landmarks", "principal_axes", "pivot_tip", "butt_pivot", "grid"];
 // Layouts a static front offers (spec 010): rows and overlay.
 const LAYOUTS = STATIC ? ["rows", "overlay"] : ["single", "rows", "columns", "grid", "overlay"];
 
@@ -55,15 +55,18 @@ let analyzers = [];
 let calibration = null;
 let workspace = "";
 
+// The whole state is stored, defaults included: a new key when the defaults change.
+const STORE = "kgl.workbench.2";
+
 function loadLocal() {
   try {
-    const s = JSON.parse(localStorage.getItem("kgl.workbench") || "{}");
+    const s = JSON.parse(localStorage.getItem(STORE) || "{}");
     if (s.layout && !LAYOUTS.includes(s.layout)) delete s.layout;
     return { ...DEFAULT_STATE, ...s, layers: { ...DEFAULT_STATE.layers, ...(s.layers || {}) } };
   } catch { return structuredClone(DEFAULT_STATE); }
 }
 function saveLocal() {
-  try { localStorage.setItem("kgl.workbench", JSON.stringify(state)); } catch { /* private mode */ }
+  try { localStorage.setItem(STORE, JSON.stringify(state)); } catch { /* private mode */ }
 }
 
 function selectedRefs() { return new URLSearchParams(location.search).getAll("g"); }
@@ -198,7 +201,8 @@ function drawItem(svg, it, overlay) {
     el("image", {
       href: cut.url, width: cut.width, height: cut.height, opacity: overlay ? state.opacity : 1,
       transform: `matrix(${m[0][0]} ${m[1][0]} ${m[0][1]} ${m[1][1]} ${m[0][2]} ${m[1][2]})`, preserveAspectRatio: "none",
-      // Display images are the photograph on white (spec 012): multiply keeps white neutral in overlays.
+      // Opaque display images (spec 012, photo-band/1) are drawn with multiply so their white stays neutral;
+      // photo-band/2 images are transparent instead and carry no blend.
       ...(cut.blend === "multiply" ? { style: "mix-blend-mode: multiply" } : {}),
     }, g);
   }

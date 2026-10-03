@@ -2,7 +2,7 @@
  "slug": "benchmade-bugout",
  "brand": "Benchmade",
  "model": "Bugout 535",
- "version": 8,
+ "version": 9,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3475,9 +3475,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 381,
    "px_to_mm": [
     [
@@ -3494,7 +3492,7 @@
    "url": "img/benchmade-bugout-closed.webp",
    "width": 1149
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 373,
   "px_to_mm": [
    [

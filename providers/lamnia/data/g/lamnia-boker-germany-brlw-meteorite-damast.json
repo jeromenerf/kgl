@@ -2,7 +2,7 @@
  "slug": "lamnia-boker-germany-brlw-meteorite-damast",
  "brand": "Böker Germany",
  "model": "BRLW Meteorite Damast",
- "version": 2,
+ "version": 3,
  "active": true,
  "pinned": false,
  "frame": {
@@ -999,9 +999,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 793,
    "px_to_mm": [
     [
@@ -1018,7 +1016,7 @@
    "url": "img/lamnia-boker-germany-brlw-meteorite-damast-closed.webp",
    "width": 791
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 765,
   "px_to_mm": [
    [

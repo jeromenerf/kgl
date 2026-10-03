@@ -2,7 +2,7 @@
  "slug": "insistent",
  "brand": "Spyderco",
  "model": "Insistent",
- "version": 10,
+ "version": 11,
  "active": true,
  "pinned": false,
  "frame": {
@@ -3071,9 +3071,7 @@
   ]
  },
  "cutout": {
-  "blend": "multiply",
   "closed": {
-   "blend": "multiply",
    "height": 870,
    "px_to_mm": [
     [
@@ -3090,7 +3088,7 @@
    "url": "img/insistent-closed.webp",
    "width": 771
   },
-  "display": "display.photo-band/1",
+  "display": "display.photo-band/2",
   "height": 1225,
   "px_to_mm": [
    [
