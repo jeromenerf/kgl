@@ -1,6 +1,6 @@
 {
  "catalog": "lamnia",
- "backend_commit": "e44c783646cb166f5ac73665046c9bbbd0d64b52",
+ "backend_commit": "1113e7026917d332c42abf4063139f04864960d5",
  "worker_code_sha256": "f0052387fa5cbbf5d133dc2e4039dc306e626db8b78759c2f36259049cde5bfe",
  "catalog_lock_sha256": "e48ef597d2386c3da4e669ec339d3885cdcae058dd243a771c60b267cdf4082b",
  "geometries": 84,

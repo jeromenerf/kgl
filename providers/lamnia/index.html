@@ -11,7 +11,7 @@
 <a href="index.html">compare</a>
 <a href="calibrate.html">calibrate</a>
 
-<span class="dim">published e44c783646cb</span>
+<span class="dim">published 1113e7026917</span>
 
 </nav>
 <main>
@@ -31,23 +31,29 @@
 <h2>Opacity <span id="opv"></span></h2>
 <input type="range" id="opacity" min="0.05" max="1" step="0.05"> <kbd>[</kbd> <kbd>]</kbd>
 <h2>Alignment</h2>
+<p class="dim">a point and an axis: the axis made horizontal and coaxial, the points together along it</p>
+<h2>Point</h2>
 <div class="radio">
-<label><input type="radio" name="align" value="frame"> handle frame</label>
+<label><input type="radio" name="align" value="frame"> none</label>
 <label><input type="radio" name="align" value="pivot"> pivot</label>
 <label><input type="radio" name="align" value="junction"> blade/handle junction</label>
 <label><input type="radio" name="align" value="tip"> tip</label>
 <label><input type="radio" name="align" value="butt"> butt</label>
 </div>
-<h2>Orientation</h2>
+<h2>Axis</h2>
 <div class="radio">
-<label><input type="radio" name="orient" value="frame"> handle frame</label>
-<label><input type="radio" name="orient" value="pivot_tip"> pivot→tip horizontal</label>
-<label><input type="radio" name="orient" value="pivot_butt"> pivot→butt horizontal</label>
+<label><input type="radio" name="orient" value="frame"> handle frame (points coincide)</label>
+<label><input type="radio" name="orient" value="pivot_tip"> pivot→tip</label>
+<label><input type="radio" name="orient" value="blade"> blade principal axis</label>
+<label><input type="radio" name="orient" value="junction_tip"> junction→tip</label>
+<label><input type="radio" name="orient" value="pivot_butt"> pivot→butt</label>
+<label><input type="radio" name="orient" value="handle"> handle principal axis</label>
+<label><input type="radio" name="orient" value="junction_butt"> junction→butt</label>
 </div>
 </details>
-<h2>Rotation about pivot <span id="rotv"></span></h2>
+<h2>Rotation <span id="rotv"></span></h2>
 <input type="range" id="rotation" min="-45" max="45" step="1"> <button id="rotreset" title="back to 0°">0</button>
-<p class="dim">+ raises the tip · <kbd>,</kbd> <kbd>.</kbd> 1° · <kbd>0</kbd> reset · display only</p>
+<p class="dim">about the shared point (no point: each knife's pivot) · + raises the tip · <kbd>,</kbd> <kbd>.</kbd> 1° · <kbd>0</kbd> reset · display only</p>
 <h2>Scale</h2>
 <div class="radio">
 <label><input type="radio" name="scale" value="fit"> common, fit screen</label>

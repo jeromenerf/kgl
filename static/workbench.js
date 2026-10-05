@@ -93,44 +93,77 @@ function rotationCentre(it) {
   if (lm.junction) return [(lm.junction[0][0] + lm.junction[1][0]) / 2, (lm.junction[0][1] + lm.junction[1][1]) / 2];
   return [0, 0];
 }
-// Orientation (spec 004 R006): before the common rotation, each knife turns
-// about the same centre so that its pivot→tip axis points to −x (the blade
-// side of the canonical frame) or its pivot→butt axis to +x.
+// Axis (spec 004 R006, R010): before the common rotation, each knife turns
+// about the same centre so that the chosen axis is horizontal, blade-side
+// axes pointing to −x (the blade side of the canonical frame), handle-side
+// axes to +x. "frame" keeps the handle frame.
+const mid = j => [(j[0][0] + j[1][0]) / 2, (j[0][1] + j[1][1]) / 2];
+function axisOf(it) {
+  const lm = it.landmarks_mm || {}, j = lm.junction && mid(lm.junction);
+  const principal = part => (it.analysis?.["axis.principal"]?.overlay || []).find(o => o.part === part);
+  const seg = (a, b, dir) => (a && b ? [a, b, dir] : null);
+  const pr = (part, dir) => { const o = principal(part); return o ? seg(o.from, o.to, dir) : null; };
+  switch (state.orient) {
+    case "pivot_tip": return seg(lm.pivot, lm.tip, -1);
+    case "blade": return pr("blade", -1);
+    case "junction_tip": return seg(j, lm.tip, -1);
+    case "pivot_butt": return seg(lm.pivot, lm.butt, 1);
+    case "handle": return pr("handle", 1);
+    case "junction_butt": return seg(j, lm.butt, 1);
+    default: return null;
+  }
+}
+// Levelling angle: from the axis direction (oriented by its sign) to ±x.
 function orientation(it) {
-  const lm = it.landmarks_mm || {}, [cx, cy] = rotationCentre(it);
-  const end = state.orient === "pivot_tip" ? lm.tip : state.orient === "pivot_butt" ? lm.butt : null;
-  if (!end) return 0;
-  const phi = Math.atan2(end[1] - cy, end[0] - cx) * 180 / Math.PI;
-  const a = (state.orient === "pivot_tip" ? 180 : 0) - phi;
-  return ((a + 540) % 360) - 180;
+  const ax = axisOf(it);
+  if (!ax) return 0;
+  const [a, b, dir] = ax, phi = Math.atan2(b[1] - a[1], b[0] - a[0]) * 180 / Math.PI;
+  const a0 = (dir < 0 ? 180 : 0) - phi;
+  return ((a0 + 540) % 360) - 180;
+}
+function turn(p, c, deg) {
+  const a = deg * Math.PI / 180, dx = p[0] - c[0], dy = p[1] - c[1];
+  return [c[0] + dx * Math.cos(a) - dy * Math.sin(a), c[1] + dx * Math.sin(a) + dy * Math.cos(a)];
 }
 const angle = it => (state.rotation || 0) + orientation(it);
 function rotate(it, p) {
-  const a = angle(it) * Math.PI / 180;
-  if (!a) return p;
-  const [cx, cy] = rotationCentre(it), dx = p[0] - cx, dy = p[1] - cy;
-  return [cx + dx * Math.cos(a) - dy * Math.sin(a), cy + dx * Math.sin(a) + dy * Math.cos(a)];
+  const a = angle(it);
+  return a ? turn(p, rotationCentre(it), a) : p;
 }
 
-// Alignment: translation (mm) applied after the rotation, so tip, junction and
-// butt anchors use their rotated positions (the pivot does not move).
-function offset(it) {
+// Alignment (spec 004 R010): a point and an axis. With the handle frame the
+// chosen points coincide. With an axis, every knife's axis lies on one
+// horizontal line (coaxial) and the points' projections on it coincide (no
+// point: the lines only). The common rotation then turns the set about the
+// shared point; without a point each knife turns about its own centre.
+function anchor(it, lev) {
   const lm = it.landmarks_mm || {};
-  const neg = p => { const q = rotate(it, p); return [-q[0], -q[1]]; };
   switch (state.align) {
-    case "tip": return lm.tip ? neg(lm.tip) : [0, 0];
-    case "pivot": return lm.pivot ? neg(lm.pivot) : [0, 0];
-    case "junction": {
-      const j = lm.junction;
-      return j ? neg([(j[0][0] + j[1][0]) / 2, (j[0][1] + j[1][1]) / 2]) : [0, 0];
-    }
+    case "tip": return lm.tip && lev(lm.tip);
+    case "pivot": return lm.pivot && lev(lm.pivot);
+    case "junction": return lm.junction && lev(mid(lm.junction));
     case "butt": {
       let best = null;
-      for (const p of it.contours_mm.whole) { const q = rotate(it, p); if (!best || q[0] > best[0]) best = q; }
-      return [-best[0], -best[1]];
+      for (const p of it.contours_mm.whole) { const q = lev(p); if (!best || q[0] > best[0]) best = q; }
+      return best;
     }
-    default: return [0, 0];
+    default: return null;
   }
+}
+function offset(it) {
+  const c = rotationCentre(it), o = orientation(it);
+  const lev = p => (o ? turn(p, c, o) : p);
+  const pt = anchor(it, lev), ax = axisOf(it);
+  let t = [0, 0];
+  if (state.orient === "frame" || !ax) {
+    if (pt) t = [-pt[0], -pt[1]];
+  } else {
+    t = [pt ? -pt[0] : 0, -lev(ax[0])[1]];
+  }
+  const shared = state.align !== "frame" && pt;
+  const O = shared ? [0, 0] : [c[0] + t[0], c[1] + t[1]];
+  const q = turn([c[0] + t[0], c[1] + t[1]], O, state.rotation || 0);
+  return [q[0] - c[0], q[1] - c[1]];
 }
 
 function bounds(it) {
