@@ -1,8 +1,8 @@
 {
  "catalog": "house",
- "backend_commit": "1113e7026917d332c42abf4063139f04864960d5",
+ "backend_commit": "6bf63a90e869b84f4e55b0ee96fc273ff2099451",
  "worker_code_sha256": "f0052387fa5cbbf5d133dc2e4039dc306e626db8b78759c2f36259049cde5bfe",
- "catalog_lock_sha256": "e48ef597d2386c3da4e669ec339d3885cdcae058dd243a771c60b267cdf4082b",
+ "catalog_lock_sha256": "09bc291b4c3444a6cb0d81478cf61c32f079e881a6b030b1aa4584d5fb84e5ea",
  "geometries": 103,
  "watermarks": {
   "alcyone": "marked",

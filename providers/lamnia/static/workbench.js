@@ -48,6 +48,21 @@ const CONSUMER_LAYERS = ["image", "image_closed", "whole", "landmarks", "princip
 // Layouts a static front offers (spec 010): rows and overlay.
 const LAYOUTS = STATIC ? ["rows", "overlay"] : ["single", "rows", "columns", "grid", "overlay"];
 
+// Permalinks (spec 004 R011): the address carries the knives (g) and every
+// view setting, defaults included, so a link keeps its meaning if the
+// defaults change. It wins over the stored state; the screen calibration
+// stays out (it belongs to the screen, not to the view).
+const VIEW = {
+  layout: v => LAYOUTS.includes(v) && v,
+  align: v => ["frame", "pivot", "junction", "tip", "butt"].includes(v) && v,
+  orient: v => ["frame", "pivot_tip", "blade", "junction_tip", "pivot_butt", "handle", "junction_butt"].includes(v) && v,
+  scale: v => ["fit", "physical"].includes(v) && v,
+  rotation: v => Number.isInteger(+v) && Math.abs(+v) <= 45 && +v,
+  opacity: v => +v >= 0.05 && +v <= 1 && +v,
+  single: v => Number.isInteger(+v) && +v >= 0 && +v,
+};
+// The whole state is stored, defaults included: a new key when the defaults change.
+const STORE = "kgl.workbench.2";
 const stage = document.getElementById("stage");
 let state = loadLocal();
 let items = [];
@@ -55,27 +70,42 @@ let analyzers = [];
 let calibration = null;
 let workspace = "";
 
-// The whole state is stored, defaults included: a new key when the defaults change.
-const STORE = "kgl.workbench.2";
-
 function loadLocal() {
+  let st;
   try {
     const s = JSON.parse(localStorage.getItem(STORE) || "{}");
     if (s.layout && !LAYOUTS.includes(s.layout)) delete s.layout;
-    return { ...DEFAULT_STATE, ...s, layers: { ...DEFAULT_STATE.layers, ...(s.layers || {}) } };
-  } catch { return structuredClone(DEFAULT_STATE); }
+    st = { ...DEFAULT_STATE, ...s, layers: { ...DEFAULT_STATE.layers, ...(s.layers || {}) } };
+  } catch { st = structuredClone(DEFAULT_STATE); }
+  return viewFromURL(st);
+}
+
+function viewFromURL(st) {
+  const p = new URLSearchParams(location.search);
+  for (const [k, ok] of Object.entries(VIEW)) {
+    const v = p.has(k) ? ok(p.get(k)) : false;
+    if (v !== false) st[k] = v;
+  }
+  if (p.has("layers")) {
+    const on = new Set(p.get("layers").split(",").filter(Boolean));
+    st.layers = Object.fromEntries([...new Set([...Object.keys(st.layers), ...on])].map(k => [k, on.has(k)]));
+  }
+  return st;
+}
+function writeURL(refs) {
+  const p = new URLSearchParams();
+  refs.forEach(r => p.append("g", r));
+  if (workspace) p.set("ws", workspace);
+  for (const k of Object.keys(VIEW)) if (k !== "single" || state.layout === "single") p.set(k, state[k]);
+  p.set("layers", Object.keys(state.layers).filter(k => state.layers[k]).sort().join(","));
+  history.replaceState(null, "", "?" + p.toString().replace(/%2C/g, ","));
 }
 function saveLocal() {
   try { localStorage.setItem(STORE, JSON.stringify(state)); } catch { /* private mode */ }
 }
 
 function selectedRefs() { return new URLSearchParams(location.search).getAll("g"); }
-function setRefs(refs) {
-  const p = new URLSearchParams();
-  refs.forEach(r => p.append("g", r));
-  if (workspace) p.set("ws", workspace);
-  history.replaceState(null, "", "?" + p.toString());
-}
+function setRefs(refs) { writeURL(refs); }
 
 async function fetchItems() {
   const refs = selectedRefs();
@@ -527,6 +557,7 @@ async function refresh(refetch) {
   if (refetch) await fetchItems();
   syncControls();
   saveLocal();
+  writeURL(selectedRefs());
   render();
 }
 
@@ -604,6 +635,12 @@ document.getElementById("calsel").addEventListener("change", e => {
 document.getElementById("opacity").addEventListener("input", e => { state.opacity = +e.target.value; refresh(false); });
 document.getElementById("rotation").addEventListener("input", e => { state.rotation = +e.target.value; refresh(false); });
 document.getElementById("rotreset").addEventListener("click", () => { state.rotation = 0; refresh(false); });
+document.getElementById("permalink").addEventListener("click", async e => {
+  const b = e.target;
+  try { await navigator.clipboard.writeText(location.href); b.textContent = "copied"; }
+  catch { prompt("Link to this view:", location.href); }
+  setTimeout(() => { b.textContent = "copy link"; }, 1500);
+});
 window.addEventListener("resize", () => render());
 document.addEventListener("keydown", e => {
   if (["TEXTAREA", "SELECT"].includes(e.target.tagName) || (e.target.tagName === "INPUT" && ["text", "search"].includes(e.target.type))) return;
