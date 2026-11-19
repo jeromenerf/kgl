@@ -1,5 +1,6 @@
 :root { --fg:#111; --dim:#777; --bg:#fafafa; --line:#ddd; --acc:#b00; --nav:#fff; }
 * { box-sizing: border-box; }
+[hidden] { display:none !important; }
 body { margin:0; font: 12px/1.35 ui-monospace, "DejaVu Sans Mono", monospace; color:var(--fg); background:var(--bg); }
 nav { display:flex; flex-wrap:wrap; gap:1.2em; padding:4px 10px; border-bottom:1px solid var(--line); background:var(--nav); }
 nav b.front { color:var(--acc); }
@@ -19,12 +20,6 @@ code { background:#eee; padding:0 3px; }
 .gallery figure.sel { border:2px solid var(--acc); }
 table.lineage code { font-size:10px; word-break:break-all; }
 kbd { border:1px solid var(--line); border-radius:2px; padding:0 3px; font-size:10px; color:var(--dim); }
-#wb { display:flex; gap:10px; align-items:flex-start; }
-#controls, #knives { width:230px; flex:none; position:sticky; top:0; max-height:100vh; overflow:auto; }
-#controls label, #knives label { display:block; } #controls h2 { margin-top:10px; }
-#controls h2.group { border-bottom:1px solid var(--line); }
-#knives { border-left:1px solid var(--line); padding-left:8px; }
-#stage { display:grid; gap:8px 16px; flex:1; overflow:auto; }
 #stage figure { margin:0; } #stage svg { background:#fff; border:1px solid var(--line); display:block; }
 #stage .grid line { stroke:#e6e6e6; stroke-width:1; } #stage .grid line.axis { stroke:#bbb; }
 #stage polygon { fill:none; stroke-width:1.5; } #stage .bbox { fill:none; stroke-dasharray:4 3; stroke-width:1; }
@@ -50,21 +45,11 @@ td.num { text-align:right; font-variant-numeric: tabular-nums; }
 #chosen { padding-left:0; list-style:none; margin:2px 0; }
 #chosen li { padding:3px 0; border-bottom:1px solid var(--line); }
 #chosen .acts { display:block; text-align:right; }
-#chosen button, #permalink { font-size:9px; padding:0 3px; }
+#chosen button { font-size:9px; padding:0 3px; }
 .stars { cursor:pointer; color:var(--dim); font-size:13px; white-space:nowrap; }
 .stars .on, .stars-ro { color:#e6a700; }
 #ctl > summary, details.more > summary { cursor:pointer; color:var(--dim); margin-top:6px; }
 #ctl > summary { font-weight:bold; }
-/* Phones (spec 010, A11): search first, then the stage, then the display options. */
-@media (max-width: 760px) {
-  #wb { flex-direction:column; }
-  #controls, #knives { width:100%; position:static; max-height:none; }
-  #knives { order:-1; border-left:none; padding-left:0; border-bottom:1px solid var(--line); padding-bottom:6px; }
-  #main { width:100%; order:0; } #controls { order:1; }
-  #measures { display:block; overflow-x:auto; }
-  #stage { max-width:100%; }
-}
-
 /* Docs tab (specs/011) */
 .doc { max-width: 60rem; line-height: 1.45; }
 .doc table { border-collapse: collapse; margin: .5rem 0; }
@@ -74,3 +59,78 @@ td.num { text-align:right; font-variant-numeric: tabular-nums; }
 .doc figure.diagram svg { max-width: 100%; height: auto; }
 .doc-index { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 1rem; }
 .doc-index dd { margin: 0 0 .4rem 1rem; }
+
+/* Comparison page (specs/014): knives left, stage centre, tools right. One
+   identity; the Back-office stays dense, the public products breathe. */
+:root { --panel:#fff; --radius:4px; --gap:10px; }
+#wb { display:grid; grid-template-columns:230px minmax(0,1fr) var(--tools, 240px); gap:var(--gap); align-items:start; }
+#knives, #controls { position:sticky; top:0; max-height:100vh; overflow:auto; }
+#knives label, #controls .radio label, #layers label { display:block; }
+.panel { background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:6px 8px; }
+.panel > h2:first-child { margin-top:0; }
+#controls h3 { font-size:inherit; margin:8px 0 2px; color:var(--dim); font-weight:normal; }
+.tool { border-top:1px solid var(--line); padding-top:2px; margin-top:6px; }
+#views { display:flex; gap:3px; flex-wrap:wrap; }
+#views label { display:inline-flex; flex-direction:column; align-items:center; gap:1px; padding:4px 2px; flex:1 1 0; min-width:0;
+  border:1px solid var(--line); border-radius:var(--radius); cursor:pointer; color:var(--fg); font-size:10px; user-select:none; }
+#views label:hover { border-color:var(--acc); }
+#views label.on { background:var(--acc); border-color:var(--acc); color:#fff; }
+#views input { position:absolute; opacity:0; pointer-events:none; }
+#views svg { width:22px; height:22px; fill:currentColor; } #views svg .over { fill-opacity:.55; }
+#stagebar { display:flex; align-items:center; gap:6px; margin-bottom:6px; }
+#stagebar .grow { flex:1; }
+#scale-badge { border:1px solid var(--line); border-radius:999px; padding:1px 8px; background:var(--panel); }
+#stage { display:grid; gap:8px 16px; overflow:auto; }
+#stage.zoomed { max-height:80vh; }
+#stage svg { cursor:grab; touch-action:none; }
+#stage.turning svg { cursor:grabbing; }
+#stage .hit { fill:transparent; stroke:none; pointer-events:all; }
+#stage .hit:hover { stroke:var(--acc); stroke-width:1.5; }
+#stagehint { margin:4px 0 0; font-size:.85em; }
+.empty { display:flex; align-items:center; gap:16px; min-height:260px; padding:24px; border:1px dashed var(--line); border-radius:var(--radius); color:var(--dim); }
+.empty .arrow { font-size:48px; line-height:1; color:var(--acc); }
+.empty b { color:var(--fg); font-size:1.2em; } .empty p { max-width:32em; }
+#suggest .head { cursor:default; border-bottom:none; padding-top:6px; }
+#suggest .head:hover { background:none; outline:none; }
+#card { position:fixed; z-index:10; pointer-events:none; background:var(--panel); color:var(--fg); border:1px solid var(--line);
+  border-radius:var(--radius); padding:6px 10px; box-shadow:0 4px 16px rgba(0,0,0,.15); max-width:22em; }
+#card table th { font-weight:normal; color:var(--dim); padding-right:10px; } #card table td, #card table th { border:none; padding:1px 8px 1px 0; }
+#numbers { margin-top:10px; }
+#decision { margin:4px 0 8px; } #decision th { font-weight:normal; color:var(--dim); } #decision tr:first-child th { font-weight:bold; }
+#decision td, #decision th { padding:4px 14px 4px 0; }
+.diff { font-size:.85em; padding:0 4px; border-radius:3px; background:#eee; }
+.diff.up { background:#e3f0fb; color:#1f5f99; } .diff.down { background:#fdecdf; color:#a04a10; }
+#allmeasures > summary { cursor:pointer; color:var(--dim); }
+
+/* Public products: contemporary type and spacing (docs/reference/04-ux-guidelines.md). */
+body[data-product=explorer], body[data-product=comparator] {
+  --radius:8px; --gap:16px; --line:#e3e3e3;
+  --tools:270px;
+  font:14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+body[data-product=explorer] main, body[data-product=comparator] main { padding:16px; }
+body[data-product=explorer] nav, body[data-product=comparator] nav { padding:10px 16px; gap:1.6em; }
+body[data-product=explorer] .panel, body[data-product=comparator] .panel { padding:12px 14px; }
+body[data-product=explorer] #stage svg, body[data-product=comparator] #stage svg { border-radius:var(--radius); }
+body[data-product=explorer] button, body[data-product=comparator] button, body[data-product=explorer] select, body[data-product=comparator] select,
+body[data-product=explorer] input[type=search], body[data-product=comparator] input[type=search] {
+  font:inherit; font-size:.9em; border:1px solid var(--line); border-radius:6px; background:var(--panel); padding:3px 8px; color:var(--fg); }
+body[data-product=explorer] button:hover, body[data-product=comparator] button:hover { border-color:var(--acc); }
+body[data-product=explorer] #filter, body[data-product=comparator] #filter { padding:7px 10px; font-size:1em; }
+body[data-product=explorer] #chosen button, body[data-product=comparator] #chosen button { font-size:10px; padding:0 5px; }
+body[data-product=explorer] #suggest div, body[data-product=comparator] #suggest div { padding:5px 6px; border-radius:6px; border-bottom:none; }
+body[data-product=explorer] #views label, body[data-product=comparator] #views label { padding:6px 2px; font-size:11px; }
+body[data-product=explorer] #views svg, body[data-product=comparator] #views svg { width:24px; height:24px; }
+#reset { border-color:var(--acc); color:var(--acc); }
+/* The Comparator is plainer still: bigger numbers, fewer lines. */
+body[data-product=comparator] { font-size:15px; }
+body[data-product=comparator] #decision td b { font-size:1.15em; }
+body[data-product=comparator] .tool { border-top:none; }
+
+/* Phones (spec 010, A11): knives first, then the stage, then the tools. */
+@media (max-width: 760px) {
+  #wb { grid-template-columns:minmax(0,1fr); }
+  #knives, #controls { position:static; max-height:none; }
+  #measures, #decision { display:block; overflow-x:auto; }
+  .empty { min-height:120px; }
+}

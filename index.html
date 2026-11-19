@@ -6,33 +6,62 @@
 <link rel="stylesheet" href="./static/app.css">
 <style>:root { }</style>
 
-</head><body data-static="1">
+</head><body data-static="1" data-product="explorer">
 <nav><b class="front">Knife Geometry Lab</b>
 <a href="index.html">compare</a>
 <a href="calibrate.html">calibrate</a>
 <a href="demo.html">demo</a>
-<span class="dim">published 6bf63a90e869</span>
+<span class="dim">published 46739993636d</span>
 
 </nav>
 <main>
 <div id="wb">
-<aside id="controls">
-<details id="ctl" open><summary>display options</summary>
-
-<h2 class="group">Display</h2>
-<h2>Layout</h2>
-<div class="radio">
-<label><input type="radio" name="layout" value="rows"> rows <kbd>r</kbd></label>
-<label><input type="radio" name="layout" value="overlay"> overlay <kbd>o</kbd></label>
+<aside id="knives" class="panel">
+<h2>Knives</h2>
+<div id="search">
+<input id="filter" type="search" placeholder="brand, model…  (/)" autocomplete="off" aria-label="search a knife by brand or model">
+<div id="suggest" role="listbox"></div>
 </div>
-<h2>Layers</h2>
-<div id="layers"></div>
-<details class="more"><summary>more</summary>
-<h2>Opacity <span id="opv"></span></h2>
+<label class="dim">favourites <select id="minstars"><option value="0">all</option><option value="1">★ and more</option><option value="2">★★ and more</option><option value="3">★★★ and more</option><option value="4">★★★★ and more</option><option value="5">★★★★★</option></select></label>
+
+<h2>Compared <span id="count" class="dim"></span></h2>
+<ol id="chosen"><li class="dim">loading…</li></ol>
+</aside>
+<section id="main">
+<div id="stagebar">
+<span id="scale-badge" title="scale of the stage"></span>
+<button id="zoomreset" hidden title="back to fit (wheel zooms in fit)">fit</button>
+<span class="grow"></span>
+<button id="permalink" title="copy a link to these knives and this view (the screen calibration stays on each screen)">copy link</button>
+<button id="reset" title="back to the starting state: knives and every view setting">start over</button>
+</div>
+<div id="stage"></div>
+<p id="stagehint" class="dim">drag to turn · <span data-when-scale="fit">wheel to zoom · </span>shift-drag to pan · hover a blade, handle or pivot for its numbers</p>
+<div id="numbers">
+<h2 id="measures-title">Measurements <span class="dim">(canonical frame, rotation not applied; mm / degrees; hover a header for its definition)</span></h2>
+<table id="decision" hidden></table>
+<details id="allmeasures"><summary>all measurements</summary></details>
+<table id="measures"></table>
+</div>
+</section>
+<aside id="controls" class="panel">
+<div id="views" role="radiogroup" aria-label="view">
+<label data-view="single" title="single (s, ← →)"><input type="radio" name="layout" value="single"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="8" rx="1"/></svg><span>single</span></label>
+<label data-view="rows" title="rows (r)"><input type="radio" name="layout" value="rows"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="4.5" rx="1"/><rect x="3" y="9.75" width="18" height="4.5" rx="1"/><rect x="3" y="16.5" width="18" height="4.5" rx="1"/></svg><span>rows</span></label>
+<label data-view="columns" title="columns (c)"><input type="radio" name="layout" value="columns"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="4.5" height="18" rx="1"/><rect x="9.75" y="3" width="4.5" height="18" rx="1"/><rect x="16.5" y="3" width="4.5" height="18" rx="1"/></svg><span>columns</span></label>
+<label data-view="grid" title="grid (g)"><input type="radio" name="layout" value="grid"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg><span>grid</span></label>
+<label data-view="overlay" title="overlay (o)"><input type="radio" name="layout" value="overlay"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="9" rx="1"/><rect x="8" y="10" width="13" height="9" rx="1" class="over"/></svg><span>overlay</span></label>
+</div>
+<details id="ctl" open><summary>tools</summary>
+<section class="tool" data-when="single"><h2>Knife</h2>
+<p><button id="prev" title="previous knife (←)">◀</button> <span id="singlev"></span> <button id="next" title="next knife (→)">▶</button></p>
+</section>
+<section class="tool" data-when="overlay"><h2>Opacity <span id="opv"></span></h2>
 <input type="range" id="opacity" min="0.05" max="1" step="0.05"> <kbd>[</kbd> <kbd>]</kbd>
-<h2>Alignment</h2>
+</section>
+<section class="tool" data-tool="align"><h2>Alignment</h2>
 <p class="dim">a point and an axis: the axis made horizontal and coaxial, the points together along it</p>
-<h2>Point</h2>
+<h3>Point</h3>
 <div class="radio">
 <label><input type="radio" name="align" value="frame"> none</label>
 <label><input type="radio" name="align" value="pivot"> pivot</label>
@@ -40,7 +69,7 @@
 <label><input type="radio" name="align" value="tip"> tip</label>
 <label><input type="radio" name="align" value="butt"> butt</label>
 </div>
-<h2>Axis</h2>
+<h3>Axis</h3>
 <div class="radio">
 <label><input type="radio" name="orient" value="frame"> handle frame (points coincide)</label>
 <label><input type="radio" name="orient" value="pivot_tip"> pivot→tip</label>
@@ -50,35 +79,25 @@
 <label><input type="radio" name="orient" value="handle"> handle principal axis</label>
 <label><input type="radio" name="orient" value="junction_butt"> junction→butt</label>
 </div>
-</details>
-<h2>Rotation <span id="rotv"></span></h2>
-<input type="range" id="rotation" min="-45" max="45" step="1"> <button id="rotreset" title="back to 0°">0</button>
-<p class="dim">about the shared point (no point: each knife's pivot) · + raises the tip · <kbd>,</kbd> <kbd>.</kbd> 1° · <kbd>0</kbd> reset · display only</p>
-<h2>Scale</h2>
+</section>
+<section class="tool"><h2>Rotation <span id="rotv"></span></h2>
+<input type="range" id="rotation" min="-180" max="180" step="1"> <button id="rotreset" title="back to 0°">0</button>
+<p class="dim">or drag on the stage · about the shared point (no point: each knife's pivot) · + raises the tip · <kbd>,</kbd> <kbd>.</kbd> 1° · <kbd>0</kbd> reset · display only</p>
+</section>
+<section class="tool"><h2>Scale</h2>
 <div class="radio">
-<label><input type="radio" name="scale" value="fit"> common, fit screen</label>
+<label><input type="radio" name="scale" value="fit"> fit the screen</label>
 <label><input type="radio" name="scale" value="physical"> 1:1 physical <kbd>m</kbd></label>
 <select id="calsel" hidden title="display calibration"></select>
 </div>
 <p id="calib" class="dim"></p>
+</section>
+<section class="tool"><h2>Layers</h2>
+<div id="layers"></div>
+</section>
 </details>
 </aside>
-<section id="main">
-<div id="stage"></div>
-<h2 id="measures-title">Measurements <span class="dim">(canonical frame, rotation not applied; mm / degrees; hover a header for its definition)</span></h2>
-<table id="measures"></table>
-</section>
-<aside id="knives">
-<h2>Add a knife</h2>
-<div id="search">
-<input id="filter" type="search" placeholder="brand, model…  (/)" autocomplete="off" aria-label="search a knife by brand or model">
-<div id="suggest" role="listbox"></div>
 </div>
-<label class="dim">favourites <select id="minstars"><option value="0">all</option><option value="1">★ and more</option><option value="2">★★ and more</option><option value="3">★★★ and more</option><option value="4">★★★★ and more</option><option value="5">★★★★★</option></select></label>
-
-<h2>Compared <span id="count" class="dim"></span> <button id="permalink" title="copy a link to these knives and this view (the screen calibration stays on each screen)">copy link</button></h2>
-<ol id="chosen"><li class="dim">loading…</li></ol>
-</aside>
-</div>
+<div id="card" role="tooltip" hidden></div>
 <script type="module" src="./static/workbench.js"></script>
 </main></body></html>

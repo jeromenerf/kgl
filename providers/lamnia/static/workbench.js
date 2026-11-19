@@ -36,7 +36,21 @@ const COLUMNS = [
   ["area.centroid", "handle_area", "handle A"],
 ];
 
-// Consumer defaults, fronts and lab alike (spec 010): rows, knives aligned on
+// Products (specs/014, docs/reference/03-products.md): one engine, a profile
+// per product. The page says which (data-product); a published front without
+// it is an Explorer.
+const ALL_LAYOUTS = ["single", "rows", "columns", "grid", "overlay"];
+const PROFILES = {
+  backoffice: { layouts: ALL_LAYOUTS, start: "empty", align: true, numbers: "table" },
+  explorer: { layouts: ALL_LAYOUTS, start: "empty", align: true, numbers: "table" },
+  comparator: { layouts: ["rows", "overlay"], start: "random", align: false, numbers: "card" },
+};
+const PRODUCT = PROFILES[document.body.dataset.product] ? document.body.dataset.product : (STATIC ? "explorer" : "backoffice");
+const P = PROFILES[PRODUCT];
+const RANDOM_START = 3; // knives a Comparator opens on
+const LAYOUTS = P.layouts;
+
+// Defaults, every product alike (spec 010): rows, knives aligned on
 // the pivot and levelled pivot→tip, open image with the principal and pivot
 // axes, the points of interest and the grid, no contours, life size. A phone cannot show a knife at 1:1, so it starts at fit.
 const NARROW = matchMedia("(max-width: 760px)").matches;
@@ -44,9 +58,8 @@ const DEFAULT_STATE = {
   layout: "rows", align: "pivot", orient: "pivot_tip", scale: NARROW ? "fit" : "physical", opacity: 0.5, single: 0, rotation: 0,
   layers: { ...Object.fromEntries(BASE_LAYERS.map(([k, , on]) => [k, on])), principal_axes: true, pivot_tip: true, butt_pivot: true },
 };
+// Layers a public product lists first; the others go under "more layers".
 const CONSUMER_LAYERS = ["image", "image_closed", "whole", "landmarks", "principal_axes", "pivot_tip", "butt_pivot", "grid"];
-// Layouts a static front offers (spec 010): rows and overlay.
-const LAYOUTS = STATIC ? ["rows", "overlay"] : ["single", "rows", "columns", "grid", "overlay"];
 
 // Permalinks (spec 004 R011): the address carries the knives (g) and every
 // view setting, defaults included, so a link keeps its meaning if the
@@ -57,18 +70,20 @@ const VIEW = {
   align: v => ["frame", "pivot", "junction", "tip", "butt"].includes(v) && v,
   orient: v => ["frame", "pivot_tip", "blade", "junction_tip", "pivot_butt", "handle", "junction_butt"].includes(v) && v,
   scale: v => ["fit", "physical"].includes(v) && v,
-  rotation: v => Number.isInteger(+v) && Math.abs(+v) <= 45 && +v,
+  rotation: v => Number.isInteger(+v) && Math.abs(+v) <= 180 && +v,
   opacity: v => +v >= 0.05 && +v <= 1 && +v,
   single: v => Number.isInteger(+v) && +v >= 0 && +v,
 };
-// The whole state is stored, defaults included: a new key when the defaults change.
-const STORE = "kgl.workbench.2";
+// The whole state is stored, defaults included: a new key when the defaults
+// change. Each public product keeps its own (fronts share an origin).
+const STORE = "kgl.workbench.2" + (PRODUCT === "backoffice" ? "" : "." + PRODUCT);
 const stage = document.getElementById("stage");
 let state = loadLocal();
 let items = [];
 let analyzers = [];
 let calibration = null;
 let workspace = "";
+let zoom = 1; // wheel zoom in fit; of the moment, like a scroll position: not stored, not in links
 
 function loadLocal() {
   let st;
@@ -77,7 +92,13 @@ function loadLocal() {
     if (s.layout && !LAYOUTS.includes(s.layout)) delete s.layout;
     st = { ...DEFAULT_STATE, ...s, layers: { ...DEFAULT_STATE.layers, ...(s.layers || {}) } };
   } catch { st = structuredClone(DEFAULT_STATE); }
-  return viewFromURL(st);
+  return productRules(viewFromURL(st));
+}
+// A product without the alignment tools keeps the default alignment.
+function productRules(st) {
+  if (!P.align) { st.align = DEFAULT_STATE.align; st.orient = DEFAULT_STATE.orient; }
+  if (!LAYOUTS.includes(st.layout)) st.layout = DEFAULT_STATE.layout;
+  return st;
 }
 
 function viewFromURL(st) {
@@ -207,6 +228,21 @@ function bounds(it) {
   return [x0, y0, x1, y1];
 }
 const union = bs => bs.reduce((a, b) => [Math.min(a[0], b[0]), Math.min(a[1], b[1]), Math.max(a[2], b[2]), Math.max(a[3], b[3])]);
+// The layout at rotation 0: the scale is computed from it, so that turning
+// the knives never resizes them (specs/014 U6).
+function atRest(fn) {
+  const r = state.rotation;
+  state.rotation = 0;
+  try { return fn(); } finally { state.rotation = r; }
+}
+// The point the knives turn about, in stage coordinates: the shared point
+// when the knives share one (it is at the origin), else the knife's own.
+const sharedPoint = () => state.align !== "frame" && items.some(it => anchor(it, p => p));
+function turnCentre(it) {
+  if (sharedPoint() && anchor(it, p => p)) return [0, 0];
+  const c = rotationCentre(it), [dx, dy] = offset(it);
+  return [c[0] + dx, c[1] + dy];
+}
 
 function el(name, attrs = {}, parent) {
   const e = document.createElementNS(SVGNS, name);
@@ -295,6 +331,14 @@ function drawItem(svg, it, overlay) {
   for (const res of Object.values(it.analysis || {}))
     for (const p of res.overlay || [])
       if (L[p.layer]) drawPrimitive(g, p, col);
+  // Hover targets (specs/014 U9): the blade, the handle and the pivot answer
+  // the pointer with their numbers, in separate views only.
+  if (!overlay) {
+    const i = items.indexOf(it);
+    for (const part of ["handle", "blade"])
+      if (it.contours_mm[part]) el("polygon", { points: pts(smooth[part] || it.contours_mm[part]), class: "hit", "data-i": i, "data-part": part, ...NS }, g);
+    if (it.landmarks_mm?.pivot) el("circle", { cx: it.landmarks_mm.pivot[0], cy: it.landmarks_mm.pivot[1], r: 4, class: "hit", "data-i": i, "data-part": "pivot", ...NS }, g);
+  }
 }
 
 function pxPerMM(box, cols, rows) {
@@ -334,42 +378,73 @@ function scaleStatus(k) {
   } else {
     el.textContent = k ? `fit: ${k.toFixed(2)} css px/mm` + (calibration ? ` (${(k / calibration.css_px_per_mm).toFixed(2)}× life size)` : "") : "";
   }
+  // The badge above the stage always says where the stage is (specs/014 U8).
+  const life = calibration ? calibration.css_px_per_mm : estimatedPxPerMM();
+  document.getElementById("scale-badge").textContent = state.scale === "physical"
+    ? (calibration ? "1:1" : "1:1 (estimated)")
+    : (zoom === 1 ? "fit" : `zoom ×${zoom.toFixed(1)}`) + (k ? ` · ${(k / life).toFixed(2)}× life size` : "");
+  document.getElementById("zoomreset").hidden = state.scale === "physical" || zoom === 1;
+  document.querySelectorAll("[data-when-scale]").forEach(e => { e.hidden = e.dataset.whenScale !== state.scale; });
+}
+
+function emptyStage() {
+  const arrow = NARROW ? "↑" : "←";
+  return `<div class="empty"><span class="arrow">${arrow}</span><div><b>Pick knives to compare</b>` +
+    `<p>Search by brand or model, or take one of the suggestions. Each knife you add appears here, at its real size.</p></div></div>`;
 }
 
 function render() {
   stage.innerHTML = "";
+  stage.classList.toggle("zoomed", zoom !== 1 && state.scale !== "physical");
   scaleStatus(null);
   renderMeasures();
   if (!items.length) {
-    stage.innerHTML = '<p class="dim">Select knives in the list on the right.</p>';
+    stage.innerHTML = emptyStage();
     return;
   }
-  const box = union(items.map(bounds));
-  const m = 6, vb = [box[0] - m, box[1] - m, box[2] + m, box[3] + m];
-  const w = vb[2] - vb[0], h = vb[3] - vb[1];
+  const m = 6, pad = b => [b[0] - m, b[1] - m, b[2] + m, b[3] + m];
+  // The scale comes from the knives at rest (rotation 0): a turn never
+  // resizes them. Separate panels grow when a turned knife needs room.
+  const rest = pad(atRest(() => union(items.map(bounds))));
+  const overlay = state.layout === "overlay";
   let shown = items, cols = 1, rows = items.length;
   if (state.layout === "single") { state.single = Math.min(state.single, items.length - 1); shown = [items[state.single]]; rows = 1; }
-  else if (state.layout === "overlay") rows = 1;
+  else if (overlay) rows = 1;
   else if (state.layout === "columns") { cols = items.length; rows = 1; }
   else if (state.layout === "grid") {
     // Knives are long and flat: stack them vertically while they stay
     // legible, and add a column only when one would show them much smaller
     // (under 60 % of the best scale any column count reaches).
-    const scaleFor = c => pxPerMM(vb, c, Math.ceil(items.length / c));
+    const scaleFor = c => pxPerMM(rest, c, Math.ceil(items.length / c));
     const counts = Array.from({ length: items.length }, (_, i) => i + 1);
     const best = Math.max(...counts.map(scaleFor));
     cols = counts.find(c => scaleFor(c) >= 0.6 * best);
     rows = Math.ceil(items.length / cols);
   }
-  const k = pxPerMM(vb, cols, rows);
+  const z = state.scale === "physical" ? 1 : zoom;
+  let vb, k1;
+  if (overlay) {
+    // A fixed window centred on the shared point (specs/014 U7): the knives
+    // turn about it and the grid stays still. It fills the stage.
+    const c = sharedPoint() ? [0, 0] : [(rest[0] + rest[2]) / 2, (rest[1] + rest[3]) / 2];
+    const hx = Math.max(c[0] - rest[0], rest[2] - c[0]), hy = Math.max(c[1] - rest[1], rest[3] - c[1]);
+    const W = stage.clientWidth - 16, H = Math.max(200, window.innerHeight * 0.72 - 22);
+    k1 = state.scale === "physical" ? pxPerMM(rest, 1, 1) : Math.max(0.2, Math.min(W / (2 * hx), H / (2 * hy)));
+    const w = Math.max(W, 2 * hx * k1) / k1, h = Math.max(H, 2 * hy * k1) / k1;
+    vb = [c[0] - w / 2, c[1] - h / 2, c[0] + w / 2, c[1] + h / 2];
+  } else {
+    k1 = pxPerMM(rest, cols, rows);
+    vb = union([rest, pad(union(shown.map(bounds)))]);
+  }
+  const k = k1 * z, w = vb[2] - vb[0], h = vb[3] - vb[1];
   scaleStatus(k);
   stage.style.gridTemplateColumns = `repeat(${cols}, max-content)`;
-  const panels = state.layout === "overlay" ? [shown] : shown.map(it => [it]);
+  const panels = overlay ? [shown] : shown.map(it => [it]);
   for (const group of panels) {
     const fig = document.createElement("figure");
     const cap = document.createElement("figcaption");
     cap.innerHTML = group.map(it =>
-      `<span style="color:${state.layout === "overlay" ? it.color : "inherit"}">■</span> ` +
+      `<span style="color:${overlay ? it.color : "inherit"}">■</span> ` +
       (STATIC ? (pageURL(it.slug) ? `<a href="${pageURL(it.slug)}" target="_blank" rel="noopener"><b>${it.model}</b></a>` : `<b>${it.model}</b>`)
         : `<a href="/g/${it.slug}">${it.model}</a>`) +
       (it.notes ? ` <span class="dim" title="${it.notes.replace(/"/g, "&quot;")}">⚠ known defect</span>` : "") +
@@ -378,19 +453,31 @@ function render() {
           `${it.landmarks_mm?.pivot ? (it.landmarks_mm.pivot_confidence === "high" ? "" : " · pivot unconfirmed") : " · no pivot"}</span>`) +
       (state.align === "pivot" && !it.landmarks_mm?.pivot ? ' <b class="st-REJECTED">not aligned (no pivot)</b>' : "") +
       ((state.rotation || state.orient !== "frame") && !it.landmarks_mm?.pivot ? ' <span class="dim">rotated about the junction (no pivot)</span>' : "") +
-      (state.orient !== "frame" && !STATIC ? ` <span class="dim">${orientation(it) >= 0 ? "+" : ""}${orientation(it).toFixed(1)}° to level</span>` : "")).join(" &nbsp; ");
+      (state.orient !== "frame" && PRODUCT === "backoffice" ? ` <span class="dim">${orientation(it) >= 0 ? "+" : ""}${orientation(it).toFixed(1)}° to level</span>` : "")).join(" &nbsp; ");
     const svg = el("svg", { viewBox: `${vb[0]} ${vb[1]} ${w} ${h}`, width: (w * k).toFixed(1), height: (h * k).toFixed(1) });
+    svg.dataset.i = overlay ? "" : items.indexOf(group[0]);
     if (state.layers.grid) drawGrid(svg, vb);
-    for (const it of group) drawItem(svg, it, state.layout === "overlay");
+    for (const it of group) drawItem(svg, it, overlay);
     fig.append(cap, svg);
     stage.appendChild(fig);
   }
 }
 
+// Comparator decision card (specs/014 U10): the numbers that decide, one
+// column per knife, each knife after the first with its difference to it.
+const DECISION = [
+  ["extrema.dimensions", "length_along_handle_axis", "overall length"],
+  ["extrema.dimensions", "junction_tip_length", "blade length"],
+  ["extrema.dimensions", "handle_length_butt_to_junction", "handle length"],
+  ["extrema.dimensions", "blade_width", "blade height"],
+];
+const val = (it, a, key) => it.analysis?.[a]?.values?.[key];
+
 function renderMeasures() {
-  const t = document.getElementById("measures");
+  const t = document.getElementById("measures"), card = document.getElementById("decision");
+  const all = document.getElementById("allmeasures");
   // Nothing selected, nothing to measure: no empty table header.
-  t.hidden = document.getElementById("measures-title").hidden = !items.length;
+  document.getElementById("numbers").hidden = !items.length;
   const def = id => (analyzers.find(a => a.id === id) || {}).definition || "";
   const head = COLUMNS.map(([a, key, label]) => {
     const unit = items[0]?.analysis?.[a]?.values?.[key]?.unit || "";
@@ -399,11 +486,128 @@ function renderMeasures() {
   const body = items.map(it => "<tr>" +
     `<td style="color:${it.color}">${it.model}</td>` +
     COLUMNS.map(([a, key]) => {
-      const v = it.analysis?.[a]?.values?.[key];
+      const v = val(it, a, key);
       return `<td class="num">${v == null ? "" : v.v.toFixed(v.unit === "mm²" ? 0 : 1)}</td>`;
     }).join("") + "</tr>").join("");
   t.innerHTML = `<tr><th></th>${head}</tr>${body}`;
+  const isCard = P.numbers === "card";
+  card.hidden = !isCard;
+  all.hidden = !isCard;
+  document.getElementById("measures-title").hidden = isCard;
+  if (isCard) {
+    if (t.parentElement !== all) all.appendChild(t);
+    const first = items[0];
+    card.innerHTML = "<tr><th></th>" + items.map(it => `<th style="color:${it.color}">${it.model}</th>`).join("") + "</tr>" +
+      DECISION.map(([a, key, label]) => {
+        const ref = first && val(first, a, key);
+        return `<tr><th>${label}</th>` + items.map((it, i) => {
+          const v = val(it, a, key);
+          if (v == null) return "<td></td>";
+          const d = i && ref ? v.v - ref.v : null;
+          const diff = d == null ? "" : ` <span class="diff ${d > 0.05 ? "up" : d < -0.05 ? "down" : ""}">${d >= 0 ? "+" : "−"}${Math.abs(d).toFixed(1)}</span>`;
+          return `<td class="num"><b>${v.v.toFixed(1)}</b> <span class="dim">mm</span>${diff}</td>`;
+        }).join("") + "</tr>";
+      }).join("");
+  }
 }
+
+// Hover cards (specs/014 U9): what is measured on the part under the pointer.
+const CARD = {
+  blade: [["extrema.dimensions", "junction_tip_length", "blade length (junction→tip)"], ["extrema.dimensions", "blade_width", "blade height"],
+    ["area.centroid", "blade_area", "blade area"], ["angle.relative", "blade_vs_handle", "blade angle to the handle"]],
+  handle: [["extrema.dimensions", "handle_length_butt_to_junction", "handle length (butt→junction)"], ["extrema.dimensions", "handle_width", "handle height"],
+    ["area.centroid", "handle_area", "handle area"]],
+  pivot: [["axis.pivot_tip", "length", "pivot→tip"], ["axis.butt_pivot", "length", "butt→pivot"]],
+};
+function cardHTML(it, part) {
+  const rows = CARD[part].map(([a, key, label]) => {
+    const v = val(it, a, key);
+    return v == null ? "" : `<tr><th>${label}</th><td class="num">${v.v.toFixed(v.unit === "mm²" ? 0 : 1)} <span class="dim">${v.unit}</span></td></tr>`;
+  }).join("");
+  const conf = part === "pivot" ? `<tr><th>confidence</th><td>${it.landmarks_mm.pivot_confidence || "?"}</td></tr>` : "";
+  return `<b style="color:${it.color}">■</b> <b>${it.model}</b> · ${part}<table>${conf}${rows}</table>`;
+}
+const card = document.getElementById("card");
+stage.addEventListener("pointermove", e => {
+  const h = !drag && e.target.closest?.(".hit");
+  if (!h) { card.hidden = true; return; }
+  const it = items[+h.dataset.i];
+  if (!it) return;
+  card.innerHTML = cardHTML(it, h.dataset.part);
+  card.hidden = false;
+  const r = card.getBoundingClientRect();
+  card.style.left = Math.min(e.clientX + 14, window.innerWidth - r.width - 8) + "px";
+  card.style.top = Math.min(e.clientY + 14, window.innerHeight - r.height - 8) + "px";
+});
+stage.addEventListener("pointerleave", () => { card.hidden = true; });
+
+// Direct manipulation (specs/014 U8): drag turns the knives about the
+// centre under the pointer, shift-drag pans, the wheel zooms (fit only).
+let drag = null, frame = 0;
+function paint() {
+  if (frame) return;
+  frame = requestAnimationFrame(() => { frame = 0; syncRotation(); render(); });
+}
+function screenPoint(svg, p) {
+  const q = svg.createSVGPoint();
+  q.x = p[0]; q.y = p[1];
+  return q.matrixTransform(svg.getScreenCTM());
+}
+stage.addEventListener("pointerdown", e => {
+  const svg = e.target.closest?.("svg");
+  if (!svg || e.button !== 0 || e.target.closest("a")) return;
+  e.preventDefault();
+  try { stage.setPointerCapture(e.pointerId); } catch { /* synthetic or ended pointer */ }
+  card.hidden = true;
+  if (e.shiftKey) {
+    drag = { pan: true, x: e.clientX, y: e.clientY, sl: stage.scrollLeft, st: stage.scrollTop };
+    return;
+  }
+  let c;
+  if (svg.dataset.i === "") {
+    const rest = atRest(() => union(items.map(bounds)));
+    c = sharedPoint() ? [0, 0] : [(rest[0] + rest[2]) / 2, (rest[1] + rest[3]) / 2];
+  } else c = turnCentre(items[+svg.dataset.i]);
+  const sc = screenPoint(svg, c);
+  drag = { cx: sc.x, cy: sc.y, a0: Math.atan2(e.clientY - sc.y, e.clientX - sc.x), r0: state.rotation || 0 };
+  stage.classList.add("turning");
+});
+stage.addEventListener("pointermove", e => {
+  if (!drag) return;
+  if (drag.pan) {
+    stage.scrollLeft = drag.sl - (e.clientX - drag.x);
+    stage.scrollTop = drag.st - (e.clientY - drag.y);
+    return;
+  }
+  const a = Math.atan2(e.clientY - drag.cy, e.clientX - drag.cx);
+  // SVG rotate(+a) is clockwise on screen, like the pointer's angle.
+  let r = Math.round(drag.r0 + (a - drag.a0) * 180 / Math.PI);
+  r = ((r + 540) % 360) - 180;
+  if (r !== state.rotation) { state.rotation = r; paint(); }
+});
+const endDrag = () => {
+  if (!drag) return;
+  const turned = !drag.pan;
+  drag = null;
+  stage.classList.remove("turning");
+  if (turned) refresh(false);
+};
+stage.addEventListener("pointerup", endDrag);
+stage.addEventListener("pointercancel", endDrag);
+stage.addEventListener("wheel", e => {
+  if (state.scale === "physical" || !items.length) return; // at 1:1 the wheel scrolls
+  e.preventDefault();
+  const z0 = zoom, z1 = Math.min(8, Math.max(1, z0 * Math.exp(-e.deltaY * 0.0015)));
+  if (z1 === z0) return;
+  const r = stage.getBoundingClientRect(), px = e.clientX - r.left, py = e.clientY - r.top;
+  const x = stage.scrollLeft + px, y = stage.scrollTop + py;
+  zoom = z1;
+  render();
+  // Keep the point under the cursor where it was.
+  stage.scrollLeft = x * z1 / z0 - px;
+  stage.scrollTop = y * z1 / z0 - py;
+}, { passive: false });
+document.getElementById("zoomreset").addEventListener("click", () => { zoom = 1; render(); });
 
 function buildLayerControls() {
   const box = document.getElementById("layers");
@@ -413,9 +617,10 @@ function buildLayerControls() {
   const html = ([k, label, title]) =>
     `<label title="${title.replace(/"/g, "&quot;")}"><input type="checkbox" data-layer="${k}"> ${label}` +
     (k === "image" ? " <kbd>i</kbd>" : "") + "</label>";
-  // A static front lists the consumer layers first, the others under "more layers" (spec 010).
-  const first = STATIC ? rows.filter(([k]) => CONSUMER_LAYERS.includes(k)) : rows;
-  const rest = STATIC ? rows.filter(([k]) => !CONSUMER_LAYERS.includes(k)) : [];
+  // A public product lists the consumer layers first, the others under "more layers" (spec 010).
+  const pub = PRODUCT !== "backoffice";
+  const first = pub ? rows.filter(([k]) => CONSUMER_LAYERS.includes(k)) : rows;
+  const rest = pub ? rows.filter(([k]) => !CONSUMER_LAYERS.includes(k)) : [];
   box.innerHTML = first.map(html).join("") +
     (rest.length ? `<details class="more"><summary>more layers</summary>${rest.map(html).join("")}</details>` : "");
   box.querySelectorAll("input").forEach(i => i.addEventListener("change", () => {
@@ -432,6 +637,7 @@ let catalogList = [];
 let activeSuggestion = 0;
 async function loadPicker() {
   catalogList = await (await api("/api/geometries")).json();
+  if (!ideas.length) ideas = shuffled(catalogList.filter(g => g.comparable));
   renderSuggest();
   renderChosen();
 }
@@ -439,13 +645,20 @@ const pageURL = slug => (catalogList.find(g => g.slug === slug) || {}).url;
 
 // Every word must appear in brand + model; words that start the brand or a
 // word of the model rank first. With favourites chosen and no text, the
-// favourites are suggested.
+// favourites are suggested; with neither, a few random knives, so that an
+// empty page always offers a choice (specs/014 U5).
+let ideas = [];
+const shuffled = list => {
+  const a = [...list];
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+};
 function suggestions(q) {
   const words = q.toLowerCase().split(/\s+/).filter(Boolean);
   const min = +document.getElementById("minstars").value;
   const all = !STATIC && document.getElementById("showall").checked;
-  if (!words.length && !min) return [];
   const chosen = new Set(selectedRefs().map(r => r.split("@")[0]));
+  if (!words.length && !min) return ideas.filter(g => !chosen.has(g.slug));
   const out = [];
   for (const g of catalogList) {
     if (chosen.has(g.slug) || (!g.comparable && !all) || (g.stars || 0) < min) continue;
@@ -458,13 +671,15 @@ function suggestions(q) {
 }
 function renderSuggest() {
   const q = document.getElementById("filter").value;
-  const list = suggestions(q), shown = list.slice(0, MAX_SUGGEST);
+  const idle = !q.trim() && !+document.getElementById("minstars").value;
+  // On a phone the stage comes after the picker: fewer idle suggestions.
+  const list = suggestions(q), shown = list.slice(0, idle && NARROW ? 3 : MAX_SUGGEST);
   activeSuggestion = Math.max(0, Math.min(activeSuggestion, shown.length - 1));
-  document.getElementById("suggest").innerHTML = shown.map((g, i) =>
+  document.getElementById("suggest").innerHTML = (idle && shown.length ? '<div class="dim head">suggestions</div>' : "") + shown.map((g, i) =>
     `<div role="option" data-slug="${g.slug}" class="${i === activeSuggestion ? "on" : ""}${g.comparable ? "" : " dim"}">` +
     `<span class="dim">${g.brand}</span> ${g.model}${g.stars ? ` <span class="stars-ro">${"★".repeat(g.stars)}</span>` : ""}` +
     (g.comparable ? "" : ` <a href="/g/${g.slug}" class="st-${g.status}">${g.status.toLowerCase()}</a>`) + "</div>").join("") +
-    (list.length > shown.length ? `<div class="dim">${list.length - shown.length} more: type more letters</div>` : "") +
+    (list.length > shown.length && !idle ? `<div class="dim">${list.length - shown.length} more: type more letters</div>` : "") +
     (q.trim() && !list.length ? '<div class="dim">no match</div>' : "");
 }
 function addKnife(slug) {
@@ -546,11 +761,23 @@ function syncControls() {
   for (const key of ["layout", "align", "orient", "scale"])
     document.querySelectorAll(`input[name=${key}]`).forEach(i => { i.checked = i.value === state[key]; });
   document.querySelectorAll("#layers input").forEach(i => { i.checked = !!state.layers[i.dataset.layer]; });
-  document.getElementById("rotation").value = state.rotation || 0;
-  document.getElementById("rotv").textContent = `${state.rotation > 0 ? "+" : ""}${state.rotation || 0}°`;
+  syncRotation();
   document.getElementById("opacity").value = state.opacity;
   document.getElementById("opv").textContent = state.opacity.toFixed(2);
+  // The view selector shows the product's views, the current one pressed;
+  // a tool shows only in the views where it does something (specs/014 U3, U4).
+  document.querySelectorAll("#views label").forEach(l => {
+    l.hidden = !LAYOUTS.includes(l.dataset.view);
+    l.classList.toggle("on", l.dataset.view === state.layout);
+  });
+  document.querySelectorAll("#controls [data-when]").forEach(e => { e.hidden = e.dataset.when !== state.layout; });
+  document.querySelectorAll('#controls [data-tool="align"]').forEach(e => { e.hidden = !P.align; });
+  document.getElementById("singlev").textContent = items.length ? `${state.single + 1} / ${items.length}` : "";
   renderChosen();
+}
+function syncRotation() {
+  document.getElementById("rotation").value = state.rotation || 0;
+  document.getElementById("rotv").textContent = `${state.rotation > 0 ? "+" : ""}${state.rotation || 0}°`;
 }
 
 async function refresh(refetch) {
@@ -635,6 +862,23 @@ document.getElementById("calsel").addEventListener("change", e => {
 document.getElementById("opacity").addEventListener("input", e => { state.opacity = +e.target.value; refresh(false); });
 document.getElementById("rotation").addEventListener("input", e => { state.rotation = +e.target.value; refresh(false); });
 document.getElementById("rotreset").addEventListener("click", () => { state.rotation = 0; refresh(false); });
+const step = d => { state.single = (state.single + d + items.length) % Math.max(1, items.length); refresh(false); };
+document.getElementById("prev").addEventListener("click", () => step(-1));
+document.getElementById("next").addEventListener("click", () => step(1));
+// Start over (specs/014 U5): the product's starting state, knives and view.
+const startRefs = () => P.start === "random" ? ideas.slice(0, RANDOM_START).map(g => g.slug) : [];
+document.getElementById("reset").addEventListener("click", () => {
+  try { localStorage.removeItem(STORE); } catch { /* private mode */ }
+  state = productRules(structuredClone(DEFAULT_STATE));
+  zoom = 1;
+  workspace = "";
+  if (!STATIC) { document.getElementById("wslist").value = ""; document.getElementById("notes").value = ""; }
+  ideas = shuffled(ideas);
+  document.getElementById("filter").value = "";
+  setRefs(startRefs());
+  renderSuggest();
+  refresh(true);
+});
 document.getElementById("permalink").addEventListener("click", async e => {
   const b = e.target;
   try { await navigator.clipboard.writeText(location.href); b.textContent = "copied"; }
@@ -671,6 +915,8 @@ document.addEventListener("keydown", e => {
     workspace = new URLSearchParams(location.search).get("ws") || "";
     await listWorkspaces();
   }
+  // A Comparator never opens on nothing: a random set when the link has none.
+  if (!workspace && !selectedRefs().length && P.start === "random") { setRefs(startRefs()); renderSuggest(); }
   if (workspace) await openWorkspace(workspace);
   else refresh(true);
 })();
